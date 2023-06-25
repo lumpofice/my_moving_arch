@@ -1,3 +1,300 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	padding: 1rem .5rem;
+	font-size: 1.3rem;
+	line-height: 1.2;
+	max-width: 60rem;
+	margin: 0 auto;
+	color: #333;
+}
+
 img {
 	max-width: 100%;
+}
+
+.Header {
+	text-align: center;
+	border-bottom: 8px double #f9f9f9;
+	margin-bottom: 2rem;
+	padding-bottom: 1rem;
+}
+
+.Zeroth {
+	padding: 1rem;
+	position: relative;
+}
+
+.ZerothImg {
+	border: 6px solid #06043d;
+	border-radius: 4px;
+}
+
+.First {
+	padding: 1rem;
+	position: relative;
+}
+
+.FirstImg {
+	border: 6px solid #06043d;
+	border-radius: 4px;
+}
+
+.Second {
+	padding: 1rem;
+	position: relative;
+}
+
+.SecondImg {
+	border: 6px solid #06043d;
+	border-radius: 4px;
+}
+
+.Third {
+	padding: 1rem;
+	position: relative;
+}
+
+.ThirdImg {
+	border: 6px solid #06043d;
+	border-radius: 4px;
+}
+
+.Fourth {
+	padding: 1rem;
+	position: relative;
+}
+
+.FourthImg {
+	border: 6px solid #06043d;
+	border-radius: 4px;
+}
+
+.Fifth {
+	padding: 1rem;
+	position: relative;
+}
+
+.FifthImg {
+	border: 6px solid #06043d;
+	border-radius: 4px;
+}
+
+.Sixth {
+	padding: 1rem;
+	position: relative;
+}
+
+.SixthImg {
+	border: 6px solid #06043d;
+	border-radius: 4px;
+}
+
+.Seventh {
+	padding: 1rem;
+	position: relative;
+}
+
+.SeventhImg {
+	border: 6px solid #06043d;
+	border-radius: 4px;
+}
+
+.Eighth {
+	padding: 1rem;
+	position: relative;
+}
+
+.EighthImg {
+	border: 6px solid #06043d;
+	border-radius: 4px;
+}
+
+.Ninth {
+	padding: 1rem;
+	position: relative;
+}
+
+.NinthImg {
+	border: 6px solid #06043d;
+	border-radius: 4px;
+}
+
+.Tenth {
+	padding: 1rem;
+	position: relative;
+}
+
+.TenthImg {
+	border: 6px solid #06043d;
+	border-radius: 4px;
+}
+
+.Eleventh {
+	padding: 1rem;
+	position: relative;
+}
+
+.EleventhImg {
+	border: 6px solid #06043d;
+	border-radius: 4px;
+}
+
+
+
+@media screen and (min-width: 50rem) {
+	body {
+		border-left: 4px solid #f9f9f9;
+		border-right: 4px solid #f9f9f9;
+		padding: 1rem 2rem;
+	}
+
+
+	.Zeroth {
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+	}
+	
+	.ZerothImg {
+		display: table-cell;
+		width: 100%;
+		vertical-align: middle;
+	}
+
+	.First {
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+	}
+	
+	.FirstImg {
+		display: table-cell;
+		width: 100%;
+		vertical-align: middle;
+	}
+
+	.Second {
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+	}
+	
+	.SecondImg {
+		display: table-cell;
+		width: 100%;
+		vertical-align: middle;
+	}
+
+	.Third {
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+	}
+	
+	.ThirdImg {
+		display: table-cell;
+		width: 100%;
+		vertical-align: middle;
+	}
+
+	.Fourth {
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+	}
+	
+	.FourthImg {
+		display: table-cell;
+		width: 100%;
+		vertical-align: middle;
+	}
+
+	.Fifth {
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+	}
+	
+	.FifthImg {
+		display: table-cell;
+		width: 100%;
+		vertical-align: middle;
+	}
+
+	.Sixth {
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+	}
+	
+	.SixthImg {
+		display: table-cell;
+		width: 100%;
+		vertical-align: middle;
+	}
+
+	.Seventh {
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+	}
+	
+	.SeventhImg {
+		display: table-cell;
+		width: 100%;
+		vertical-align: middle;
+	}
+
+	.Eighth {
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+	}
+	
+	.EighthImg {
+		display: table-cell;
+		width: 100%;
+		vertical-align: middle;
+	}
+
+	.Ninth {
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+	}
+	
+	.NinthImg {
+		display: table-cell;
+		width: 100%;
+		vertical-align: middle;
+	}
+
+	.Tenth {
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+	}
+	
+	.TenthImg {
+		display: table-cell;
+		width: 100%;
+		vertical-align: middle;
+	}
+
+	.Eleventh {
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+	}
+	
+	.EleventhImg {
+		display: table-cell;
+		width: 100%;
+		vertical-align: middle;
+	}
+
+
 }

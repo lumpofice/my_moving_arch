@@ -1,10 +1,30 @@
-{% extends 'base.html' %}
+<!doctype html>
+<html>
+	<head>
+		{% if title %}
+		<title>{{ title }}</title>
+		{% else %}
+		<title>My Moving Arch</title>
+		{% endif %}
+		<meta name="viewport" content="width=device-width">
+		<link rel='stylesheet' href='{{ url_for("static", filename="styles/visual_art.css") }}'>
+	</head>
+	<body>
+		<div>
+			<a href='{{ url_for("main.index") }}'>Home</a>
+			<a href='{{ url_for("main.visual_art") }}'>Visual Art</a>
+		</div>
+		<hr>
 
-{% block content %}
-	<h1>Visual Art Gallery</h1>
-		<form action='' method='post'>
-			<div>
-				<input type='submit' name='submit_button' value='Robots Grow Out of Keyboards'>
+		{% block content %}
+			<div class="Header">
+				<p>Visual Art Gallery</p>
+				<form action='' method='post'>
+					<div>
+						<input type='submit' name='submit_button' value='Robots Grow Out of Keyboards'>
+					</div>
+				</form>
 			</div>
-		</form>
-{% endblock %}
+		{% endblock %}
+	</body>
+</html>
