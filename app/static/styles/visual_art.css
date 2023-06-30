@@ -22,6 +22,23 @@ img {
 	padding-bottom: 1rem;
 }
 
+input {
+	padding: 6px 12px 6px 12px;
+	border: 1px solid #1f0b4a;
+	font-size: 18px;
+	font-family: courier new, sans-serif;
+	background-color: #bdc2c9;
+	color: #284475;
+}	
+
+input:hover[type="submit"] {
+	background-color: #dcecf7;
+}
+
+input:active[type="submit"] {
+	background-color: #fcfcf7;
+}
+
 @media screen and (min-width: 50rem) {
 	body {
 		border-left: 4px solid #f9f9f9;
