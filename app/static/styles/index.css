@@ -3,24 +3,43 @@
 }
 
 body {
-	padding: 1rem .5rem;
 	font-size: 1.3rem;
+	padding: 1rem .5rem;
 	line-height: 1.2;
 	max-width: 60rem;
 	margin: 0 auto;
-	color: #333;
+	color: #333333;
 }
 
-img {
-	max-width: 100%;
-}
-
-.Header {
+#nav {
+	padding: 1rem .5rem;
+	margin: 0 auto;
+	color: #333333;
 	text-align: center;
 	border-bottom: 8px double #f9f9f9;
-	margin-bottom: 2rem;
-	padding-bottom: 1rem;
+	margin-bottom: 2rem; 
 }
+
+#content {
+	overflow: auto;
+	height: 100%;
+}
+
+#slideshow {
+	padding: 1rem .5rem;
+	margin: 0 auto;
+}
+
+.featuredgallery1, .featuredgallery2, .featuredgallery3 {
+	width: 33%;
+	float: left;
+	margin: 0 auto;
+}
+
+li {
+	display: inline;
+}
+
 
 @media screen and (min-width: 50rem) {
 	body {

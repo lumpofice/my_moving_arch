@@ -10,52 +10,33 @@
 		<link rel='stylesheet' href='{{ url_for("static", filename="styles/robots_grow_out_of_keyboards.css") }}'>
 	</head>
 	<body>
-		<div>
-			<a href='{{ url_for("main.index") }}'>Home</a>
-			<a href='{{ url_for("main.visual_art") }}'>Visual Art</a>
+		<div id='opening'>
+			<div id='nav'>
+				<ul>
+					<li><a href='{{ url_for("main.index") }}'>Home</a></li>
+					<li><a href='{{ url_for("main.visual_art") }}'>Visual Art</a></li>
+				</ul>
+			</div>
 		</div>
-		<hr>
 
 		{% block content %}
 			<div class="Header">
 				<h2>Robots Grow Out of Keyboards</h2>
 				<p><em>All with <a href='https://www.bing.com/create'>Bing Image Creator</a></em></p>
 			</div>
-			<div class="Zeroth">
-				<img class="ZerothImg" src='{{ url_for("static", filename="images/robots_grow_out_of_keyboards/robots_grow_out_of_keyboards_000.jpeg") }}' align='middle'/>
-			</div>
-			<div class="First">
-				<img class="FirstImg" src='{{ url_for("static", filename="images/robots_grow_out_of_keyboards/robots_grow_out_of_keyboards_001.jpeg") }}' align='middle'/>
-			</div>
-			<div class="Second">
-				<img class="SecondImg" src='{{ url_for("static", filename="images/robots_grow_out_of_keyboards/robots_grow_out_of_keyboards_002.jpeg") }}' align='middle'/>
-			</div>
-			<div class="Third">
-				<img class="ThirdImg" src='{{ url_for("static", filename="images/robots_grow_out_of_keyboards/robots_grow_out_of_keyboards_003.jpeg") }}' align='middle'/>
-			</div>
-			<div class="Fourth">
-				<img class="FourthImg" src='{{ url_for("static", filename="images/robots_grow_out_of_keyboards/robots_grow_out_of_keyboards_004.jpeg") }}' align='middle'/>
-			</div>
-			<div class="Fifth">
-				<img class="FifthImg" src='{{ url_for("static", filename="images/robots_grow_out_of_keyboards/robots_grow_out_of_keyboards_005.jpeg") }}' align='middle'/>
-			</div>
-			<div class="Sixth">
-				<img class="SixthImg" src='{{ url_for("static", filename="images/robots_grow_out_of_keyboards/robots_grow_out_of_keyboards_006.jpeg") }}' align='middle'/>
-			</div>
-			<div class="Seventh">
-				<img class="SeventhImg" src='{{ url_for("static", filename="images/robots_grow_out_of_keyboards/robots_grow_out_of_keyboards_007.jpeg") }}' align='middle'/>
-			</div>
-			<div class="Eighth">
-				<img class="EighthImg" src='{{ url_for("static", filename="images/robots_grow_out_of_keyboards/robots_grow_out_of_keyboards_008.jpeg") }}' align='middle'/>
-			</div>
-			<div class="Ninth">
-				<img class="NinthImg" src='{{ url_for("static", filename="images/robots_grow_out_of_keyboards/robots_grow_out_of_keyboards_009.jpeg") }}' align='middle'/>
-			</div>
-			<div class="Tenth">
-				<img class="TenthImg" src='{{ url_for("static", filename="images/robots_grow_out_of_keyboards/robots_grow_out_of_keyboards_010.jpeg") }}' align='middle'/>
-			</div>
-			<div class="Eleventh">
-				<img class="EleventhImg" src='{{ url_for("static", filename="images/robots_grow_out_of_keyboards/robots_grow_out_of_keyboards_011.jpeg") }}' align='middle'/>
+			<div class="images">
+				<img class="image" src='{{ url_for("static", filename="images/robots_grow_out_of_keyboards/robots_grow_out_of_keyboards_000.jpeg") }}' align='middle'/>
+				<img class="image" src='{{ url_for("static", filename="images/robots_grow_out_of_keyboards/robots_grow_out_of_keyboards_001.jpeg") }}' align='middle'/>
+				<img class="image" src='{{ url_for("static", filename="images/robots_grow_out_of_keyboards/robots_grow_out_of_keyboards_002.jpeg") }}' align='middle'/>
+				<img class="image" src='{{ url_for("static", filename="images/robots_grow_out_of_keyboards/robots_grow_out_of_keyboards_003.jpeg") }}' align='middle'/>
+				<img class="image" src='{{ url_for("static", filename="images/robots_grow_out_of_keyboards/robots_grow_out_of_keyboards_004.jpeg") }}' align='middle'/>
+				<img class="image" src='{{ url_for("static", filename="images/robots_grow_out_of_keyboards/robots_grow_out_of_keyboards_005.jpeg") }}' align='middle'/>
+				<img class="image" src='{{ url_for("static", filename="images/robots_grow_out_of_keyboards/robots_grow_out_of_keyboards_006.jpeg") }}' align='middle'/>
+				<img class="image" src='{{ url_for("static", filename="images/robots_grow_out_of_keyboards/robots_grow_out_of_keyboards_007.jpeg") }}' align='middle'/>
+				<img class="image" src='{{ url_for("static", filename="images/robots_grow_out_of_keyboards/robots_grow_out_of_keyboards_008.jpeg") }}' align='middle'/>
+				<img class="image" src='{{ url_for("static", filename="images/robots_grow_out_of_keyboards/robots_grow_out_of_keyboards_009.jpeg") }}' align='middle'/>
+				<img class="image" src='{{ url_for("static", filename="images/robots_grow_out_of_keyboards/robots_grow_out_of_keyboards_010.jpeg") }}' align='middle'/>
+				<img class="image" src='{{ url_for("static", filename="images/robots_grow_out_of_keyboards/robots_grow_out_of_keyboards_011.jpeg") }}' align='middle'/>
 			</div>
 		{% endblock %}
 	</body>

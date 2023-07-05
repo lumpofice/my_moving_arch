@@ -14,6 +14,8 @@ def visual_art():
             return redirect(url_for('main.robots_grow_out_of_keyboards'))
         if request.form['submit_button'] == 'Land of Milk and Honey':
             return redirect(url_for('main.land_of_milk_and_honey'))
+        if request.form['submit_button'] == 'Next':
+            return redirect(url_for('main.index'))
     return render_template('visual_art.html', title='My Moving Arch')
 
 
@@ -29,3 +31,4 @@ def robots_grow_out_of_keyboards():
 def land_of_milk_and_honey():
     return render_template('land_of_milk_and_honey.html', \
             title='My Moving Arch')
+

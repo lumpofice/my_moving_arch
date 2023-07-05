@@ -10,16 +10,27 @@
 		<link rel='stylesheet' href='{{ url_for("static", filename="styles/index.css") }}'>
 	</head>
 	<body>
-		<div>
-			<a href='{{ url_for("main.index") }}'>Home</a>
-			<a href='{{ url_for("main.visual_art") }}'>Visual Art</a>
+		<div id='opening'>
+			<div id='nav'>
+				<ul>
+					<li><a href='{{ url_for("main.index") }}'>Home</a></li>
+					<li><a href='{{ url_for("main.visual_art") }}'>Visual Art</a></li>
+				</ul>
+			</div>
 		</div>
-		<hr>
-
-
 		{% block content %}
-			<div class="Header">
-				<p>Welcome</p>
+			<div id='content'>
+				<div id='slideshow'>
+				</div>
+				<div class='featuredgallery1'>
+					<p><a href='{{ url_for("main.robots_grow_out_of_keyboards") }}'>Robots</a></p>
+				</div>
+				<div class='featuredgallery2'>
+					<p><a href='{{ url_for("main.land_of_milk_and_honey") }}'>Land of Milk and Honey</a></p>
+				</div>
+				<div class='featuredgallery3'>
+					<p><a href=""></a></p>
+				</div>
 			</div>
 		{% endblock %}
 	</body>

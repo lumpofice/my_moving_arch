@@ -10,21 +10,26 @@
 		<link rel='stylesheet' href='{{ url_for("static", filename="styles/visual_art.css") }}'>
 	</head>
 	<body>
-		<div>
-			<a href='{{ url_for("main.index") }}'>Home</a>
-			<a href='{{ url_for("main.visual_art") }}'>Visual Art</a>
+		<div id='opening'>
+			<div id='nav'>
+				<ul>
+					<li><a href='{{ url_for("main.index") }}'>Home</a></li>
+					<li><a href='{{ url_for("main.visual_art") }}'>Visual Art</a></li>
+				</ul>
+			</div>
 		</div>
-		<hr>
-
 		{% block content %}
-			<div class="Header">
-				<p>Visual Art Gallery</p>
-				<form action='' method='post'>
-					<div>
-						<input type='submit' name='submit_button' value='Robots Grow Out of Keyboards'>
-						<input type='submit' name='submit_button' value='Land of Milk and Honey'>
-					</div>
-				</form>
+			<div id='content'>
+				<div id='page'>
+					<p>Visual Art Gallery</p>
+				</div>
+				<div class='galleries'>
+					<form action='' method='post'>
+						<input type='submit' name='submit_button' value='Robots Grow Out of Keyboards'><br>
+						<input type='submit' name='submit_button' value='Land of Milk and Honey'><br>
+						<input type='submit' name='submit_button' value='Next'><br>
+					</form>
+				</div>
 			</div>
 		{% endblock %}
 	</body>
