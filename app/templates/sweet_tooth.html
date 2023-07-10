@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+	<head>
+		{% if title %}
+		<title>{{ title }}</title>
+		{% else %}
+		<title>My Moving Arch</title>
+		{% endif %}
+		<meta name="viewport" content="width=device-width">
+		<link rel='stylesheet' href='{{ url_for("static", filename="styles/sweet_tooth.css") }}'>
+	</head>
+	<body>
+		<div id='opening'>
+			<div id='nav'>
+				<ul>
+					<li><a href='{{ url_for("main.index") }}'>Home</a></li>
+					<li><a href='{{ url_for("main.visual_art") }}'>Visual Art</a></li>
+				</ul>
+			</div>
+		</div>
+
+		{% block content %}
+			<div class="Header">
+				<h2>Sweet Tooth</h2>
+				<p><em>All with <a href='https://www.bing.com/create'>Bing Image Creator</a></em></p>
+			</div>
+			<div class="image_container">
+				<img class="image" src='{{ url_for("static", filename="images/sweet_tooth/sweet_tooth_000.jpeg") }}' align='middle'/>
+			</div>
+			<div class="image_container">
+				<img class="image" src='{{ url_for("static", filename="images/sweet_tooth/sweet_tooth_001.jpeg") }}' align='middle'/>
+			</div>
+			<div class="image_container">
+				<img class="image" src='{{ url_for("static", filename="images/sweet_tooth/sweet_tooth_002.jpeg") }}' align='middle'/>
+			</div>
+			<div class="image_container">
+				<img class="image" src='{{ url_for("static", filename="images/sweet_tooth/sweet_tooth_003.jpeg") }}' align='middle'/>
+			</div>
+			<div class="image_container">
+				<img class="image" src='{{ url_for("static", filename="images/sweet_tooth/sweet_tooth_004.jpeg") }}' align='middle'/>
+			</div>
+			<div class="image_container">
+				<img class="image" src='{{ url_for("static", filename="images/sweet_tooth/sweet_tooth_005.jpeg") }}' align='middle'/>
+			</div>
+			<div class="image_container">
+				<img class="image" src='{{ url_for("static", filename="images/sweet_tooth/sweet_tooth_006.jpeg") }}' align='middle'/>
+			</div>
+			<div class="image_container">
+				<img class="image" src='{{ url_for("static", filename="images/sweet_tooth/sweet_tooth_007.jpeg") }}' align='middle'/>
+			</div>
+			<div class="image_container">	
+				<img class="image" src='{{ url_for("static", filename="images/sweet_tooth/sweet_tooth_008.jpeg") }}' align='middle'/>
+			</div>
+			<div class="image_container">
+				<img class="image" src='{{ url_for("static", filename="images/sweet_tooth/sweet_tooth_009.jpeg") }}' align='middle'/>
+			</div>
+			<div class="image_container">
+				<img class="image" src='{{ url_for("static", filename="images/sweet_tooth/sweet_tooth_010.jpeg") }}' align='middle'/>
+			</div>
+		{% endblock %}
+	</body>
+</html>
+

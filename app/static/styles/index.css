@@ -20,6 +20,10 @@ body {
 	margin-bottom: 2rem; 
 }
 
+li {
+	display: inline;
+}
+
 #content {
 	overflow: auto;
 	height: 100%;
@@ -31,17 +35,17 @@ body {
 }
 
 .featuredgallery1, .featuredgallery2, .featuredgallery3 {
-	width: 33%;
+	width: 33.33%;
 	float: left;
 	margin: 0 auto;
 }
 
-li {
-	display: inline;
+p.gallery {
+	text-align: center;
 }
 
 
-@media screen and (min-width: 50rem) {
+@media screen and (min-width: 15rem) {
 	body {
 		border-left: 4px solid #f9f9f9;
 		border-right: 4px solid #f9f9f9;

@@ -20,6 +20,10 @@ body {
 	margin-bottom: 2rem;
 }
 
+li {
+	display: inline;
+}
+
 .Header {
 	text-align: center;
 	border-bottom: 8px double #f9f9f9;
@@ -27,19 +31,14 @@ body {
 	padding-bottom: 1rem;
 }
 
-
-.image {
+.image_container {
 	max-width: 100%;
 	position: relative;
-	border: 6px solid #06043d;
-	border-radius: 4px;
+	padding: 1rem;
 }
 
-li {
-	display: inline;
-}
 
-@media screen and (min-width: 50rem) {
+@media screen and (min-width: 15rem) {
 	body {
 		border-left: 4px solid #f9f9f9;
 		border-right: 4px solid #f9f9f9;
@@ -70,13 +69,16 @@ li {
 	}
 
 
-	.images {
+	.image_container {
 		display: table;
 		table-layout: fixed;
 		width: 100%;
 	}
 	
 	.image {
+		width: 100%;
+		border: 6px solid #06043d;
+		border-radius: 4px;
 		display: table-cell;
 		vertical-align: middle;
 	}

@@ -38,10 +38,10 @@ li {
 
 input {
 	max-width: 100%;
-	margin: 8px 8px auto;
-	padding: 12px 12px 12px 12px;
+	margin: 8px 8px 8px 8px;
+	padding: 8px 8px 8px 8px;
 	border: 1px solid #1f0b4a;
-	font-size: 18px;
+	font-size: 12px;
 	font-family: courier, monospace;
 	background-color: #bdc2c9;
 	color: #284475;
@@ -55,7 +55,7 @@ input:active[type="submit"] {
 	background-color: #fcfcf7;
 }
 
-@media screen and (min-width: 50rem) {
+@media screen and (min-width: 15rem) {
 	body {
 		border-left: 4px solid #f9f9f9;
 		border-right: 4px solid #f9f9f9;
