@@ -7,27 +7,28 @@
 		<title>My Moving Arch</title>
 		{% endif %}
 		<meta name="viewport" content="width=device-width">
-		<link rel='stylesheet' href='{{ url_for("static", filename="styles/visual_art.css") }}'>
+		<link rel='stylesheet' href='{{ url_for("static", filename="styles/visual.css") }}'>
 	</head>
 	<body>
 		<div id='opening'>
 			<div id='nav'>
 				<ul>
 					<li><a href='{{ url_for("main.index") }}'>Home</a></li>
-					<li><a href='{{ url_for("main.visual_art") }}'>Visual Art</a></li>
+					<li><a href='{{ url_for("main.visual") }}'>Visual</a></li>
 				</ul>
 			</div>
 		</div>
 		{% block content %}
 			<div id='content'>
 				<div id='page'>
-					<p>Visual Art Gallery</p>
+					<p>Visual Gallery</p>
 				</div>
 				<div class='galleries'>
 					<form action='' method='post'>
 						<input type='submit' name='submit_button' value='Robots'><br>
 						<input type='submit' name='submit_button' value='Milk and Honey'><br>
 						<input type='submit' name='submit_button' value='Sweet Tooth'><br>
+						<input type='submit' name='submit_button' value='Metric Topology'><br>
 					</form>
 				</div>
 			</div>

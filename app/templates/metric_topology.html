@@ -7,7 +7,11 @@
 		<title>My Moving Arch</title>
 		{% endif %}
 		<meta name="viewport" content="width=device-width">
-		<link rel='stylesheet' href='{{ url_for("static", filename="styles/index.css") }}'>
+		<link rel='stylesheet' href='{{ url_for("static", filename="styles/metric_topology.css") }}'>
+		<script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		<script type="text/javascript" src='{{ url_for("static", filename="js/metric_topology.js") }}' defer></script>
 	</head>
 	<body>
 		<div id='opening'>
@@ -20,18 +24,19 @@
 		</div>
 		{% block content %}
 			<div id='content'>
-				<div id='slideshow'>
+				<div id='math0'>
 				</div>
 				<div class='featuredgallery1'>
-					<p class="gallery"><a href='{{ url_for("main.metric_topology") }}'>Metric Topology</a></p>
+					<p class="gallery">Radius 15 radians</p>
 				</div>
 				<div class='featuredgallery2'>
-					<p class="gallery"><a href='{{ url_for("main.land_of_milk_and_honey") }}'>Milk and Honey</a></p>
+					<p class="gallery">Radius 10 radians</p>
 				</div>
 				<div class='featuredgallery3'>
-					<p class="gallery"><a href='{{ url_for("main.sweet_tooth") }}'>Sweet Tooth</a></p>
+					<p class="gallery">Radius 5 radians</p>
 				</div>
 			</div>
 		{% endblock %}
 	</body>
 </html>
+
