@@ -9,6 +9,7 @@ body {
 	max-width: 60rem;
 	margin: 0 auto;
 	color: #333333;
+	background-color: rgba(117, 158, 22, 0.05);
 }
 
 #nav {
@@ -37,6 +38,11 @@ li {
 	margin: 0 auto;
 }
 
+#ball0 {
+	padding: 1rem .5rem;
+	margin: 0 auto;
+}
+
 .featuredgallery0, 
 .featuredgallery1, 
 .featuredgallery2, 
@@ -53,8 +59,8 @@ p.gallery {
 
 @media screen and (min-width: 15rem) {
 	body {
-		border-left: 4px solid #f9f9f9;
-		border-right: 4px solid #f9f9f9;
+		border-left: 4px solid rgba(153, 119, 189, 0.05);
+		border-right: 4px solid rgba(153, 119, 189, 0.05);
 		padding: 1rem 2rem;
 	}
 }

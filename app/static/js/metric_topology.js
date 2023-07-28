@@ -219,6 +219,152 @@ for (let i = 7; i < 953; i = i + distance_2) {
 
 
 
+// Ball of radius delta inside of ball of radius epsilon ---------------------
+//
+//
+// ---------------------------------------------------------------------------
+var width_epsilon_delta_svg = 960;
+var height_epsilon_delta_svg = 600;
+
+var epsilon_ball_radius = 290;
+var delta_ball_radius = 120;
+
+var epsilon_delta_svg = d3.select("#ball0")
+  .append("svg")
+    .attr("viewBox", 
+	    "0 0 " 
+	    + width_epsilon_delta_svg 
+	    + " " 
+	    + height_epsilon_delta_svg);
+
+// The epsilon ball ----------------------------------------------------------
+epsilon_delta_svg.append("circle")
+    .style("stroke", "#9977bd")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3")
+    .style("fill", "#759e16")
+    .attr("cx", width_epsilon_delta_svg/2)
+    .attr("cy", height_epsilon_delta_svg/2)
+    .attr("r", epsilon_ball_radius);
+
+// The delta ball ------------------------------------------------------------
+epsilon_delta_svg.append("circle")
+    .style("stroke", "#9977bd")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3")
+    .style("fill", "#f5ffde")
+    .attr("cx", (width_epsilon_delta_svg/2) - 110)
+    .attr("cy", (height_epsilon_delta_svg/2) - 90)
+    .attr("r", delta_ball_radius);
+
+
+
+// Radius line in esilon ball ------------------------------------------------
+// We need a line extending from the middle of the ball
+// (width_epsilon_delta_svg/2, height_epsilon_delta_svg/2)
+// to a point on the circle enclosing the ball.
+// (width_epsilon_delta_svg/2 + x, height_epsilon_delta_svg/2 + x)
+// We establish this the easy way: Pythagorean Theorem with legs
+// of equal length.
+// So, we have that length as x = sqrt( ([epsilon_ball_radius]^2)/2 )
+epsilon_delta_svg.append("line")
+    .attr("x1", width_epsilon_delta_svg/2)
+    .attr("y1", height_epsilon_delta_svg/2)
+    .attr("x2", 
+	    (width_epsilon_delta_svg/2) 
+	    + Math.sqrt((epsilon_ball_radius**2)/2))
+    .attr("y2", 
+	    (height_epsilon_delta_svg/2)
+	    + Math.sqrt((epsilon_ball_radius**2)/2))
+    .style("stroke", "#f5ffde")
+    .style("stroke-width", 5);
+
+// Radius epsilon symbol ----------------------------------------------------- 
+epsilon_delta_svg.append("text")
+    .text("\u03B5")
+    .attr("x", width_epsilon_delta_svg/2 + 115)
+    .attr("y", height_epsilon_delta_svg/2 + 110)
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "42px")
+    .attr("fill", "#f5ffde");
+    
+
+// Radius line in delta ball -------------------------------------------------
+// We need a line extending from the middle of the ball
+// (width_epsilon_delta_svg/2 - 110, height_epsilon_delta_svg/2 - 90)
+// to a point on the circle enclosing the ball.
+// (width_epsilon_delta_svg/2 - 110 + x, height_epsilon_delta_svg/2 - 90 + x)
+// We establish this the easy way: Pythagorean Theorem with legs
+// of equal length.
+// So, we have that length as x = sqrt( ([delta_ball_radius]^2)/2 )
+epsilon_delta_svg.append("line")
+    .attr("x1", width_epsilon_delta_svg/2 - 110)
+    .attr("y1", height_epsilon_delta_svg/2 - 90)
+    .attr("x2", 
+	    (width_epsilon_delta_svg/2 - 110) 
+	    - Math.sqrt((delta_ball_radius**2)/2))
+    .attr("y2", 
+	    (height_epsilon_delta_svg/2 - 90)
+	    + Math.sqrt((delta_ball_radius**2)/2))
+    .style("stroke", "#759e16")
+    .style("stroke-width", 5);
+
+// Radius delta symbol -------------------------------------------------------
+epsilon_delta_svg.append("text")
+    .text("\u03B4")
+    .attr("x", width_epsilon_delta_svg/2 - 110 - 85)
+    .attr("y", height_epsilon_delta_svg/2 -90 + 55)
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "42px")
+    .attr("fill", "#759e16");
+
+// Point x in epsilon ball --------------------------------------------------- 
+epsilon_delta_svg.append("text")
+    .text("x")
+    .attr("x", width_epsilon_delta_svg/2 + 10)
+    .attr("y", height_epsilon_delta_svg/2)
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "42px")
+    .attr("fill", "#f5ffde");
+
+epsilon_delta_svg.append("circle")
+    .style("fill", "#f5ffde")
+    .attr("cx", width_epsilon_delta_svg/2)
+    .attr("cy", height_epsilon_delta_svg/2)
+    .attr("r", 5);
+
+// Point y in delta ball -----------------------------------------------------
+epsilon_delta_svg.append("text")
+    .text("y")
+    .attr("x", width_epsilon_delta_svg/2 - 110 + 10)
+    .attr("y", height_epsilon_delta_svg/2 - 90)
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "42px")
+    .attr("fill", "#759e16");
+
+epsilon_delta_svg.append("circle")
+    .style("fill", "#759e16")
+    .attr("cx", width_epsilon_delta_svg/2 - 110)
+    .attr("cy", height_epsilon_delta_svg/2 - 90)
+    .attr("r", 5);
+
+// Point z in delta ball -----------------------------------------------------
+epsilon_delta_svg.append("circle")
+    .style("fill", "#759e16")
+    .attr("cx", width_epsilon_delta_svg/2 - 90)
+    .attr("cy", height_epsilon_delta_svg/2 - 170)
+    .attr("r", 5);
+
+epsilon_delta_svg.append("text")
+    .text("z")
+    .attr("x", width_epsilon_delta_svg/2 - 90 - 30)
+    .attr("y", height_epsilon_delta_svg/2 - 170)
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "42px")
+    .attr("fill", "#759e16");
+
+
+
 
 
 // Two-dimensional Euclidean space filled with balls of radius r -------------
