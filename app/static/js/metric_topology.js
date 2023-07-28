@@ -1,4 +1,6 @@
 // One-dimensional real line filled with interval of a specified distance ----
+//
+//
 // ---------------------------------------------------------------------------
 // 4 intervals ---------------------------------------------------------------
 var w_svg_for_line = 960;
@@ -72,6 +74,8 @@ for (let i = 23; i < 937; i = i + distance_0) {
 	    .attr("fill", "none");
 }
 
+
+
 // ---------------------------------------------------------------------------
 // 8 intervals ---------------------------------------------------------------
 var svg_for_line_1 = d3.select("#math1")
@@ -137,6 +141,8 @@ for (let i = 23; i < 937; i = i + distance_1) {
 	    .attr("fill", "none");
 	
 }
+
+
 
 
 // ---------------------------------------------------------------------------
@@ -213,12 +219,70 @@ for (let i = 7; i < 953; i = i + distance_2) {
 
 
 
+
+
 // Two-dimensional Euclidean space filled with balls of radius r -------------
+//
+//
+// ---------------------------------------------------------------------------
+// radius r=18 nodes
+var w_3 = 960;
+var h_3 = 300;
+
+// Compute the number of nodes by taking the floor of 
+// 53407/(pi*[r^2])
+// 53407 comes from the following
+// For r=10, each node area is pi*[10^2]
+// Take the sum of the area of 170 such nodes to get 53407
+// If a total area larger than 53407 is desired, 
+// a greater number of nodes can be used in the sum
+var number_nodes_3 = 52;
+var nodes_set_3 = d3.range(number_nodes_3).map(function(d, i) {
+	return {radii_3: 18};
+});
+
+var the_simulation_3 = d3.forceSimulation(nodes_set_3)
+    .force("charge", d3.forceManyBody().strength(1))
+    .force("center", d3.forceCenter(w_3/2, h_3/2))
+    .force("collision", d3.forceCollide().radius(function(d) {
+	    return d.radii_3;
+    }));
+
+
+var svg_nodes_set_3 = d3.select(".featuredgallery0")
+  .append("svg")
+    .attr("viewBox", "0 0 " + w_3 + " " + h_3);
+
+var all_the_nodes_3 = svg_nodes_set_3.selectAll("circle")
+    .data(nodes_set_3)
+    .enter()
+  .append("circle")
+    .attr("r", function(d) {
+        return d.radii_3;	    
+    })
+    .style("fill", "#9977bd");
+
+the_simulation_3.on("tick", function() {
+	all_the_nodes_3
+	    .attr("cx", function(d) {return d.x;} )
+	    .attr("cy", function(d) {return d.y;} );
+});
+
+
+
+
 // ---------------------------------------------------------------------------
 // radius r=15 nodes
 var w_0 = 960;
 var h_0 = 300;
 
+// Compute the number of nodes by taking the floor of 
+// 53407/(pi*[r^2])
+// 53407 comes from the following
+// For r=10, each node area is pi*[10^2]
+// Take the sum of the area of 170 such nodes to get 53407
+// If a total area larger than 53407 is desired, 
+// a greater number of nodes can be used in the sum
 var number_nodes_0 = 75;
 var nodes_set_0 = d3.range(number_nodes_0).map(function(d, i) {
 	return {radii_0: 15};
@@ -257,6 +321,13 @@ the_simulation_0.on("tick", function() {
 var w_1 = 960;
 var h_1 = 300;
 
+// Compute the number of nodes by taking the floor of 
+// 53407/(pi*[r^2])
+// 53407 comes from the following
+// For r=10, each node area is pi*[10^2]
+// Take the sum of the area of 170 such nodes to get 53407
+// If a total area larger than 53407 is desired, 
+// a greater number of nodes can be used in the sum
 var number_nodes_1 = 170;
 var nodes_set_1 = d3.range(number_nodes_1).map(function(d, i) {
 	return {radii_1: 10};
@@ -295,6 +366,13 @@ the_simulation_1.on("tick", function() {
 var w_2 = 960;
 var h_2 = 300;
 
+// Compute the number of nodes by taking the floor of 
+// 53407/(pi*[r^2])
+// 53407 comes from the following
+// For r=10, each node area is pi*[10^2]
+// Take the sum of the area of 170 such nodes to get 53407
+// If a total area larger than 53407 is desired, 
+// a greater number of nodes can be used in the sum
 var number_nodes_2 = 679;
 var nodes_set_2 = d3.range(number_nodes_2).map(function(d, i) {
 	return {radii_2: 5};
