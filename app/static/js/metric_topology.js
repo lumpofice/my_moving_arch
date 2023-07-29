@@ -18,6 +18,10 @@ svg_for_line_0.append("line")
     .attr("x2", w_svg_for_line)
     .attr("y2", h_svg_for_line/2);
 
+
+// Outer parentheses spanning the entire line
+//
+//
 var parenthesis_open_0 = d3.path();
 var parenthesis_close_0 = d3.path();
 
@@ -75,6 +79,51 @@ for (let i = 23; i < 937; i = i + distance_0) {
 }
 
 
+// Middle parentheses spanning located between the outer parentheses
+// spanning the entire line
+//
+//
+var parenthesis_middles_open_0 = d3.path();
+var parenthesis_middles_close_0 = d3.path();
+
+for (var i = 23 + distance_0/2; i < 937; i = i + distance_0) {
+	parenthesis_middles_open_0.moveTo(
+		i, 
+		(h_svg_for_line/2) + (vertical_distance/3)
+	);
+	parenthesis_middles_open_0.quadraticCurveTo(
+		i - convexity, 
+		h_svg_for_line/2, 
+		i, 
+		(h_svg_for_line/2) - (vertical_distance/3)
+	);
+	
+	svg_for_line_0.append("path")
+	    .style("stroke", "#696a61")
+	    .style("stroke-width", parenthesis_width)
+	    .style("stroke-dasharray", "3 3")
+	    .attr("d", parenthesis_middles_open_0)
+	    .attr("fill", "none");
+	
+	parenthesis_middles_close_0.moveTo(
+		i - 2*(drawn_convexity + parenthesis_width), 
+		(h_svg_for_line/2) + (vertical_distance/3)
+	);
+	parenthesis_middles_close_0.quadraticCurveTo(
+		i - 2*(drawn_convexity + parenthesis_width) + convexity, 
+		h_svg_for_line/2,
+		i -2*(drawn_convexity + parenthesis_width),
+		(h_svg_for_line/2) - (vertical_distance/3)
+	);
+
+	svg_for_line_0.append("path")
+	    .style("stroke", "#696a61")
+	    .style("stroke-width", parenthesis_width)
+	    .style("stroke-dasharray", "3 3")
+	    .attr("d", parenthesis_middles_close_0)
+	    .attr("fill", "none");
+}
+
 
 // ---------------------------------------------------------------------------
 // 8 intervals ---------------------------------------------------------------
@@ -90,6 +139,10 @@ svg_for_line_1.append("line")
     .attr("x2", w_svg_for_line)
     .attr("y2", h_svg_for_line/2);
 
+
+// Outer parentheses spanning the entire line
+//
+//
 var parenthesis_open_1 = d3.path();
 var parenthesis_close_1 = d3.path();
 
@@ -142,6 +195,51 @@ for (let i = 23; i < 937; i = i + distance_1) {
 	
 }
 
+
+// Middle parentheses spanning located between the outer parentheses
+// spanning the entire line
+//
+//
+var parenthesis_middles_open_1 = d3.path();
+var parenthesis_middles_close_1 = d3.path();
+
+for (var i = 23 + distance_1/2; i < 937; i = i + distance_1) {
+	parenthesis_middles_open_1.moveTo(
+		i, 
+		(h_svg_for_line/2) + (vertical_distance/3)
+	);
+	parenthesis_middles_open_1.quadraticCurveTo(
+		i - convexity, 
+		h_svg_for_line/2, 
+		i, 
+		(h_svg_for_line/2) - (vertical_distance/3)
+	);
+	
+	svg_for_line_1.append("path")
+	    .style("stroke", "#696a61")
+	    .style("stroke-width", parenthesis_width)
+	    .style("stroke-dasharray", "3 3")
+	    .attr("d", parenthesis_middles_open_1)
+	    .attr("fill", "none");
+	
+	parenthesis_middles_close_1.moveTo(
+		i - 2*(drawn_convexity + parenthesis_width), 
+		(h_svg_for_line/2) + (vertical_distance/3)
+	);
+	parenthesis_middles_close_1.quadraticCurveTo(
+		i - 2*(drawn_convexity + parenthesis_width) + convexity, 
+		h_svg_for_line/2,
+		i -2*(drawn_convexity + parenthesis_width),
+		(h_svg_for_line/2) - (vertical_distance/3)
+	);
+
+	svg_for_line_1.append("path")
+	    .style("stroke", "#696a61")
+	    .style("stroke-width", parenthesis_width)
+	    .style("stroke-dasharray", "3 3")
+	    .attr("d", parenthesis_middles_close_1)
+	    .attr("fill", "none");
+}
 
 
 
