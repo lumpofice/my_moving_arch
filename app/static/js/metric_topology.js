@@ -29,7 +29,7 @@ var parenthesis_close_0 = d3.path();
 // when convexity is 40
 var convexity = 40;
 
-var drawn_convexity = 18;
+var drawn_convexity = 18; // x distance from vertex to endpoints of parentheses
 var vertical_distance = 90;
 
 // The left-most pixel of the vertex of the parenthesis to i is 23px 
@@ -38,7 +38,8 @@ var parenthesis_width = 5;
 
 // Given n is "number of intervals", increment is 
 // (960 - [ n*( (2*parenthesis_width) + (2*drawn_convexity) ) ] )/n
-var increment_0 = 194;
+var increment_0 = 194; // x distance from endpoints of open parenthesis
+// to endpoints of closed parenthesis
 
 var distance_0 = increment_0 + (2*drawn_convexity) + (2*parenthesis_width);  
 
@@ -86,7 +87,10 @@ for (let i = 23; i < 960; i = i + distance_0) {
 var parenthesis_middles_open_0 = d3.path();
 var parenthesis_middles_close_0 = d3.path();
 
-for (var i = 23 + distance_0/2; i < 960; i = i + distance_0) {
+
+for (var i = 23 + distance_0/2; 
+	i < 960 - distance_0; 
+	i = i + distance_0) {
 	parenthesis_middles_open_0.moveTo(
 		i, 
 		(h_svg_for_line/2) + (vertical_distance/3)
@@ -104,7 +108,11 @@ for (var i = 23 + distance_0/2; i < 960; i = i + distance_0) {
 	    .style("stroke-dasharray", "3 3")
 	    .attr("d", parenthesis_middles_open_0)
 	    .attr("fill", "none");
-	
+}
+
+for (var i = 23 + distance_0 + distance_0/2; 
+	i < 960; 
+	i = i + distance_0) {
 	parenthesis_middles_close_0.moveTo(
 		i - 2*(drawn_convexity + parenthesis_width), 
 		(h_svg_for_line/2) + (vertical_distance/3)
@@ -155,7 +163,8 @@ var parenthesis_close_1 = d3.path();
 
 // Given n is "number of intervals", increment is 
 // (960 - [ n*( (2*parenthesis_width) + (2*drawn_convexity) ) ] )/n
-var increment_1 = 74;
+var increment_1 = 74; // x distance from endpoints of open parenthesis
+// to endpoints of closed parenthesis
 
 var distance_1 = increment_1 + (2*drawn_convexity) + (2*parenthesis_width);  
 
@@ -204,7 +213,9 @@ for (let i = 23; i < 960; i = i + distance_1) {
 var parenthesis_middles_open_1 = d3.path();
 var parenthesis_middles_close_1 = d3.path();
 
-for (var i = 23 + distance_1/2; i < 960; i = i + distance_1) {
+for (var i = 23 + distance_1/2; 
+	i < 960 - distance_1; 
+	i = i + distance_1) {
 	parenthesis_middles_open_1.moveTo(
 		i, 
 		(h_svg_for_line/2) + (vertical_distance/3)
@@ -222,7 +233,11 @@ for (var i = 23 + distance_1/2; i < 960; i = i + distance_1) {
 	    .style("stroke-dasharray", "3 3")
 	    .attr("d", parenthesis_middles_open_1)
 	    .attr("fill", "none");
-	
+}	
+
+for (var i = 23 + distance_1 + distance_1/2; 
+	i < 960; 
+	i = i + distance_1) {
 	parenthesis_middles_close_1.moveTo(
 		i - 2*(drawn_convexity + parenthesis_width), 
 		(h_svg_for_line/2) + (vertical_distance/3)
@@ -322,7 +337,9 @@ for (let i = 23; i < 960; i = i + distance_2) {
 var parenthesis_middles_open_2 = d3.path();
 var parenthesis_middles_close_2 = d3.path();
 
-for (var i = 23 + distance_2/2; i < 960; i = i + distance_2) {
+for (var i = 23 + distance_2/2; 
+	i < 960 - distance_2; 
+	i = i + distance_2) {
 	parenthesis_middles_open_2.moveTo(
 		i, 
 		(h_svg_for_line/2) + (vertical_distance/3)
@@ -340,7 +357,11 @@ for (var i = 23 + distance_2/2; i < 960; i = i + distance_2) {
 	    .style("stroke-dasharray", "3 3")
 	    .attr("d", parenthesis_middles_open_2)
 	    .attr("fill", "none");
-	
+}	
+
+for (var i = 23 + distance_2 + distance_2/2; 
+	i < 960; 
+	i = i + distance_2) {
 	parenthesis_middles_close_2.moveTo(
 		i - 2*(drawn_convexity + parenthesis_width), 
 		(h_svg_for_line/2) + (vertical_distance/3)
