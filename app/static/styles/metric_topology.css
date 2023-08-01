@@ -38,6 +38,22 @@ li {
 	margin: 0 auto;
 }
 
+#block0 {
+	padding: 1rem .5rem;
+	margin: 0 auto;
+}
+
+#topic>ul {
+	"list-style": none;
+}
+
+#block1,
+#block2 {
+	width: 50%;
+	float: left;
+	margin: 0 auto;
+}
+
 #math0,
 #math1,
 #math2 {

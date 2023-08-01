@@ -1,3 +1,295 @@
+// Drawing a rectangular block to represent the BLOCK OF BUTTER --------------
+// 
+//
+var w_block = 960;
+var h_block = 300;
+
+var svg_block = d3.select("#block0")
+  .append("svg")
+    .attr("viewBox", "0 0 " + w_block + " " + h_block);
+
+// BLOCK OF BUTTER label
+svg_block.append("text")
+    .text("BLOCK OF BUTTER")
+    .attr("x", w_block*(5/15))
+    .attr("y", h_block*(3/10))
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "32px")
+    .attr("fill", "#696a61");
+
+
+// back-facing long edge of block
+// top line
+svg_block.append("line")
+    .attr("x1", w_block*(3/15))
+    .attr("y1", h_block*(1/10))
+    .attr("x2", w_block*(14/15))
+    .attr("y2", h_block*(1/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// bottom line
+svg_block.append("line")
+    .attr("x1", w_block*(3/15))
+    .attr("y1", h_block*(6/10))
+    .attr("x2", w_block*(14/15))
+    .attr("y2", h_block*(6/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// front-facing long edge of block
+// top line
+svg_block.append("line")
+    .attr("x1", w_block*(1/15))
+    .attr("y1", h_block*(4/10))
+    .attr("x2", w_block*(12/15))
+    .attr("y2", h_block*(4/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// bottom line
+svg_block.append("line")
+    .attr("x1", w_block*(1/15))
+    .attr("y1", h_block*(9/10))
+    .attr("x2", w_block*(12/15))
+    .attr("y2", h_block*(9/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// right-facing short edge of block
+// top line
+svg_block.append("line")
+    .attr("x1", w_block*(12/15))
+    .attr("y1", h_block*(4/10))
+    .attr("x2", w_block*(14/15))
+    .attr("y2", h_block*(1/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// left vertical line
+svg_block.append("line")
+    .attr("x1", w_block*(12/15))
+    .attr("y1", h_block*(4/10))
+    .attr("x2", w_block*(12/15))
+    .attr("y2", h_block*(9/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// bottom line
+svg_block.append("line")
+    .attr("x1", w_block*(12/15))
+    .attr("y1", h_block*(9/10))
+    .attr("x2", w_block*(14/15))
+    .attr("y2", h_block*(6/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// right vertical line
+svg_block.append("line")
+    .attr("x1", w_block*(14/15))
+    .attr("y1", h_block*(6/10))
+    .attr("x2", w_block*(14/15))
+    .attr("y2", h_block*(1/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// left-facing short edge of block
+// top line
+svg_block.append("line")
+    .attr("x1", w_block*(3/15))
+    .attr("y1", h_block*(1/10))
+    .attr("x2", w_block*(1/15))
+    .attr("y2", h_block*(4/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// left vertical line
+svg_block.append("line")
+    .attr("x1", w_block*(1/15))
+    .attr("y1", h_block*(4/10))
+    .attr("x2", w_block*(1/15))
+    .attr("y2", h_block*(9/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// bottom line
+svg_block.append("line")
+    .attr("x1", w_block*(1/15))
+    .attr("y1", h_block*(9/10))
+    .attr("x2", w_block*(3/15))
+    .attr("y2", h_block*(6/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// right vertical line
+svg_block.append("line")
+    .attr("x1", w_block*(3/15))
+    .attr("y1", h_block*(6/10))
+    .attr("x2", w_block*(3/15))
+    .attr("y2", h_block*(1/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// Big R indicating the Right Face of this rectangular block of butter
+svg_block.append("text")
+    .text("R")
+    .attr("x", w_block*(51/60))
+    .attr("y", h_block*(11/20))
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "82px")
+    .attr("fill", "#d079a2")
+    .attr("stroke", "#696a61")
+    .attr("stroke-width", 2);
+
+// Drawing a cross section of the BLOCK OF BUTTER ----------------------------
+// 
+//
+var w_cross_block = 480;
+var h_cross_block = 380;
+var svg_cross_1_block = d3.select("#block1")
+  .append("svg")
+    .attr("viewBox", "0 0 " + w_cross_block + " " + h_cross_block);
+
+// i) label
+svg_cross_1_block.append("text")
+    .text("i)")
+    .attr("x", w_cross_block/2)
+    .attr("y", h_cross_block*(1/10))
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "32px")
+    .attr("fill", "#696a61");
+
+// top line
+svg_cross_1_block.append("line")
+    .attr("x1", w_cross_block*(1/15))
+    .attr("y1", h_cross_block*(2/10))
+    .attr("x2", w_cross_block*(14/15))
+    .attr("y2", h_cross_block*(2/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// right vertical line
+svg_cross_1_block.append("line")
+    .attr("x1", w_cross_block*(14/15))
+    .attr("y1", h_cross_block*(2/10))
+    .attr("x2", w_cross_block*(14/15))
+    .attr("y2", h_cross_block*(8/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// bottom line
+svg_cross_1_block.append("line")
+    .attr("x1", w_cross_block*(14/15))
+    .attr("y1", h_cross_block*(8/10))
+    .attr("x2", w_cross_block*(1/15))
+    .attr("y2", h_cross_block*(8/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// left vertical line
+svg_cross_1_block.append("line")
+    .attr("x1", w_cross_block*(1/15))
+    .attr("y1", h_cross_block*(8/10))
+    .attr("x2", w_cross_block*(1/15))
+    .attr("y2", h_cross_block*(2/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+
+// Drawing a cross section of the BLOCK OF BUTTER ----------------------------
+// 
+//
+var svg_cross_4_block = d3.select("#block2")
+  .append("svg")
+    .attr("viewBox", "0 0 " + w_cross_block + " " + h_cross_block);
+
+// ii) label
+svg_cross_4_block.append("text")
+    .text("ii)")
+    .attr("x", w_cross_block/2)
+    .attr("y", h_cross_block*(1/10))
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "32px")
+    .attr("fill", "#696a61");
+
+// top line
+svg_cross_4_block.append("line")
+    .attr("x1", w_cross_block*(1/15))
+    .attr("y1", h_cross_block*(2/10))
+    .attr("x2", w_cross_block*(14/15))
+    .attr("y2", h_cross_block*(2/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// right vertical line
+svg_cross_4_block.append("line")
+    .attr("x1", w_cross_block*(14/15))
+    .attr("y1", h_cross_block*(2/10))
+    .attr("x2", w_cross_block*(14/15))
+    .attr("y2", h_cross_block*(8/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// bottom line
+svg_cross_4_block.append("line")
+    .attr("x1", w_cross_block*(14/15))
+    .attr("y1", h_cross_block*(8/10))
+    .attr("x2", w_cross_block*(1/15))
+    .attr("y2", h_cross_block*(8/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// left vertical line
+svg_cross_4_block.append("line")
+    .attr("x1", w_cross_block*(1/15))
+    .attr("y1", h_cross_block*(8/10))
+    .attr("x2", w_cross_block*(1/15))
+    .attr("y2", h_cross_block*(2/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// middle horizontal line
+svg_cross_4_block.append("line")
+    .attr("x1", w_cross_block*(1/15))
+    .attr("y1", h_cross_block*(5/10))
+    .attr("x2", w_cross_block*(14/15))
+    .attr("y2", h_cross_block*(5/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// middle vertical line
+svg_cross_4_block.append("line")
+    .attr("x1", w_cross_block*(7.5/15))
+    .attr("y1", h_cross_block*(2/10))
+    .attr("x2", w_cross_block*(7.5/15))
+    .attr("y2", h_cross_block*(8/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+
+
 // One-dimensional real line filled with interval of a specified distance ----
 //
 //
