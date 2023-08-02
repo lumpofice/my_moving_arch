@@ -212,7 +212,8 @@ svg_cross_1_block.append("line")
     .style("stroke-dasharray", "3 3");
 
 
-// Drawing a cross section of the BLOCK OF BUTTER ----------------------------
+// Drawing a cross section of the BLOCK OF BUTTER after breaking it down -----
+// to 4 sticks of butter -----------------------------------------------------
 // 
 //
 var svg_cross_4_block = d3.select("#block2")
@@ -287,6 +288,68 @@ svg_cross_4_block.append("line")
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
     .style("stroke-dasharray", "3 3");
+
+
+
+// Cross sections of butter bearing center points ----------------------------
+//
+//
+d3.select("#center_point")
+    .on("click", function() {
+	// Drawing a cross section of the BLOCK OF BUTTER with a center point -
+	// 
+	//
+	
+	// center point
+	svg_cross_1_block.append("circle")
+	    .style("fill", "#696a61")
+	    .attr("cx", w_cross_block*(7.5/15))
+	    .attr("cy", h_cross_block*(5/10))
+	    .attr("r", 5);
+
+	
+	
+	// Drawing a cross section of the BLOCK OF BUTTER after breaking it --
+	// down to 4 sticks of butter with center points ---------------------
+	// 
+	//
+	// center points
+	svg_cross_4_block.append("circle")
+	    .style("fill", "#696a61")
+	    .attr("cx", w_cross_block*(4.25/15))
+	    .attr("cy", h_cross_block*(3.5/10))
+	    .attr("r", 5);
+
+	svg_cross_4_block.append("circle")
+	    .style("fill", "#696a61")
+	    .attr("cx", w_cross_block*(10.75/15))
+	    .attr("cy", h_cross_block*(3.5/10))
+	    .attr("r", 5);
+
+	svg_cross_4_block.append("circle")
+	    .style("fill", "#696a61")
+	    .attr("cx", w_cross_block*(4.25/15))
+	    .attr("cy", h_cross_block*(6.5/10))
+	    .attr("r", 5);
+
+	svg_cross_4_block.append("circle")
+	    .style("fill", "#696a61")
+	    .attr("cx", w_cross_block*(10.75/15))
+	    .attr("cy", h_cross_block*(6.5/10))
+	    .attr("r", 5);
+});
+
+
+// One-dimensional real line filled with intervals of a specified distance ---
+//
+//
+// ---------------------------------------------------------------------------
+// 4 intervals ---------------------------------------------------------------
+var w_svg_for_line = 960;
+var h_svg_for_line = 150;
+
+
+
 
 
 
