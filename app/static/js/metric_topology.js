@@ -340,6 +340,245 @@ d3.select("#center_point")
 });
 
 
+// Drawing a rectangle; breaking it down -------------------------------------
+// to 4 subrectangle; then drawing another rectangle within by the click of --
+// a button. The user has buttons for all three choices: drawing a rectangle -
+// of the same size; smaller; or bigger --------------------------------------
+// 
+//
+
+
+var svg_rect_4_plus_1 = d3.select("#block3")
+  .append("svg")
+    .attr("viewBox", "0 0 " + w_cross_block + " " + h_cross_block);
+
+
+// top line
+svg_rect_4_plus_1.append("line")
+    .attr("x1", w_cross_block*(1/15))
+    .attr("y1", h_cross_block*(2/10))
+    .attr("x2", w_cross_block*(14/15))
+    .attr("y2", h_cross_block*(2/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// right vertical line
+svg_rect_4_plus_1.append("line")
+    .attr("x1", w_cross_block*(14/15))
+    .attr("y1", h_cross_block*(2/10))
+    .attr("x2", w_cross_block*(14/15))
+    .attr("y2", h_cross_block*(8/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// bottom line
+svg_rect_4_plus_1.append("line")
+    .attr("x1", w_cross_block*(14/15))
+    .attr("y1", h_cross_block*(8/10))
+    .attr("x2", w_cross_block*(1/15))
+    .attr("y2", h_cross_block*(8/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// left vertical line
+svg_rect_4_plus_1.append("line")
+    .attr("x1", w_cross_block*(1/15))
+    .attr("y1", h_cross_block*(8/10))
+    .attr("x2", w_cross_block*(1/15))
+    .attr("y2", h_cross_block*(2/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// middle horizontal line
+svg_rect_4_plus_1.append("line")
+    .attr("x1", w_cross_block*(1/15))
+    .attr("y1", h_cross_block*(5/10))
+    .attr("x2", w_cross_block*(14/15))
+    .attr("y2", h_cross_block*(5/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// middle vertical line
+svg_rect_4_plus_1.append("line")
+    .attr("x1", w_cross_block*(7.5/15))
+    .attr("y1", h_cross_block*(2/10))
+    .attr("x2", w_cross_block*(7.5/15))
+    .attr("y2", h_cross_block*(8/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+
+// center points
+svg_rect_4_plus_1.append("circle")
+    .style("fill", "#696a61")
+    .attr("cx", w_cross_block*(4.25/15))
+    .attr("cy", h_cross_block*(3.5/10))
+    .attr("r", 5);
+
+svg_rect_4_plus_1.append("circle")
+    .style("fill", "#696a61")
+    .attr("cx", w_cross_block*(10.75/15))
+    .attr("cy", h_cross_block*(3.5/10))
+    .attr("r", 5);
+
+svg_rect_4_plus_1.append("circle")
+    .style("fill", "#696a61")
+    .attr("cx", w_cross_block*(4.25/15))
+    .attr("cy", h_cross_block*(6.5/10))
+    .attr("r", 5);
+
+svg_rect_4_plus_1.append("circle")
+    .style("fill", "#696a61")
+    .attr("cx", w_cross_block*(10.75/15))
+    .attr("cy", h_cross_block*(6.5/10))
+    .attr("r", 5);
+
+// Drawing the same size rectangle within ------------------------------------
+//
+//
+d3.select("#same_size")
+    .on("click", function() {
+	    // top
+	    svg_rect_4_plus_1.append("line")
+	        .attr("x1", w_cross_block*(6/15))
+	        .attr("y1", h_cross_block*(3/10))
+	        .attr("x2", w_cross_block*(12.5/15))
+	        .attr("y2", h_cross_block*(3/10))
+	        .style("stroke", "#d079a2")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+
+	    // right vertical side
+	    svg_rect_4_plus_1.append("line")
+	        .attr("x1", w_cross_block*(12.5/15))
+	        .attr("y1", h_cross_block*(3/10))
+	        .attr("x2", w_cross_block*(12.5/15))
+	        .attr("y2", h_cross_block*(6/10))
+	        .style("stroke", "#d079a2")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+	    
+	    // bottom
+	    svg_rect_4_plus_1.append("line")
+	        .attr("x1", w_cross_block*(12.5/15))
+	        .attr("y1", h_cross_block*(6/10))
+	        .attr("x2", w_cross_block*(6/15))
+	        .attr("y2", h_cross_block*(6/10))
+	        .style("stroke", "#d079a2")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+
+	    // left vertical side
+	    svg_rect_4_plus_1.append("line")
+	        .attr("x1", w_cross_block*(6/15))
+	        .attr("y1", h_cross_block*(6/10))
+	        .attr("x2", w_cross_block*(6/15))
+	        .attr("y2", h_cross_block*(3/10))
+	        .style("stroke", "#d079a2")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+    });
+
+// Drawing the smaller rectangle within --------------------------------------
+//
+//
+d3.select("#smaller_size")
+    .on("click", function() {
+	    // top
+	    svg_rect_4_plus_1.append("line")
+	        .attr("x1", w_cross_block*(1.5/15))
+	        .attr("y1", h_cross_block*(6.5/10))
+	        .attr("x2", w_cross_block*(4.5/15))
+	        .attr("y2", h_cross_block*(6.5/10))
+	        .style("stroke", "#d079a2")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+
+	    // right vertical side
+	    svg_rect_4_plus_1.append("line")
+	        .attr("x1", w_cross_block*(4.5/15))
+	        .attr("y1", h_cross_block*(6.5/10))
+	        .attr("x2", w_cross_block*(4.5/15))
+	        .attr("y2", h_cross_block*(7.5/10))
+	        .style("stroke", "#d079a2")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+	    
+	    // bottom
+	    svg_rect_4_plus_1.append("line")
+	        .attr("x1", w_cross_block*(4.5/15))
+	        .attr("y1", h_cross_block*(7.5/10))
+	        .attr("x2", w_cross_block*(1.5/15))
+	        .attr("y2", h_cross_block*(7.5/10))
+	        .style("stroke", "#d079a2")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+
+	    // left vertical side
+	    svg_rect_4_plus_1.append("line")
+	        .attr("x1", w_cross_block*(1.5/15))
+	        .attr("y1", h_cross_block*(7.5/10))
+	        .attr("x2", w_cross_block*(1.5/15))
+	        .attr("y2", h_cross_block*(6.5/10))
+	        .style("stroke", "#d079a2")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+    });
+
+// Drawing the larger rectangle within ---------------------------------------
+//
+//
+d3.select("#larger_size")
+    .on("click", function() {
+	    // top
+	    svg_rect_4_plus_1.append("line")
+	        .attr("x1", w_cross_block*(2.5/15))
+	        .attr("y1", h_cross_block*(2.25/10))
+	        .attr("x2", w_cross_block*(10.5/15))
+	        .attr("y2", h_cross_block*(2.25/10))
+	        .style("stroke", "#d079a2")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+
+	    // right vertical side
+	    svg_rect_4_plus_1.append("line")
+	        .attr("x1", w_cross_block*(10.5/15))
+	        .attr("y1", h_cross_block*(2.25/10))
+	        .attr("x2", w_cross_block*(10.5/15))
+	        .attr("y2", h_cross_block*(6.75/10))
+	        .style("stroke", "#d079a2")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+	    
+	    // bottom
+	    svg_rect_4_plus_1.append("line")
+	        .attr("x1", w_cross_block*(10.5/15))
+	        .attr("y1", h_cross_block*(6.75/10))
+	        .attr("x2", w_cross_block*(2.5/15))
+	        .attr("y2", h_cross_block*(6.75/10))
+	        .style("stroke", "#d079a2")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+
+	    // left vertical side
+	    svg_rect_4_plus_1.append("line")
+	        .attr("x1", w_cross_block*(2.5/15))
+	        .attr("y1", h_cross_block*(6.75/10))
+	        .attr("x2", w_cross_block*(2.5/15))
+	        .attr("y2", h_cross_block*(2.25/10))
+	        .style("stroke", "#d079a2")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+    });
+
+
+
 // One-dimensional real line filled with intervals of a specified distance ---
 //
 //
@@ -1106,195 +1345,3 @@ the_simulation_3.on("tick", function() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-//// ---------------------------------------------------------------------------
-//// radius r=18 nodes
-//var w_3 = 960;
-//var h_3 = 300;
-//
-//// Compute the number of nodes by taking the floor of 
-//// 53407/(pi*[r^2])
-//// 53407 comes from the following
-//// For r=10, each node area is pi*[10^2]
-//// Take the sum of the area of 170 such nodes to get 53407
-//// If a total area larger than 53407 is desired, 
-//// a greater number of nodes can be used in the sum
-//var number_nodes_3 = 52;
-//var nodes_set_3 = d3.range(number_nodes_3).map(function(d, i) {
-//	return {radii_3: 18};
-//});
-//
-//var the_simulation_3 = d3.forceSimulation(nodes_set_3)
-//    .force("charge", d3.forceManyBody().strength(1))
-//    .force("center", d3.forceCenter(w_3/2, h_3/2))
-//    .force("collision", d3.forceCollide().radius(function(d) {
-//	    return d.radii_3;
-//    }));
-//
-//
-//var svg_nodes_set_3 = d3.select(".featuredgallery0")
-//  .append("svg")
-//    .attr("viewBox", "0 0 " + w_3 + " " + h_3);
-//
-//var all_the_nodes_3 = svg_nodes_set_3.selectAll("circle")
-//    .data(nodes_set_3)
-//    .enter()
-//  .append("circle")
-//    .attr("r", function(d) {
-//        return d.radii_3;	    
-//    })
-//    .style("fill", "#9977bd");
-//
-//the_simulation_3.on("tick", function() {
-//	all_the_nodes_3
-//	    .attr("cx", function(d) {return d.x;} )
-//	    .attr("cy", function(d) {return d.y;} );
-//});
-//
-//
-//
-//
-//// ---------------------------------------------------------------------------
-//// radius r=15 nodes
-//var w_0 = 960;
-//var h_0 = 300;
-//
-//// Compute the number of nodes by taking the floor of 
-//// 53407/(pi*[r^2])
-//// 53407 comes from the following
-//// For r=10, each node area is pi*[10^2]
-//// Take the sum of the area of 170 such nodes to get 53407
-//// If a total area larger than 53407 is desired, 
-//// a greater number of nodes can be used in the sum
-//var number_nodes_0 = 75;
-//var nodes_set_0 = d3.range(number_nodes_0).map(function(d, i) {
-//	return {radii_0: 15};
-//});
-//
-//var the_simulation_0 = d3.forceSimulation(nodes_set_0)
-//    .force("charge", d3.forceManyBody().strength(1))
-//    .force("center", d3.forceCenter(w_0/2, h_0/2))
-//    .force("collision", d3.forceCollide().radius(function(d) {
-//	    return d.radii_0;
-//    }));
-//
-//
-//var svg_nodes_set_0 = d3.select(".featuredgallery1")
-//  .append("svg")
-//    .attr("viewBox", "0 0 " + w_0 + " " + h_0);
-//
-//var all_the_nodes_0 = svg_nodes_set_0.selectAll("circle")
-//    .data(nodes_set_0)
-//    .enter()
-//  .append("circle")
-//    .attr("r", function(d) {
-//        return d.radii_0;	    
-//    })
-//    .style("fill", "#9977bd");
-//
-//the_simulation_0.on("tick", function() {
-//	all_the_nodes_0
-//	    .attr("cx", function(d) {return d.x;} )
-//	    .attr("cy", function(d) {return d.y;} );
-//});
-//
-//
-//// ---------------------------------------------------------------------------
-//// radius r=10 nodes
-//var w_1 = 960;
-//var h_1 = 300;
-//
-//// Compute the number of nodes by taking the floor of 
-//// 53407/(pi*[r^2])
-//// 53407 comes from the following
-//// For r=10, each node area is pi*[10^2]
-//// Take the sum of the area of 170 such nodes to get 53407
-//// If a total area larger than 53407 is desired, 
-//// a greater number of nodes can be used in the sum
-//var number_nodes_1 = 170;
-//var nodes_set_1 = d3.range(number_nodes_1).map(function(d, i) {
-//	return {radii_1: 10};
-//});
-//
-//var the_simulation_1 = d3.forceSimulation(nodes_set_1)
-//    .force("charge", d3.forceManyBody().strength(1))
-//    .force("center", d3.forceCenter(w_1/2, h_1/2))
-//    .force("collision", d3.forceCollide().radius(function(d) {
-//	    return d.radii_1;
-//    }));
-//
-//
-//var svg_nodes_set_1 = d3.select(".featuredgallery2")
-//  .append("svg")
-//    .attr("viewBox", "0 0 " + w_1 + " " + h_1);
-//
-//var all_the_nodes_1 = svg_nodes_set_1.selectAll("circle")
-//    .data(nodes_set_1)
-//    .enter()
-//  .append("circle")
-//    .attr("r", function(d) {
-//        return d.radii_1;	    
-//    })
-//    .style("fill", "#9977bd");
-//
-//the_simulation_1.on("tick", function() {
-//	all_the_nodes_1
-//	    .attr("cx", function(d) {return d.x;} )
-//	    .attr("cy", function(d) {return d.y;} );
-//});
-//
-//
-//// ---------------------------------------------------------------------------
-//// radius r=5 nodes
-//var w_2 = 960;
-//var h_2 = 300;
-//
-//// Compute the number of nodes by taking the floor of 
-//// 53407/(pi*[r^2])
-//// 53407 comes from the following
-//// For r=10, each node area is pi*[10^2]
-//// Take the sum of the area of 170 such nodes to get 53407
-//// If a total area larger than 53407 is desired, 
-//// a greater number of nodes can be used in the sum
-//var number_nodes_2 = 679;
-//var nodes_set_2 = d3.range(number_nodes_2).map(function(d, i) {
-//	return {radii_2: 5};
-//});
-//
-//var the_simulation_2 = d3.forceSimulation(nodes_set_2)
-//    .force("charge", d3.forceManyBody().strength(1))
-//    .force("center", d3.forceCenter(w_2/2, h_2/2))
-//    .force("collision", d3.forceCollide().radius(function(d) {
-//	    return d.radii_2;
-//    }));
-//
-//
-//var svg_nodes_set_2 = d3.select(".featuredgallery3")
-//  .append("svg")
-//    .attr("viewBox", "0 0 " + w_2 + " " + h_2);
-//
-//var all_the_nodes_2 = svg_nodes_set_2.selectAll("circle")
-//    .data(nodes_set_2)
-//    .enter()
-//  .append("circle")
-//    .attr("r", function(d) {
-//        return d.radii_2;	    
-//    })
-//    .style("fill", "#9977bd");
-//
-//the_simulation_2.on("tick", function() {
-//	all_the_nodes_2
-//	    .attr("cx", function(d) {return d.x;} )
-//	    .attr("cy", function(d) {return d.y;} );
-//});
-//
