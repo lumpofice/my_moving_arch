@@ -541,23 +541,17 @@ svg_cross_3_and_1_several_block.append("circle")
 
 
 
-
-// Drawing a rectangle; breaking it down -------------------------------------
-// to 4 subrectangles; then allowing the user to draw another rectangle ------
-// within by the click of ----------------------------------------------------
-// a button. The user has buttons for all three choices: drawing a rectangle -
-// of the same size; smaller; or bigger --------------------------------------
-// 
+// Drawing a cross section of the BLOCK OF BUTTER after breaking it-----------
+// down to 2 sticks of butter of one size, several sticks of butter ----------
+// of a second size, and several sticks of butter of a third size ------------
 //
-
-
-var svg_rect_4_plus_1 = d3.select("#block5")
+//
+var svg_cross_2_and_2_several_block = d3.select("#block4")
   .append("svg")
     .attr("viewBox", "0 0 " + w_cross_block + " " + h_cross_block);
 
-
 // top line
-svg_rect_4_plus_1.append("line")
+svg_cross_2_and_2_several_block.append("line")
     .attr("x1", w_cross_block*(1/15))
     .attr("y1", h_cross_block*(2/10))
     .attr("x2", w_cross_block*(14/15))
@@ -566,8 +560,28 @@ svg_rect_4_plus_1.append("line")
     .style("stroke-width", 5)
     .style("stroke-dasharray", "3 3");
 
+// middle vertical line in top left stick of butter
+svg_cross_2_and_2_several_block.append("line")
+    .attr("x1", w_cross_block*(4.25/15))
+    .attr("y1", h_cross_block*(2/10))
+    .attr("x2", w_cross_block*(4.25/15))
+    .attr("y2", h_cross_block*(5/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// middle horizontal line in top left stick of butter
+svg_cross_2_and_2_several_block.append("line")
+    .attr("x1", w_cross_block*(1/15))
+    .attr("y1", h_cross_block*(3.5/10))
+    .attr("x2", w_cross_block*(7.5/15))
+    .attr("y2", h_cross_block*(3.5/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
 // right vertical line
-svg_rect_4_plus_1.append("line")
+svg_cross_2_and_2_several_block.append("line")
     .attr("x1", w_cross_block*(14/15))
     .attr("y1", h_cross_block*(2/10))
     .attr("x2", w_cross_block*(14/15))
@@ -577,7 +591,7 @@ svg_rect_4_plus_1.append("line")
     .style("stroke-dasharray", "3 3");
 
 // bottom line
-svg_rect_4_plus_1.append("line")
+svg_cross_2_and_2_several_block.append("line")
     .attr("x1", w_cross_block*(14/15))
     .attr("y1", h_cross_block*(8/10))
     .attr("x2", w_cross_block*(1/15))
@@ -587,7 +601,7 @@ svg_rect_4_plus_1.append("line")
     .style("stroke-dasharray", "3 3");
 
 // left vertical line
-svg_rect_4_plus_1.append("line")
+svg_cross_2_and_2_several_block.append("line")
     .attr("x1", w_cross_block*(1/15))
     .attr("y1", h_cross_block*(8/10))
     .attr("x2", w_cross_block*(1/15))
@@ -597,7 +611,7 @@ svg_rect_4_plus_1.append("line")
     .style("stroke-dasharray", "3 3");
 
 // middle horizontal line
-svg_rect_4_plus_1.append("line")
+svg_cross_2_and_2_several_block.append("line")
     .attr("x1", w_cross_block*(1/15))
     .attr("y1", h_cross_block*(5/10))
     .attr("x2", w_cross_block*(14/15))
@@ -607,7 +621,421 @@ svg_rect_4_plus_1.append("line")
     .style("stroke-dasharray", "3 3");
 
 // middle vertical line
-svg_rect_4_plus_1.append("line")
+svg_cross_2_and_2_several_block.append("line")
+    .attr("x1", w_cross_block*(7.5/15))
+    .attr("y1", h_cross_block*(2/10))
+    .attr("x2", w_cross_block*(7.5/15))
+    .attr("y2", h_cross_block*(8/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// left vertical line in bottom right stick of butter
+svg_cross_2_and_2_several_block.append("line")
+    .attr("x1", w_cross_block*(9.66/15))
+    .attr("y1", h_cross_block*(5/10))
+    .attr("x2", w_cross_block*(9.66/15))
+    .attr("y2", h_cross_block*(8/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// right vertical vertical line in bottom right stick of butter
+svg_cross_2_and_2_several_block.append("line")
+    .attr("x1", w_cross_block*(11.83/15))
+    .attr("y1", h_cross_block*(5/10))
+    .attr("x2", w_cross_block*(11.83/15))
+    .attr("y2", h_cross_block*(8/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// top horizontal line in bottom right stick of butter
+svg_cross_2_and_2_several_block.append("line")
+    .attr("x1", w_cross_block*(7.5/15))
+    .attr("y1", h_cross_block*(6/10))
+    .attr("x2", w_cross_block*(14/15))
+    .attr("y2", h_cross_block*(6/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// bottom horizontal line in bottom right stick of butter
+svg_cross_2_and_2_several_block.append("line")
+    .attr("x1", w_cross_block*(7.5/15))
+    .attr("y1", h_cross_block*(7/10))
+    .attr("x2", w_cross_block*(14/15))
+    .attr("y2", h_cross_block*(7/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// center points
+// top left, r1, c1
+svg_cross_2_and_2_several_block.append("circle")
+    .style("fill", "#696a61")
+    .attr("cx", w_cross_block*(2.62/15))
+    .attr("cy", h_cross_block*(2.75/10))
+    .attr("r", 5)
+
+// top left, r1, c2
+svg_cross_2_and_2_several_block.append("circle")
+    .style("fill", "#696a61")
+    .attr("cx", w_cross_block*(5.87/15))
+    .attr("cy", h_cross_block*(2.75/10))
+    .attr("r", 5)
+
+// top left, r2, c1
+svg_cross_2_and_2_several_block.append("circle")
+    .style("fill", "#696a61")
+    .attr("cx", w_cross_block*(2.62/15))
+    .attr("cy", h_cross_block*(4.25/10))
+    .attr("r", 5)
+
+// top left, r2, c2
+svg_cross_2_and_2_several_block.append("circle")
+    .style("fill", "#696a61")
+    .attr("cx", w_cross_block*(5.87/15))
+    .attr("cy", h_cross_block*(4.25/10))
+    .attr("r", 5)
+
+// top right
+svg_cross_2_and_2_several_block.append("circle")
+    .style("fill", "#696a61")
+    .attr("cx", w_cross_block*(10.75/15))
+    .attr("cy", h_cross_block*(3.5/10))
+    .attr("r", 5);
+
+// bottom left
+svg_cross_2_and_2_several_block.append("circle")
+    .style("fill", "#696a61")
+    .attr("cx", w_cross_block*(4.25/15))
+    .attr("cy", h_cross_block*(6.5/10))
+    .attr("r", 5);
+
+// bottom right, r1, c1
+svg_cross_2_and_2_several_block.append("circle")
+    .style("fill", "#696a61")
+    .attr("cx", w_cross_block*(8.58/15))
+    .attr("cy", h_cross_block*(5.5/10))
+    .attr("r", 5);
+
+// bottom right, r1, c2
+svg_cross_2_and_2_several_block.append("circle")
+    .style("fill", "#696a61")
+    .attr("cx", w_cross_block*(10.74/15))
+    .attr("cy", h_cross_block*(5.5/10))
+    .attr("r", 5);
+
+// bottom right, r1, c3
+svg_cross_2_and_2_several_block.append("circle")
+    .style("fill", "#696a61")
+    .attr("cx", w_cross_block*(12.91/15))
+    .attr("cy", h_cross_block*(5.5/10))
+    .attr("r", 5);
+
+// bottom right, r2, c1
+svg_cross_2_and_2_several_block.append("circle")
+    .style("fill", "#696a61")
+    .attr("cx", w_cross_block*(8.58/15))
+    .attr("cy", h_cross_block*(6.5/10))
+    .attr("r", 5);
+
+// bottom right, r2, c2
+svg_cross_2_and_2_several_block.append("circle")
+    .style("fill", "#696a61")
+    .attr("cx", w_cross_block*(10.74/15))
+    .attr("cy", h_cross_block*(6.5/10))
+    .attr("r", 5);
+
+// bottom right, r2, c3
+svg_cross_2_and_2_several_block.append("circle")
+    .style("fill", "#696a61")
+    .attr("cx", w_cross_block*(12.91/15))
+    .attr("cy", h_cross_block*(6.5/10))
+    .attr("r", 5);
+
+// bottom right, r3, c1
+svg_cross_2_and_2_several_block.append("circle")
+    .style("fill", "#696a61")
+    .attr("cx", w_cross_block*(8.58/15))
+    .attr("cy", h_cross_block*(7.5/10))
+    .attr("r", 5);
+
+// bottom right, r3, c2
+svg_cross_2_and_2_several_block.append("circle")
+    .style("fill", "#696a61")
+    .attr("cx", w_cross_block*(10.74/15))
+    .attr("cy", h_cross_block*(7.5/10))
+    .attr("r", 5);
+
+// bottom right, r3, c3
+svg_cross_2_and_2_several_block.append("circle")
+    .style("fill", "#696a61")
+    .attr("cx", w_cross_block*(12.91/15))
+    .attr("cy", h_cross_block*(7.5/10))
+    .attr("r", 5);
+
+
+
+// Drawing a rectangle; ------------------------------------------------------
+// then allowing the user to draw another rectangle --------------------------
+// within by the click of ----------------------------------------------------
+// a button. The user has buttons for all three choices: drawing a rectangle -
+// of a medium size; smaller; or bigger --------------------------------------
+// 
+//
+var svg_rect_1_plus_3 = d3.select("#block5")
+  .append("svg")
+    .attr("viewBox", "0 0 " + w_cross_block + " " + h_cross_block);
+
+// top line
+svg_rect_1_plus_3.append("line")
+    .attr("x1", w_cross_block*(1/15))
+    .attr("y1", h_cross_block*(2/10))
+    .attr("x2", w_cross_block*(14/15))
+    .attr("y2", h_cross_block*(2/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// right vertical line
+svg_rect_1_plus_3.append("line")
+    .attr("x1", w_cross_block*(14/15))
+    .attr("y1", h_cross_block*(2/10))
+    .attr("x2", w_cross_block*(14/15))
+    .attr("y2", h_cross_block*(8/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// bottom line
+svg_rect_1_plus_3.append("line")
+    .attr("x1", w_cross_block*(14/15))
+    .attr("y1", h_cross_block*(8/10))
+    .attr("x2", w_cross_block*(1/15))
+    .attr("y2", h_cross_block*(8/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// left vertical line
+svg_rect_1_plus_3.append("line")
+    .attr("x1", w_cross_block*(1/15))
+    .attr("y1", h_cross_block*(8/10))
+    .attr("x2", w_cross_block*(1/15))
+    .attr("y2", h_cross_block*(2/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// Drawing a medium size rectangle within ------------------------------------
+//
+//
+d3.select("#medium_size_rect_1_plus_3")
+    .on("click", function() {
+	    // top
+	    svg_rect_1_plus_3.append("line")
+	        .attr("x1", w_cross_block*(2/15))
+	        .attr("y1", h_cross_block*(4/10))
+	        .attr("x2", w_cross_block*(8.5/15))
+	        .attr("y2", h_cross_block*(4/10))
+	        .style("stroke", "#91d5e4")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+
+	    // right vertical side
+	    svg_rect_1_plus_3.append("line")
+	        .attr("x1", w_cross_block*(8.5/15))
+	        .attr("y1", h_cross_block*(4/10))
+	        .attr("x2", w_cross_block*(8.5/15))
+	        .attr("y2", h_cross_block*(7/10))
+	        .style("stroke", "#91d5e4")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+	    
+	    // bottom
+	    svg_rect_1_plus_3.append("line")
+	        .attr("x1", w_cross_block*(8.5/15))
+	        .attr("y1", h_cross_block*(7/10))
+	        .attr("x2", w_cross_block*(2/15))
+	        .attr("y2", h_cross_block*(7/10))
+	        .style("stroke", "#91d5e4")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+
+	    // left vertical side
+	    svg_rect_1_plus_3.append("line")
+	        .attr("x1", w_cross_block*(2/15))
+	        .attr("y1", h_cross_block*(7/10))
+	        .attr("x2", w_cross_block*(2/15))
+	        .attr("y2", h_cross_block*(4/10))
+	        .style("stroke", "#91d5e4")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+    });
+
+// Drawing the smaller rectangle within --------------------------------------
+//
+//
+d3.select("#smaller_size_rect_1_plus_3")
+    .on("click", function() {
+	    // top
+	    svg_rect_1_plus_3.append("line")
+	        .attr("x1", w_cross_block*(1.5/15))
+	        .attr("y1", h_cross_block*(2.5/10))
+	        .attr("x2", w_cross_block*(4.5/15))
+	        .attr("y2", h_cross_block*(2.5/10))
+	        .style("stroke", "#91d5e4")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+
+	    // right vertical side
+	    svg_rect_1_plus_3.append("line")
+	        .attr("x1", w_cross_block*(4.5/15))
+	        .attr("y1", h_cross_block*(2.5/10))
+	        .attr("x2", w_cross_block*(4.5/15))
+	        .attr("y2", h_cross_block*(3.5/10))
+	        .style("stroke", "#91d5e4")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+	    
+	    // bottom
+	    svg_rect_1_plus_3.append("line")
+	        .attr("x1", w_cross_block*(4.5/15))
+	        .attr("y1", h_cross_block*(3.5/10))
+	        .attr("x2", w_cross_block*(1.5/15))
+	        .attr("y2", h_cross_block*(3.5/10))
+	        .style("stroke", "#91d5e4")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+
+	    // left vertical side
+	    svg_rect_1_plus_3.append("line")
+	        .attr("x1", w_cross_block*(1.5/15))
+	        .attr("y1", h_cross_block*(3.5/10))
+	        .attr("x2", w_cross_block*(1.5/15))
+	        .attr("y2", h_cross_block*(2.5/10))
+	        .style("stroke", "#91d5e4")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+    });
+
+// Drawing the larger rectangle within ---------------------------------------
+//
+//
+d3.select("#larger_size_rect_1_plus_3")
+    .on("click", function() {
+	    // top
+	    svg_rect_1_plus_3.append("line")
+	        .attr("x1", w_cross_block*(5.5/15))
+	        .attr("y1", h_cross_block*(2.25/10))
+	        .attr("x2", w_cross_block*(13.5/15))
+	        .attr("y2", h_cross_block*(2.25/10))
+	        .style("stroke", "#91d5e4")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+
+	    // right vertical side
+	    svg_rect_1_plus_3.append("line")
+	        .attr("x1", w_cross_block*(13.5/15))
+	        .attr("y1", h_cross_block*(2.25/10))
+	        .attr("x2", w_cross_block*(13.5/15))
+	        .attr("y2", h_cross_block*(6.75/10))
+	        .style("stroke", "#91d5e4")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+	    
+	    // bottom
+	    svg_rect_1_plus_3.append("line")
+	        .attr("x1", w_cross_block*(13.5/15))
+	        .attr("y1", h_cross_block*(6.75/10))
+	        .attr("x2", w_cross_block*(5.5/15))
+	        .attr("y2", h_cross_block*(6.75/10))
+	        .style("stroke", "#91d5e4")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+
+	    // left vertical side
+	    svg_rect_1_plus_3.append("line")
+	        .attr("x1", w_cross_block*(5.5/15))
+	        .attr("y1", h_cross_block*(6.75/10))
+	        .attr("x2", w_cross_block*(5.5/15))
+	        .attr("y2", h_cross_block*(2.25/10))
+	        .style("stroke", "#91d5e4")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+    });
+
+
+
+
+// Drawing a rectangle; breaking it down -------------------------------------
+// to 4 subrectangles; then allowing the user to draw another rectangle ------
+// within by the click of ----------------------------------------------------
+// a button. The user has buttons for all three choices: drawing a rectangle -
+// of a medium size; smaller; or bigger --------------------------------------
+// 
+//
+
+
+var svg_rect_4_plus_3 = d3.select("#block6")
+  .append("svg")
+    .attr("viewBox", "0 0 " + w_cross_block + " " + h_cross_block);
+
+
+// top line
+svg_rect_4_plus_3.append("line")
+    .attr("x1", w_cross_block*(1/15))
+    .attr("y1", h_cross_block*(2/10))
+    .attr("x2", w_cross_block*(14/15))
+    .attr("y2", h_cross_block*(2/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// right vertical line
+svg_rect_4_plus_3.append("line")
+    .attr("x1", w_cross_block*(14/15))
+    .attr("y1", h_cross_block*(2/10))
+    .attr("x2", w_cross_block*(14/15))
+    .attr("y2", h_cross_block*(8/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// bottom line
+svg_rect_4_plus_3.append("line")
+    .attr("x1", w_cross_block*(14/15))
+    .attr("y1", h_cross_block*(8/10))
+    .attr("x2", w_cross_block*(1/15))
+    .attr("y2", h_cross_block*(8/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// left vertical line
+svg_rect_4_plus_3.append("line")
+    .attr("x1", w_cross_block*(1/15))
+    .attr("y1", h_cross_block*(8/10))
+    .attr("x2", w_cross_block*(1/15))
+    .attr("y2", h_cross_block*(2/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// middle horizontal line
+svg_rect_4_plus_3.append("line")
+    .attr("x1", w_cross_block*(1/15))
+    .attr("y1", h_cross_block*(5/10))
+    .attr("x2", w_cross_block*(14/15))
+    .attr("y2", h_cross_block*(5/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// middle vertical line
+svg_rect_4_plus_3.append("line")
     .attr("x1", w_cross_block*(7.5/15))
     .attr("y1", h_cross_block*(2/10))
     .attr("x2", w_cross_block*(7.5/15))
@@ -617,38 +1045,14 @@ svg_rect_4_plus_1.append("line")
     .style("stroke-dasharray", "3 3");
 
 
-// center points
-svg_rect_4_plus_1.append("circle")
-    .style("fill", "#696a61")
-    .attr("cx", w_cross_block*(4.25/15))
-    .attr("cy", h_cross_block*(3.5/10))
-    .attr("r", 5);
 
-svg_rect_4_plus_1.append("circle")
-    .style("fill", "#696a61")
-    .attr("cx", w_cross_block*(10.75/15))
-    .attr("cy", h_cross_block*(3.5/10))
-    .attr("r", 5);
-
-svg_rect_4_plus_1.append("circle")
-    .style("fill", "#696a61")
-    .attr("cx", w_cross_block*(4.25/15))
-    .attr("cy", h_cross_block*(6.5/10))
-    .attr("r", 5);
-
-svg_rect_4_plus_1.append("circle")
-    .style("fill", "#696a61")
-    .attr("cx", w_cross_block*(10.75/15))
-    .attr("cy", h_cross_block*(6.5/10))
-    .attr("r", 5);
-
-// Drawing the same size rectangle within ------------------------------------
+// Drawing a medium size rectangle within ------------------------------------
 //
 //
-d3.select("#same_size")
+d3.select("#medium_size_rect_4_plus_3")
     .on("click", function() {
 	    // top
-	    svg_rect_4_plus_1.append("line")
+	    svg_rect_4_plus_3.append("line")
 	        .attr("x1", w_cross_block*(6/15))
 	        .attr("y1", h_cross_block*(3/10))
 	        .attr("x2", w_cross_block*(12.5/15))
@@ -658,7 +1062,7 @@ d3.select("#same_size")
 	        .style("stroke-dasharray", "3 3");
 
 	    // right vertical side
-	    svg_rect_4_plus_1.append("line")
+	    svg_rect_4_plus_3.append("line")
 	        .attr("x1", w_cross_block*(12.5/15))
 	        .attr("y1", h_cross_block*(3/10))
 	        .attr("x2", w_cross_block*(12.5/15))
@@ -668,7 +1072,7 @@ d3.select("#same_size")
 	        .style("stroke-dasharray", "3 3");
 	    
 	    // bottom
-	    svg_rect_4_plus_1.append("line")
+	    svg_rect_4_plus_3.append("line")
 	        .attr("x1", w_cross_block*(12.5/15))
 	        .attr("y1", h_cross_block*(6/10))
 	        .attr("x2", w_cross_block*(6/15))
@@ -678,7 +1082,7 @@ d3.select("#same_size")
 	        .style("stroke-dasharray", "3 3");
 
 	    // left vertical side
-	    svg_rect_4_plus_1.append("line")
+	    svg_rect_4_plus_3.append("line")
 	        .attr("x1", w_cross_block*(6/15))
 	        .attr("y1", h_cross_block*(6/10))
 	        .attr("x2", w_cross_block*(6/15))
@@ -691,10 +1095,10 @@ d3.select("#same_size")
 // Drawing the smaller rectangle within --------------------------------------
 //
 //
-d3.select("#smaller_size")
+d3.select("#smaller_size_rect_4_plus_3")
     .on("click", function() {
 	    // top
-	    svg_rect_4_plus_1.append("line")
+	    svg_rect_4_plus_3.append("line")
 	        .attr("x1", w_cross_block*(1.5/15))
 	        .attr("y1", h_cross_block*(6.5/10))
 	        .attr("x2", w_cross_block*(4.5/15))
@@ -704,7 +1108,7 @@ d3.select("#smaller_size")
 	        .style("stroke-dasharray", "3 3");
 
 	    // right vertical side
-	    svg_rect_4_plus_1.append("line")
+	    svg_rect_4_plus_3.append("line")
 	        .attr("x1", w_cross_block*(4.5/15))
 	        .attr("y1", h_cross_block*(6.5/10))
 	        .attr("x2", w_cross_block*(4.5/15))
@@ -714,7 +1118,7 @@ d3.select("#smaller_size")
 	        .style("stroke-dasharray", "3 3");
 	    
 	    // bottom
-	    svg_rect_4_plus_1.append("line")
+	    svg_rect_4_plus_3.append("line")
 	        .attr("x1", w_cross_block*(4.5/15))
 	        .attr("y1", h_cross_block*(7.5/10))
 	        .attr("x2", w_cross_block*(1.5/15))
@@ -724,7 +1128,7 @@ d3.select("#smaller_size")
 	        .style("stroke-dasharray", "3 3");
 
 	    // left vertical side
-	    svg_rect_4_plus_1.append("line")
+	    svg_rect_4_plus_3.append("line")
 	        .attr("x1", w_cross_block*(1.5/15))
 	        .attr("y1", h_cross_block*(7.5/10))
 	        .attr("x2", w_cross_block*(1.5/15))
@@ -737,10 +1141,10 @@ d3.select("#smaller_size")
 // Drawing the larger rectangle within ---------------------------------------
 //
 //
-d3.select("#larger_size")
+d3.select("#larger_size_rect_4_plus_3")
     .on("click", function() {
 	    // top
-	    svg_rect_4_plus_1.append("line")
+	    svg_rect_4_plus_3.append("line")
 	        .attr("x1", w_cross_block*(2.5/15))
 	        .attr("y1", h_cross_block*(2.25/10))
 	        .attr("x2", w_cross_block*(10.5/15))
@@ -750,7 +1154,7 @@ d3.select("#larger_size")
 	        .style("stroke-dasharray", "3 3");
 
 	    // right vertical side
-	    svg_rect_4_plus_1.append("line")
+	    svg_rect_4_plus_3.append("line")
 	        .attr("x1", w_cross_block*(10.5/15))
 	        .attr("y1", h_cross_block*(2.25/10))
 	        .attr("x2", w_cross_block*(10.5/15))
@@ -760,7 +1164,7 @@ d3.select("#larger_size")
 	        .style("stroke-dasharray", "3 3");
 	    
 	    // bottom
-	    svg_rect_4_plus_1.append("line")
+	    svg_rect_4_plus_3.append("line")
 	        .attr("x1", w_cross_block*(10.5/15))
 	        .attr("y1", h_cross_block*(6.75/10))
 	        .attr("x2", w_cross_block*(2.5/15))
@@ -770,7 +1174,7 @@ d3.select("#larger_size")
 	        .style("stroke-dasharray", "3 3");
 
 	    // left vertical side
-	    svg_rect_4_plus_1.append("line")
+	    svg_rect_4_plus_3.append("line")
 	        .attr("x1", w_cross_block*(2.5/15))
 	        .attr("y1", h_cross_block*(6.75/10))
 	        .attr("x2", w_cross_block*(2.5/15))
@@ -779,6 +1183,538 @@ d3.select("#larger_size")
 	        .style("stroke-width", 5)
 	        .style("stroke-dasharray", "3 3");
     });
+
+
+
+
+// Drawing a rectangle; breaking it down -------------------------------------
+// to 3 subrectangles of one size and several subrectangles of a different ---
+// size; ---------------------------------------------------------------------
+// then allowing the user to draw another rectangle --------------------------
+// within by the click of ----------------------------------------------------
+// a button. The user has buttons for all three choices: drawing a rectangle -
+// of a medium size; smaller; or bigger --------------------------------------
+//
+//
+var svg_rect_3_and_1_several_plus_3 = d3.select("#block7")
+  .append("svg")
+    .attr("viewBox", "0 0 " + w_cross_block + " " + h_cross_block);
+
+
+// top line
+svg_rect_3_and_1_several_plus_3.append("line")
+    .attr("x1", w_cross_block*(1/15))
+    .attr("y1", h_cross_block*(2/10))
+    .attr("x2", w_cross_block*(14/15))
+    .attr("y2", h_cross_block*(2/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// right vertical line
+svg_rect_3_and_1_several_plus_3.append("line")
+    .attr("x1", w_cross_block*(14/15))
+    .attr("y1", h_cross_block*(2/10))
+    .attr("x2", w_cross_block*(14/15))
+    .attr("y2", h_cross_block*(8/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// bottom line
+svg_rect_3_and_1_several_plus_3.append("line")
+    .attr("x1", w_cross_block*(14/15))
+    .attr("y1", h_cross_block*(8/10))
+    .attr("x2", w_cross_block*(1/15))
+    .attr("y2", h_cross_block*(8/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// left vertical line
+svg_rect_3_and_1_several_plus_3.append("line")
+    .attr("x1", w_cross_block*(1/15))
+    .attr("y1", h_cross_block*(8/10))
+    .attr("x2", w_cross_block*(1/15))
+    .attr("y2", h_cross_block*(2/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// middle horizontal line
+svg_rect_3_and_1_several_plus_3.append("line")
+    .attr("x1", w_cross_block*(1/15))
+    .attr("y1", h_cross_block*(5/10))
+    .attr("x2", w_cross_block*(14/15))
+    .attr("y2", h_cross_block*(5/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// middle vertical line
+svg_rect_3_and_1_several_plus_3.append("line")
+    .attr("x1", w_cross_block*(7.5/15))
+    .attr("y1", h_cross_block*(2/10))
+    .attr("x2", w_cross_block*(7.5/15))
+    .attr("y2", h_cross_block*(8/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// left vertical line in bottom right rect
+svg_rect_3_and_1_several_plus_3.append("line")
+    .attr("x1", w_cross_block*(9.66/15))
+    .attr("y1", h_cross_block*(5/10))
+    .attr("x2", w_cross_block*(9.66/15))
+    .attr("y2", h_cross_block*(8/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// right vertical vertical line in bottom right rect
+svg_rect_3_and_1_several_plus_3.append("line")
+    .attr("x1", w_cross_block*(11.83/15))
+    .attr("y1", h_cross_block*(5/10))
+    .attr("x2", w_cross_block*(11.83/15))
+    .attr("y2", h_cross_block*(8/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// top horizontal line in bottom right rect
+svg_rect_3_and_1_several_plus_3.append("line")
+    .attr("x1", w_cross_block*(7.5/15))
+    .attr("y1", h_cross_block*(6/10))
+    .attr("x2", w_cross_block*(14/15))
+    .attr("y2", h_cross_block*(6/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// bottom horizontal line in bottom right rect
+svg_rect_3_and_1_several_plus_3.append("line")
+    .attr("x1", w_cross_block*(7.5/15))
+    .attr("y1", h_cross_block*(7/10))
+    .attr("x2", w_cross_block*(14/15))
+    .attr("y2", h_cross_block*(7/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+
+// Drawing a medium size rectangle within ------------------------------------
+//
+//
+d3.select("#medium_size_rect_3_and_1_several_plus_3")
+    .on("click", function() {
+	    // top
+	    svg_rect_3_and_1_several_plus_3.append("line")
+	        .attr("x1", w_cross_block*(6/15))
+	        .attr("y1", h_cross_block*(3/10))
+	        .attr("x2", w_cross_block*(12.5/15))
+	        .attr("y2", h_cross_block*(3/10))
+	        .style("stroke", "#cca2fa")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+
+	    // right vertical side
+	    svg_rect_3_and_1_several_plus_3.append("line")
+	        .attr("x1", w_cross_block*(12.5/15))
+	        .attr("y1", h_cross_block*(3/10))
+	        .attr("x2", w_cross_block*(12.5/15))
+	        .attr("y2", h_cross_block*(6/10))
+	        .style("stroke", "#cca2fa")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+	    
+	    // bottom
+	    svg_rect_3_and_1_several_plus_3.append("line")
+	        .attr("x1", w_cross_block*(12.5/15))
+	        .attr("y1", h_cross_block*(6/10))
+	        .attr("x2", w_cross_block*(6/15))
+	        .attr("y2", h_cross_block*(6/10))
+	        .style("stroke", "#cca2fa")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+
+	    // left vertical side
+	    svg_rect_3_and_1_several_plus_3.append("line")
+	        .attr("x1", w_cross_block*(6/15))
+	        .attr("y1", h_cross_block*(6/10))
+	        .attr("x2", w_cross_block*(6/15))
+	        .attr("y2", h_cross_block*(3/10))
+	        .style("stroke", "#cca2fa")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+    });
+
+// Drawing the smaller rectangle within --------------------------------------
+//
+//
+d3.select("#smaller_size_rect_3_and_1_several_plus_3")
+    .on("click", function() {
+	    // top
+	    svg_rect_3_and_1_several_plus_3.append("line")
+	        .attr("x1", w_cross_block*(1.5/15))
+	        .attr("y1", h_cross_block*(6.5/10))
+	        .attr("x2", w_cross_block*(4.5/15))
+	        .attr("y2", h_cross_block*(6.5/10))
+	        .style("stroke", "#cca2fa")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+
+	    // right vertical side
+	    svg_rect_3_and_1_several_plus_3.append("line")
+	        .attr("x1", w_cross_block*(4.5/15))
+	        .attr("y1", h_cross_block*(6.5/10))
+	        .attr("x2", w_cross_block*(4.5/15))
+	        .attr("y2", h_cross_block*(7.5/10))
+	        .style("stroke", "#cca2fa")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+	    
+	    // bottom
+	    svg_rect_3_and_1_several_plus_3.append("line")
+	        .attr("x1", w_cross_block*(4.5/15))
+	        .attr("y1", h_cross_block*(7.5/10))
+	        .attr("x2", w_cross_block*(1.5/15))
+	        .attr("y2", h_cross_block*(7.5/10))
+	        .style("stroke", "#cca2fa")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+
+	    // left vertical side
+	    svg_rect_3_and_1_several_plus_3.append("line")
+	        .attr("x1", w_cross_block*(1.5/15))
+	        .attr("y1", h_cross_block*(7.5/10))
+	        .attr("x2", w_cross_block*(1.5/15))
+	        .attr("y2", h_cross_block*(6.5/10))
+	        .style("stroke", "#cca2fa")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+    });
+
+// Drawing the larger rectangle within ---------------------------------------
+//
+//
+d3.select("#larger_size_rect_3_and_1_several_plus_3")
+    .on("click", function() {
+	    // top
+	    svg_rect_3_and_1_several_plus_3.append("line")
+	        .attr("x1", w_cross_block*(2.5/15))
+	        .attr("y1", h_cross_block*(2.25/10))
+	        .attr("x2", w_cross_block*(10.5/15))
+	        .attr("y2", h_cross_block*(2.25/10))
+	        .style("stroke", "#cca2fa")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+
+	    // right vertical side
+	    svg_rect_3_and_1_several_plus_3.append("line")
+	        .attr("x1", w_cross_block*(10.5/15))
+	        .attr("y1", h_cross_block*(2.25/10))
+	        .attr("x2", w_cross_block*(10.5/15))
+	        .attr("y2", h_cross_block*(6.75/10))
+	        .style("stroke", "#cca2fa")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+	    
+	    // bottom
+	    svg_rect_3_and_1_several_plus_3.append("line")
+	        .attr("x1", w_cross_block*(10.5/15))
+	        .attr("y1", h_cross_block*(6.75/10))
+	        .attr("x2", w_cross_block*(2.5/15))
+	        .attr("y2", h_cross_block*(6.75/10))
+	        .style("stroke", "#cca2fa")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+
+	    // left vertical side
+	    svg_rect_3_and_1_several_plus_3.append("line")
+	        .attr("x1", w_cross_block*(2.5/15))
+	        .attr("y1", h_cross_block*(6.75/10))
+	        .attr("x2", w_cross_block*(2.5/15))
+	        .attr("y2", h_cross_block*(2.25/10))
+	        .style("stroke", "#cca2fa")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+    });
+
+
+
+// Drawing a rectangle; breaking it down -------------------------------------
+// to 2 subrectangles of one size, several subrectangles of a second ---------
+// size, and several subrectangles of a third size; --------------------------
+// then allowing the user to draw another rectangle --------------------------
+// within by the click of ----------------------------------------------------
+// a button. The user has buttons for all three choices: drawing a rectangle -
+// of a medium size; smaller; or bigger --------------------------------------
+//
+//
+var svg_rect_2_and_2_several_plus_3 = d3.select("#block8")
+  .append("svg")
+    .attr("viewBox", "0 0 " + w_cross_block + " " + h_cross_block);
+
+// top line
+svg_rect_2_and_2_several_plus_3.append("line")
+    .attr("x1", w_cross_block*(1/15))
+    .attr("y1", h_cross_block*(2/10))
+    .attr("x2", w_cross_block*(14/15))
+    .attr("y2", h_cross_block*(2/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// middle vertical line in top left rect
+svg_rect_2_and_2_several_plus_3.append("line")
+    .attr("x1", w_cross_block*(4.25/15))
+    .attr("y1", h_cross_block*(2/10))
+    .attr("x2", w_cross_block*(4.25/15))
+    .attr("y2", h_cross_block*(5/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// middle horizontal line in top left rect
+svg_rect_2_and_2_several_plus_3.append("line")
+    .attr("x1", w_cross_block*(1/15))
+    .attr("y1", h_cross_block*(3.5/10))
+    .attr("x2", w_cross_block*(7.5/15))
+    .attr("y2", h_cross_block*(3.5/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// right vertical line
+svg_rect_2_and_2_several_plus_3.append("line")
+    .attr("x1", w_cross_block*(14/15))
+    .attr("y1", h_cross_block*(2/10))
+    .attr("x2", w_cross_block*(14/15))
+    .attr("y2", h_cross_block*(8/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// bottom line
+svg_rect_2_and_2_several_plus_3.append("line")
+    .attr("x1", w_cross_block*(14/15))
+    .attr("y1", h_cross_block*(8/10))
+    .attr("x2", w_cross_block*(1/15))
+    .attr("y2", h_cross_block*(8/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// left vertical line
+svg_rect_2_and_2_several_plus_3.append("line")
+    .attr("x1", w_cross_block*(1/15))
+    .attr("y1", h_cross_block*(8/10))
+    .attr("x2", w_cross_block*(1/15))
+    .attr("y2", h_cross_block*(2/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// middle horizontal line
+svg_rect_2_and_2_several_plus_3.append("line")
+    .attr("x1", w_cross_block*(1/15))
+    .attr("y1", h_cross_block*(5/10))
+    .attr("x2", w_cross_block*(14/15))
+    .attr("y2", h_cross_block*(5/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// middle vertical line
+svg_rect_2_and_2_several_plus_3.append("line")
+    .attr("x1", w_cross_block*(7.5/15))
+    .attr("y1", h_cross_block*(2/10))
+    .attr("x2", w_cross_block*(7.5/15))
+    .attr("y2", h_cross_block*(8/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// left vertical line in bottom right rect
+svg_rect_2_and_2_several_plus_3.append("line")
+    .attr("x1", w_cross_block*(9.66/15))
+    .attr("y1", h_cross_block*(5/10))
+    .attr("x2", w_cross_block*(9.66/15))
+    .attr("y2", h_cross_block*(8/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// right vertical vertical line in bottom right rect
+svg_rect_2_and_2_several_plus_3.append("line")
+    .attr("x1", w_cross_block*(11.83/15))
+    .attr("y1", h_cross_block*(5/10))
+    .attr("x2", w_cross_block*(11.83/15))
+    .attr("y2", h_cross_block*(8/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// top horizontal line in bottom right rect
+svg_rect_2_and_2_several_plus_3.append("line")
+    .attr("x1", w_cross_block*(7.5/15))
+    .attr("y1", h_cross_block*(6/10))
+    .attr("x2", w_cross_block*(14/15))
+    .attr("y2", h_cross_block*(6/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// bottom horizontal line in bottom right rect
+svg_rect_2_and_2_several_plus_3.append("line")
+    .attr("x1", w_cross_block*(7.5/15))
+    .attr("y1", h_cross_block*(7/10))
+    .attr("x2", w_cross_block*(14/15))
+    .attr("y2", h_cross_block*(7/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+
+// Drawing a medium size rectangle within ------------------------------------
+//
+//
+d3.select("#medium_size_rect_2_and_2_several_plus_3")
+    .on("click", function() {
+	    // top
+	    svg_rect_2_and_2_several_plus_3.append("line")
+	        .attr("x1", w_cross_block*(6/15))
+	        .attr("y1", h_cross_block*(3/10))
+	        .attr("x2", w_cross_block*(12.5/15))
+	        .attr("y2", h_cross_block*(3/10))
+	        .style("stroke", "#d079a2")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+
+	    // right vertical side
+	    svg_rect_2_and_2_several_plus_3.append("line")
+	        .attr("x1", w_cross_block*(12.5/15))
+	        .attr("y1", h_cross_block*(3/10))
+	        .attr("x2", w_cross_block*(12.5/15))
+	        .attr("y2", h_cross_block*(6/10))
+	        .style("stroke", "#d079a2")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+	    
+	    // bottom
+	    svg_rect_2_and_2_several_plus_3.append("line")
+	        .attr("x1", w_cross_block*(12.5/15))
+	        .attr("y1", h_cross_block*(6/10))
+	        .attr("x2", w_cross_block*(6/15))
+	        .attr("y2", h_cross_block*(6/10))
+	        .style("stroke", "#d079a2")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+
+	    // left vertical side
+	    svg_rect_2_and_2_several_plus_3.append("line")
+	        .attr("x1", w_cross_block*(6/15))
+	        .attr("y1", h_cross_block*(6/10))
+	        .attr("x2", w_cross_block*(6/15))
+	        .attr("y2", h_cross_block*(3/10))
+	        .style("stroke", "#d079a2")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+    });
+
+// Drawing the smaller rectangle within --------------------------------------
+//
+//
+d3.select("#smaller_size_rect_2_and_2_several_plus_3")
+    .on("click", function() {
+	    // top
+	    svg_rect_2_and_2_several_plus_3.append("line")
+	        .attr("x1", w_cross_block*(1.5/15))
+	        .attr("y1", h_cross_block*(6.5/10))
+	        .attr("x2", w_cross_block*(4.5/15))
+	        .attr("y2", h_cross_block*(6.5/10))
+	        .style("stroke", "#d079a2")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+
+	    // right vertical side
+	    svg_rect_2_and_2_several_plus_3.append("line")
+	        .attr("x1", w_cross_block*(4.5/15))
+	        .attr("y1", h_cross_block*(6.5/10))
+	        .attr("x2", w_cross_block*(4.5/15))
+	        .attr("y2", h_cross_block*(7.5/10))
+	        .style("stroke", "#d079a2")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+	    
+	    // bottom
+	    svg_rect_2_and_2_several_plus_3.append("line")
+	        .attr("x1", w_cross_block*(4.5/15))
+	        .attr("y1", h_cross_block*(7.5/10))
+	        .attr("x2", w_cross_block*(1.5/15))
+	        .attr("y2", h_cross_block*(7.5/10))
+	        .style("stroke", "#d079a2")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+
+	    // left vertical side
+	    svg_rect_2_and_2_several_plus_3.append("line")
+	        .attr("x1", w_cross_block*(1.5/15))
+	        .attr("y1", h_cross_block*(7.5/10))
+	        .attr("x2", w_cross_block*(1.5/15))
+	        .attr("y2", h_cross_block*(6.5/10))
+	        .style("stroke", "#d079a2")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+    });
+
+// Drawing the larger rectangle within ---------------------------------------
+//
+//
+d3.select("#larger_size_rect_2_and_2_several_plus_3")
+    .on("click", function() {
+	    // top
+	    svg_rect_2_and_2_several_plus_3.append("line")
+	        .attr("x1", w_cross_block*(2.5/15))
+	        .attr("y1", h_cross_block*(2.25/10))
+	        .attr("x2", w_cross_block*(10.5/15))
+	        .attr("y2", h_cross_block*(2.25/10))
+	        .style("stroke", "#d079a2")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+
+	    // right vertical side
+	    svg_rect_2_and_2_several_plus_3.append("line")
+	        .attr("x1", w_cross_block*(10.5/15))
+	        .attr("y1", h_cross_block*(2.25/10))
+	        .attr("x2", w_cross_block*(10.5/15))
+	        .attr("y2", h_cross_block*(6.75/10))
+	        .style("stroke", "#d079a2")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+	    
+	    // bottom
+	    svg_rect_2_and_2_several_plus_3.append("line")
+	        .attr("x1", w_cross_block*(10.5/15))
+	        .attr("y1", h_cross_block*(6.75/10))
+	        .attr("x2", w_cross_block*(2.5/15))
+	        .attr("y2", h_cross_block*(6.75/10))
+	        .style("stroke", "#d079a2")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+
+	    // left vertical side
+	    svg_rect_2_and_2_several_plus_3.append("line")
+	        .attr("x1", w_cross_block*(2.5/15))
+	        .attr("y1", h_cross_block*(6.75/10))
+	        .attr("x2", w_cross_block*(2.5/15))
+	        .attr("y2", h_cross_block*(2.25/10))
+	        .style("stroke", "#d079a2")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+    });
+
+
 
 
 
