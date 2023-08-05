@@ -340,15 +340,109 @@ d3.select("#center_point")
 });
 
 
+// Drawing a cross section of the BLOCK OF BUTTER after breaking it-----------
+// down to 3 sticks of butter of one size and several sticks of butter -------
+// of a different size -------------------------------------------------------
+//
+//
+var svg_cross_3_and_several_block = d3.select("#block3")
+  .append("svg")
+    .attr("viewBox", "0 0 " + w_cross_block + " " + h_cross_block);
+
+
+// top line
+svg_cross_3_and_several_block.append("line")
+    .attr("x1", w_cross_block*(1/15))
+    .attr("y1", h_cross_block*(2/10))
+    .attr("x2", w_cross_block*(14/15))
+    .attr("y2", h_cross_block*(2/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// right vertical line
+svg_cross_3_and_several_block.append("line")
+    .attr("x1", w_cross_block*(14/15))
+    .attr("y1", h_cross_block*(2/10))
+    .attr("x2", w_cross_block*(14/15))
+    .attr("y2", h_cross_block*(8/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// bottom line
+svg_cross_3_and_several_block.append("line")
+    .attr("x1", w_cross_block*(14/15))
+    .attr("y1", h_cross_block*(8/10))
+    .attr("x2", w_cross_block*(1/15))
+    .attr("y2", h_cross_block*(8/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// left vertical line
+svg_cross_3_and_several_block.append("line")
+    .attr("x1", w_cross_block*(1/15))
+    .attr("y1", h_cross_block*(8/10))
+    .attr("x2", w_cross_block*(1/15))
+    .attr("y2", h_cross_block*(2/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// middle horizontal line
+svg_cross_3_and_several_block.append("line")
+    .attr("x1", w_cross_block*(1/15))
+    .attr("y1", h_cross_block*(5/10))
+    .attr("x2", w_cross_block*(14/15))
+    .attr("y2", h_cross_block*(5/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// middle vertical line
+svg_cross_3_and_several_block.append("line")
+    .attr("x1", w_cross_block*(7.5/15))
+    .attr("y1", h_cross_block*(2/10))
+    .attr("x2", w_cross_block*(7.5/15))
+    .attr("y2", h_cross_block*(8/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// left-most vertical line in 
+
+// center points
+svg_cross_3_and_several_block.append("circle")
+    .style("fill", "#696a61")
+    .attr("cx", w_cross_block*(4.25/15))
+    .attr("cy", h_cross_block*(3.5/10))
+    .attr("r", 5);
+
+svg_cross_3_and_several_block.append("circle")
+    .style("fill", "#696a61")
+    .attr("cx", w_cross_block*(10.75/15))
+    .attr("cy", h_cross_block*(3.5/10))
+    .attr("r", 5);
+
+svg_cross_3_and_several_block.append("circle")
+    .style("fill", "#696a61")
+    .attr("cx", w_cross_block*(4.25/15))
+    .attr("cy", h_cross_block*(6.5/10))
+    .attr("r", 5);
+
+
+
 // Drawing a rectangle; breaking it down -------------------------------------
-// to 4 subrectangle; then drawing another rectangle within by the click of --
+// to 4 subrectangles; then allowing the user to draw another rectangle ------
+// within by the click of ----------------------------------------------------
 // a button. The user has buttons for all three choices: drawing a rectangle -
 // of the same size; smaller; or bigger --------------------------------------
 // 
 //
 
 
-var svg_rect_4_plus_1 = d3.select("#block3")
+var svg_rect_4_plus_1 = d3.select("#block5")
   .append("svg")
     .attr("viewBox", "0 0 " + w_cross_block + " " + h_cross_block);
 

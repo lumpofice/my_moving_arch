@@ -48,13 +48,16 @@ li {
 }
 
 #block1,
-#block2 {
+#block2,
+#block3,
+#block4 {
 	width: 50%;
 	float: left;
 	margin: 0 auto;
 }
 
-#block3,
+
+#block5,
 #math0,
 #math1,
 #math2 {
