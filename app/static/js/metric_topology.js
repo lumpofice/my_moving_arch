@@ -1718,6 +1718,79 @@ d3.select("#larger_size_rect_2_and_2_several_plus_3")
 
 
 
+// Draw a rectangle; allow user as many clicks of a button as they wish, -----
+// each drawing a randomly ---------------------------------------------------
+// sized rectangle within the larger rectangle -------------------------------
+
+var w_rect = 960;
+var h_rect = 480;
+
+var svg_rect_1_plus_many = d3.select("#block9")
+  .append("svg")
+    .attr("viewBox", "0 0 " + w_rect + " " + h_rect);
+
+// top line
+svg_rect_1_plus_many.append("line")
+    .attr("x1", w_rect*(1/15))
+    .attr("y1", h_rect*(1/10))
+    .attr("x2", w_rect*(14/15))
+    .attr("y2", h_rect*(1/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// right vertical line
+svg_rect_1_plus_many.append("line")
+    .attr("x1", w_rect*(14/15))
+    .attr("y1", h_rect*(1/10))
+    .attr("x2", w_rect*(14/15))
+    .attr("y2", h_rect*(9/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// bottom line
+svg_rect_1_plus_many.append("line")
+    .attr("x1", w_rect*(14/15))
+    .attr("y1", h_rect*(9/10))
+    .attr("x2", w_rect*(1/15))
+    .attr("y2", h_rect*(9/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+// left vertical line
+svg_rect_1_plus_many.append("line")
+    .attr("x1", w_rect*(1/15))
+    .attr("y1", h_rect*(9/10))
+    .attr("x2", w_rect*(1/15))
+    .attr("y2", h_rect*(1/10))
+    .style("stroke", "#696a61")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3");
+
+d3.select("#rect_1_plus_many")
+    .on("click", function() {
+
+	    var i = Math.floor(Math.random()*15)
+	    var j = Math.floor(Math.random()*10)
+	    var k = Math.floor(Math.random()*15)
+	    var n = Math.floor(Math.random()*10)
+
+	    svg_rect_1_plus_many.append("line")
+	        .attr("x1", w_rect*(i/15))
+	        .attr("y1", h_rect*(j/10))
+	        .attr("x2", w_rect*(k/15))
+	        .attr("y2", h_rect*(j/10))
+	        .style("stroke", "#696a61")
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+    });
+
+
+
+
+
 // One-dimensional real line filled with intervals of a specified distance ---
 //
 //
