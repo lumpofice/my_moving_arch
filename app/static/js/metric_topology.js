@@ -1772,17 +1772,68 @@ svg_rect_1_plus_many.append("line")
 d3.select("#rect_1_plus_many")
     .on("click", function() {
 
-	    var i = Math.floor(Math.random()*15)
-	    var j = Math.floor(Math.random()*10)
-	    var k = Math.floor(Math.random()*15)
-	    var n = Math.floor(Math.random()*10)
+	    var colors = ["#cca2fa", "#91d5e4", "#d079a2"];
 
+	    const random_color = Math.floor(Math.random()*colors.length);
+    	
+	    var i = Math.random()*13;
+	    var j = Math.random()*8;
+	    var k = Math.random()*14;
+	    var n = Math.random()*9;
+
+	    while (i < 1) {
+		    i = Math.random()*13
+	    }
+
+	    while (j < 1) {
+		    j = Math.random()*8
+	    }
+   	    
+	    while (k <= i) {
+    	    	    k = Math.random()*14
+	    }
+
+            // top
 	    svg_rect_1_plus_many.append("line")
 	        .attr("x1", w_rect*(i/15))
 	        .attr("y1", h_rect*(j/10))
 	        .attr("x2", w_rect*(k/15))
 	        .attr("y2", h_rect*(j/10))
-	        .style("stroke", "#696a61")
+	        .style("stroke", colors[random_color])
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+
+	    while (n <= j) {
+		    n = Math.random()*9
+	    }
+
+            // right vertical
+	    svg_rect_1_plus_many.append("line")
+	        .attr("x1", w_rect*(k/15))
+	        .attr("y1", h_rect*(j/10))
+	        .attr("x2", w_rect*(k/15))
+	        .attr("y2", h_rect*(n/10))
+	        .style("stroke", colors[random_color])
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+            
+	    // bottom
+	    svg_rect_1_plus_many.append("line")
+	        .attr("x1", w_rect*(k/15))
+	        .attr("y1", h_rect*(n/10))
+	        .attr("x2", w_rect*(i/15))
+	        .attr("y2", h_rect*(n/10))
+	        .style("stroke", colors[random_color])
+	        .style("stroke-width", 5)
+	        .style("stroke-dasharray", "3 3");
+            
+	    // left vertical
+	    svg_rect_1_plus_many.append("line")
+	        .attr("x1", w_rect*(i/15))
+	        .attr("y1", h_rect*(n/10))
+	        .attr("x2", w_rect*(i/15))
+	        .attr("y2", h_rect*(j/10))
+	        .style("stroke", colors[random_color])
 	        .style("stroke-width", 5)
 	        .style("stroke-dasharray", "3 3");
     });
