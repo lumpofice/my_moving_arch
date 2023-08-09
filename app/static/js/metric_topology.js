@@ -2394,61 +2394,89 @@ epsilon_delta_svg.append("text")
 //
 //
 // ---------------------------------------------------------------------------
-// radius r=30 nodes
+// radius r=128 for larger circle and radius r=34 for smaller circles
 var w_0 = 960;
 var h_0 = 380;
 
 
-// Compute the number of nodes by taking the floor of 
-// 157080/(pi*[r^2])
-// 157080 comes from the following
-// For r=25, each node area is pi*[25^2]
-// Take the sum of the area of 80 such nodes to get 157080
-// If a total area larger than 157080 is desired, 
-// a greater number of nodes can be used in the sum
+var color = "rgba(105, 106, 97, 0.6)";
 
-var color_scale = ["rgba(105, 106, 97, 0.6)", 
-	"rgba(153, 119, 189, 0.6)"]
-
-// collide_factor_0 = radii_0*(2/3)
-
-var number_nodes_0 = 55;
+var number_nodes_0 = 1;
 var nodes_set_0 = d3.range(number_nodes_0).map(function(d, i) {
-	return {radii_0: 30, category: i%2, collide_factor_0: 20};
+	return {
+		satellite_circles: [
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{}
+		],
+		radii_0: 128};
 });
 
+
 var the_simulation_0 = d3.forceSimulation(nodes_set_0)
-    .force("charge", d3.forceManyBody().strength(1))
-    .force("center", d3.forceCenter(w_0/2, h_0/2))
-    .force("collision", d3.forceCollide().radius(function(d) {
-	    return d.collide_factor_0;
-    }));
+    .force("center", d3.forceCenter(w_0/2, h_0/2));
 
 
 var svg_nodes_set_0 = d3.select(".featuredgallery0")
   .append("svg")
-    .attr("viewBox", "0 0 " + w_0 + " " + h_0);
+    .attr("viewBox", "0 0 " + w_0 + " " + h_0); 
 
-var all_the_nodes_0 = svg_nodes_set_0.selectAll("circle")
+var all_the_nodes_0 = svg_nodes_set_0.selectAll(".node")
     .data(nodes_set_0)
     .enter()
-  .append("circle")
+  .append("g")
+    .attr("class", "node");
+
+all_the_nodes_0.append("circle")
     .attr("r", function(d) {
         return d.radii_0;	    
     })
     .style("fill", function(d) {
-	    return color_scale[d.category];
-    });
+	    return color;
+    })
+    .attr("class", "circle");
+
+all_the_nodes_0.append("g")
+    .selectAll(".circle_small")
+    .data(d => d.satellite_circles)
+    .enter()
+    .append("circle")
+    .attr("r", 34)
+    .style("fill", "rgba(117, 158, 22, 0.3)")
+    .attr("cx", function(d, i) {
+	    const factor = (i/15)*(10/2)*5;
+	    return 128*Math.cos(factor-(Math.PI*0.5));
+    })
+    .attr("cy", function(d, i) {
+	    const factor = (i/15)*(10/2)*5;
+	    return 128*Math.sin(factor-(Math.PI*0.5));
+    })
+    .attr("class", "circle_small");
+
 
 the_simulation_0.on("tick", function() {
-	all_the_nodes_0
-	    .attr("cx", function(d) {return d.x;} )
-	    .attr("cy", function(d) {return d.y;} );
+	all_the_nodes_0.attr("transform", d => 
+		`translate(${d.x}, ${d.y})`);
 });
 
 
+
+
+
 // ---------------------------------------------------------------------------
-// radius r=25 nodes
+// radius r=10 for larger circles and radius r=2.66 for smaller circles
 var w_1 = 960;
 var h_1 = 380;
 
@@ -2465,15 +2493,27 @@ var color_scale = ["rgba(105, 106, 97, 0.6)",
 
 // collide_factor_1 = radii_1*(2/3)
 
-var number_nodes_1 = 222;
+var number_nodes_1 = 500;
 var nodes_set_1 = d3.range(number_nodes_1).map(function(d, i) {
 	return {
-		shoes: [
-			{brand: "Nike"},
-			{brand: "Adidas"},
-			{brand: "Adidas"}
+		satellite_circles: [
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{},
+			{}
 		],
-		radii_1: 15, category: i%2, collide_factor_1: 10};
+		radii_1: 10, category: i%2, collide_factor_1: 6.66};
 });
 
 
@@ -2506,18 +2546,18 @@ all_the_nodes_1.append("circle")
 
 all_the_nodes_1.append("g")
     .selectAll(".circle_small")
-    .data(d => d.shoes)
+    .data(d => d.satellite_circles)
     .enter()
     .append("circle")
-    .attr("r", 8)
+    .attr("r", 2.66)
     .style("fill", "rgba(117, 158, 22, 0.3)")
     .attr("cx", function(d, i) {
 	    const factor = (i/15)*(10/2)*5;
-	    return 15*Math.cos(factor-(Math.PI*0.5));
+	    return 10*Math.cos(factor-(Math.PI*0.5));
     })
     .attr("cy", function(d, i) {
 	    const factor = (i/15)*(10/2)*5;
-	    return 15*Math.sin(factor-(Math.PI*0.5));
+	    return 10*Math.sin(factor-(Math.PI*0.5));
     })
     .attr("class", "circle_small");
 
@@ -2526,122 +2566,6 @@ the_simulation_1.on("tick", function() {
 	all_the_nodes_1.attr("transform", d => 
 		`translate(${d.x}, ${d.y})`);
 });
-
-
-
-// ---------------------------------------------------------------------------
-// radius r=20 nodes
-var w_2 = 960;
-var h_2 = 380;
-
-// Compute the number of nodes by taking the floor of 
-// 157080/(pi*[r^2])
-// 157080 comes from the following
-// For r=25, each node area is pi*[25^2]
-// Take the sum of the area of 80 such nodes to get 157080
-// If a total area larger than 157080 is desired, 
-// a greater number of nodes can be used in the sum
-
-var color_scale = ["rgba(105, 106, 97, 0.6)", 
-	"rgba(153, 119, 189, 0.6)"]
-
-// collide_factor_2 = radii_2(2/3)
-
-var number_nodes_2 = 125;
-var nodes_set_2 = d3.range(number_nodes_2).map(function(d, i) {
-	return {radii_2: 20, category: i%2, collide_factor_2: 13.33};
-});
-
-var the_simulation_2 = d3.forceSimulation(nodes_set_2)
-    .force("charge", d3.forceManyBody().strength(1))
-    .force("center", d3.forceCenter(w_2/2, h_2/2))
-    .force("collision", d3.forceCollide().radius(function(d) {
-	    return d.collide_factor_2;
-    }));
-
-
-var svg_nodes_set_2 = d3.select(".featuredgallery2")
-  .append("svg")
-    .attr("viewBox", "0 0 " + w_2 + " " + h_2);
-
-var all_the_nodes_2 = svg_nodes_set_2.selectAll("circle")
-    .data(nodes_set_2)
-    .enter()
-  .append("circle")
-    .attr("r", function(d) {
-        return d.radii_2;	    
-    })
-    .style("fill", function(d) {
-	    return color_scale[d.category];
-    });
-
-the_simulation_2.on("tick", function() {
-	all_the_nodes_2
-	    .attr("cx", function(d) {return d.x;} )
-	    .attr("cy", function(d) {return d.y;} );
-});
-
-
-// ---------------------------------------------------------------------------
-// radius r=15 nodes
-var w_3 = 960;
-var h_3 = 380;
-
-// Compute the number of nodes by taking the floor of 
-// 157080/(pi*[r^2])
-// 157080 comes from the following
-// For r=25, each node area is pi*[25^2]
-// Take the sum of the area of 80 such nodes to get 157080
-// If a total area larger than 157080 is desired, 
-// a greater number of nodes can be used in the sum
-
-var color_scale = ["rgba(105, 106, 97, 0.6)", 
-	"rgba(153, 119, 189, 0.6)"]
-
-// collide_factor_3 = radii_3(2/3)
-
-var number_nodes_3 = 222;
-var nodes_set_3 = d3.range(number_nodes_3).map(function(d, i) {
-	return {radii_3: 15, category: i%2, collide_factor_3: 10};
-});
-
-var the_simulation_3 = d3.forceSimulation(nodes_set_3)
-    .force("charge", d3.forceManyBody().strength(1))
-    .force("center", d3.forceCenter(w_3/2, h_3/2))
-    .force("collision", d3.forceCollide().radius(function(d) {
-	    return d.collide_factor_3;
-    }));
-
-
-var svg_nodes_set_3 = d3.select(".featuredgallery3")
-  .append("svg")
-    .attr("viewBox", "0 0 " + w_3 + " " + h_3);
-
-var all_the_nodes_3 = svg_nodes_set_3.selectAll("circle")
-    .data(nodes_set_3)
-    .enter()
-  .append("circle")
-    .attr("r", function(d) {
-        return d.radii_3;	    
-    })
-    .style("fill", function(d) {
-	    return color_scale[d.category];
-    });
-
-the_simulation_3.on("tick", function() {
-	all_the_nodes_3
-	    .attr("cx", function(d) {return d.x;} )
-	    .attr("cy", function(d) {return d.y;} );
-});
-
-
-
-
-
-
-
-
-
 
 
 
