@@ -58,6 +58,9 @@ li {
 	margin: 0 auto;
 }
 
+
+.featuredgallery0, 
+.featuredgallery1, 
 #block0,
 #block9,
 #math0,
@@ -72,8 +75,6 @@ li {
 	margin: 0 auto;
 }
 
-.featuredgallery0, 
-.featuredgallery1, 
 .featuredgallery2, 
 .featuredgallery3 {
 	width: 50%;

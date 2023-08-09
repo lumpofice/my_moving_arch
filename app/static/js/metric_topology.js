@@ -2461,14 +2461,21 @@ var h_1 = 380;
 // a greater number of nodes can be used in the sum
 
 var color_scale = ["rgba(105, 106, 97, 0.6)", 
-	"rgba(153, 119, 189, 0.6)"]
+	"rgba(153, 119, 189, 0.6)"];
 
-// collide_factor_0 = radii_0*(2/3)
+// collide_factor_1 = radii_1*(2/3)
 
-var number_nodes_1 = 80;
+var number_nodes_1 = 222;
 var nodes_set_1 = d3.range(number_nodes_1).map(function(d, i) {
-	return {radii_1: 25, category: i%2, collide_factor_1: 16.66};
+	return {
+		shoes: [
+			{brand: "Nike"},
+			{brand: "Adidas"},
+			{brand: "Adidas"}
+		],
+		radii_1: 15, category: i%2, collide_factor_1: 10};
 });
+
 
 var the_simulation_1 = d3.forceSimulation(nodes_set_1)
     .force("charge", d3.forceManyBody().strength(1))
@@ -2480,24 +2487,46 @@ var the_simulation_1 = d3.forceSimulation(nodes_set_1)
 
 var svg_nodes_set_1 = d3.select(".featuredgallery1")
   .append("svg")
-    .attr("viewBox", "0 0 " + w_1 + " " + h_1);
+    .attr("viewBox", "0 0 " + w_1 + " " + h_1); 
 
-var all_the_nodes_1 = svg_nodes_set_1.selectAll("circle")
+var all_the_nodes_1 = svg_nodes_set_1.selectAll(".node")
     .data(nodes_set_1)
     .enter()
-  .append("circle")
+  .append("g")
+    .attr("class", "node");
+
+all_the_nodes_1.append("circle")
     .attr("r", function(d) {
         return d.radii_1;	    
     })
     .style("fill", function(d) {
 	    return color_scale[d.category];
-    });
+    })
+    .attr("class", "circle");
+
+all_the_nodes_1.append("g")
+    .selectAll(".circle_small")
+    .data(d => d.shoes)
+    .enter()
+    .append("circle")
+    .attr("r", 8)
+    .style("fill", "rgba(117, 158, 22, 0.3)")
+    .attr("cx", function(d, i) {
+	    const factor = (i/15)*(10/2)*5;
+	    return 15*Math.cos(factor-(Math.PI*0.5));
+    })
+    .attr("cy", function(d, i) {
+	    const factor = (i/15)*(10/2)*5;
+	    return 15*Math.sin(factor-(Math.PI*0.5));
+    })
+    .attr("class", "circle_small");
+
 
 the_simulation_1.on("tick", function() {
-	all_the_nodes_1
-	    .attr("cx", function(d) {return d.x;} )
-	    .attr("cy", function(d) {return d.y;} );
+	all_the_nodes_1.attr("transform", d => 
+		`translate(${d.x}, ${d.y})`);
 });
+
 
 
 // ---------------------------------------------------------------------------
@@ -2604,6 +2633,14 @@ the_simulation_3.on("tick", function() {
 	    .attr("cx", function(d) {return d.x;} )
 	    .attr("cy", function(d) {return d.y;} );
 });
+
+
+
+
+
+
+
+
 
 
 
