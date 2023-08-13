@@ -842,7 +842,7 @@ d3.select("#medium_size_rect_1_plus_3")
 	        .attr("y2", h_cross_block*(4/10))
 	        .style("stroke", "#91d5e4")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 
 	    // right vertical side
 	    svg_rect_1_plus_3.append("line")
@@ -852,7 +852,7 @@ d3.select("#medium_size_rect_1_plus_3")
 	        .attr("y2", h_cross_block*(7/10))
 	        .style("stroke", "#91d5e4")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 	    
 	    // bottom
 	    svg_rect_1_plus_3.append("line")
@@ -862,7 +862,7 @@ d3.select("#medium_size_rect_1_plus_3")
 	        .attr("y2", h_cross_block*(7/10))
 	        .style("stroke", "#91d5e4")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 
 	    // left vertical side
 	    svg_rect_1_plus_3.append("line")
@@ -872,7 +872,7 @@ d3.select("#medium_size_rect_1_plus_3")
 	        .attr("y2", h_cross_block*(4/10))
 	        .style("stroke", "#91d5e4")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
     });
 
 // Drawing the smaller rectangle within --------------------------------------
@@ -888,7 +888,7 @@ d3.select("#smaller_size_rect_1_plus_3")
 	        .attr("y2", h_cross_block*(2.5/10))
 	        .style("stroke", "#91d5e4")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 
 	    // right vertical side
 	    svg_rect_1_plus_3.append("line")
@@ -898,7 +898,7 @@ d3.select("#smaller_size_rect_1_plus_3")
 	        .attr("y2", h_cross_block*(3.5/10))
 	        .style("stroke", "#91d5e4")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 	    
 	    // bottom
 	    svg_rect_1_plus_3.append("line")
@@ -908,7 +908,7 @@ d3.select("#smaller_size_rect_1_plus_3")
 	        .attr("y2", h_cross_block*(3.5/10))
 	        .style("stroke", "#91d5e4")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 
 	    // left vertical side
 	    svg_rect_1_plus_3.append("line")
@@ -918,7 +918,7 @@ d3.select("#smaller_size_rect_1_plus_3")
 	        .attr("y2", h_cross_block*(2.5/10))
 	        .style("stroke", "#91d5e4")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
     });
 
 // Drawing the larger rectangle within ---------------------------------------
@@ -934,7 +934,7 @@ d3.select("#larger_size_rect_1_plus_3")
 	        .attr("y2", h_cross_block*(2.25/10))
 	        .style("stroke", "#91d5e4")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 
 	    // right vertical side
 	    svg_rect_1_plus_3.append("line")
@@ -944,7 +944,7 @@ d3.select("#larger_size_rect_1_plus_3")
 	        .attr("y2", h_cross_block*(6.75/10))
 	        .style("stroke", "#91d5e4")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 	    
 	    // bottom
 	    svg_rect_1_plus_3.append("line")
@@ -954,7 +954,7 @@ d3.select("#larger_size_rect_1_plus_3")
 	        .attr("y2", h_cross_block*(6.75/10))
 	        .style("stroke", "#91d5e4")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 
 	    // left vertical side
 	    svg_rect_1_plus_3.append("line")
@@ -964,7 +964,7 @@ d3.select("#larger_size_rect_1_plus_3")
 	        .attr("y2", h_cross_block*(2.25/10))
 	        .style("stroke", "#91d5e4")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
     });
 
 
@@ -1059,7 +1059,7 @@ d3.select("#medium_size_rect_4_plus_3")
 	        .attr("y2", h_cross_block*(3/10))
 	        .style("stroke", "#d079a2")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 
 	    // right vertical side
 	    svg_rect_4_plus_3.append("line")
@@ -1069,7 +1069,7 @@ d3.select("#medium_size_rect_4_plus_3")
 	        .attr("y2", h_cross_block*(6/10))
 	        .style("stroke", "#d079a2")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 	    
 	    // bottom
 	    svg_rect_4_plus_3.append("line")
@@ -1079,7 +1079,7 @@ d3.select("#medium_size_rect_4_plus_3")
 	        .attr("y2", h_cross_block*(6/10))
 	        .style("stroke", "#d079a2")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 
 	    // left vertical side
 	    svg_rect_4_plus_3.append("line")
@@ -1089,7 +1089,7 @@ d3.select("#medium_size_rect_4_plus_3")
 	        .attr("y2", h_cross_block*(3/10))
 	        .style("stroke", "#d079a2")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
     });
 
 // Drawing the smaller rectangle within --------------------------------------
@@ -1105,7 +1105,7 @@ d3.select("#smaller_size_rect_4_plus_3")
 	        .attr("y2", h_cross_block*(6.5/10))
 	        .style("stroke", "#d079a2")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 
 	    // right vertical side
 	    svg_rect_4_plus_3.append("line")
@@ -1115,7 +1115,7 @@ d3.select("#smaller_size_rect_4_plus_3")
 	        .attr("y2", h_cross_block*(7.5/10))
 	        .style("stroke", "#d079a2")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 	    
 	    // bottom
 	    svg_rect_4_plus_3.append("line")
@@ -1125,7 +1125,7 @@ d3.select("#smaller_size_rect_4_plus_3")
 	        .attr("y2", h_cross_block*(7.5/10))
 	        .style("stroke", "#d079a2")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 
 	    // left vertical side
 	    svg_rect_4_plus_3.append("line")
@@ -1135,7 +1135,7 @@ d3.select("#smaller_size_rect_4_plus_3")
 	        .attr("y2", h_cross_block*(6.5/10))
 	        .style("stroke", "#d079a2")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
     });
 
 // Drawing the larger rectangle within ---------------------------------------
@@ -1151,7 +1151,7 @@ d3.select("#larger_size_rect_4_plus_3")
 	        .attr("y2", h_cross_block*(2.25/10))
 	        .style("stroke", "#d079a2")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 
 	    // right vertical side
 	    svg_rect_4_plus_3.append("line")
@@ -1161,7 +1161,7 @@ d3.select("#larger_size_rect_4_plus_3")
 	        .attr("y2", h_cross_block*(6.75/10))
 	        .style("stroke", "#d079a2")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 	    
 	    // bottom
 	    svg_rect_4_plus_3.append("line")
@@ -1171,7 +1171,7 @@ d3.select("#larger_size_rect_4_plus_3")
 	        .attr("y2", h_cross_block*(6.75/10))
 	        .style("stroke", "#d079a2")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 
 	    // left vertical side
 	    svg_rect_4_plus_3.append("line")
@@ -1181,7 +1181,7 @@ d3.select("#larger_size_rect_4_plus_3")
 	        .attr("y2", h_cross_block*(2.25/10))
 	        .style("stroke", "#d079a2")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
     });
 
 
@@ -1315,7 +1315,7 @@ d3.select("#medium_size_rect_3_and_1_several_plus_3")
 	        .attr("y2", h_cross_block*(3/10))
 	        .style("stroke", "#cca2fa")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 
 	    // right vertical side
 	    svg_rect_3_and_1_several_plus_3.append("line")
@@ -1325,7 +1325,7 @@ d3.select("#medium_size_rect_3_and_1_several_plus_3")
 	        .attr("y2", h_cross_block*(6/10))
 	        .style("stroke", "#cca2fa")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 	    
 	    // bottom
 	    svg_rect_3_and_1_several_plus_3.append("line")
@@ -1335,7 +1335,7 @@ d3.select("#medium_size_rect_3_and_1_several_plus_3")
 	        .attr("y2", h_cross_block*(6/10))
 	        .style("stroke", "#cca2fa")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 
 	    // left vertical side
 	    svg_rect_3_and_1_several_plus_3.append("line")
@@ -1345,7 +1345,7 @@ d3.select("#medium_size_rect_3_and_1_several_plus_3")
 	        .attr("y2", h_cross_block*(3/10))
 	        .style("stroke", "#cca2fa")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
     });
 
 // Drawing the smaller rectangle within --------------------------------------
@@ -1361,7 +1361,7 @@ d3.select("#smaller_size_rect_3_and_1_several_plus_3")
 	        .attr("y2", h_cross_block*(3/10))
 	        .style("stroke", "#cca2fa")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 
 	    // right vertical side
 	    svg_rect_3_and_1_several_plus_3.append("line")
@@ -1371,7 +1371,7 @@ d3.select("#smaller_size_rect_3_and_1_several_plus_3")
 	        .attr("y2", h_cross_block*(4/10))
 	        .style("stroke", "#cca2fa")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 	    
 	    // bottom
 	    svg_rect_3_and_1_several_plus_3.append("line")
@@ -1381,7 +1381,7 @@ d3.select("#smaller_size_rect_3_and_1_several_plus_3")
 	        .attr("y2", h_cross_block*(4/10))
 	        .style("stroke", "#cca2fa")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 
 	    // left vertical side
 	    svg_rect_3_and_1_several_plus_3.append("line")
@@ -1391,7 +1391,7 @@ d3.select("#smaller_size_rect_3_and_1_several_plus_3")
 	        .attr("y2", h_cross_block*(3/10))
 	        .style("stroke", "#cca2fa")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
     });
 
 // Drawing the larger rectangle within ---------------------------------------
@@ -1407,7 +1407,7 @@ d3.select("#larger_size_rect_3_and_1_several_plus_3")
 	        .attr("y2", h_cross_block*(2.25/10))
 	        .style("stroke", "#cca2fa")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 
 	    // right vertical side
 	    svg_rect_3_and_1_several_plus_3.append("line")
@@ -1417,7 +1417,7 @@ d3.select("#larger_size_rect_3_and_1_several_plus_3")
 	        .attr("y2", h_cross_block*(6.75/10))
 	        .style("stroke", "#cca2fa")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 	    
 	    // bottom
 	    svg_rect_3_and_1_several_plus_3.append("line")
@@ -1427,7 +1427,7 @@ d3.select("#larger_size_rect_3_and_1_several_plus_3")
 	        .attr("y2", h_cross_block*(6.75/10))
 	        .style("stroke", "#cca2fa")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 
 	    // left vertical side
 	    svg_rect_3_and_1_several_plus_3.append("line")
@@ -1437,7 +1437,7 @@ d3.select("#larger_size_rect_3_and_1_several_plus_3")
 	        .attr("y2", h_cross_block*(2.25/10))
 	        .style("stroke", "#cca2fa")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
     });
 
 
@@ -1589,7 +1589,7 @@ d3.select("#medium_size_rect_2_and_2_several_plus_3")
 	        .attr("y2", h_cross_block*(2.5/10))
 	        .style("stroke", "#d079a2")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 
 	    // right vertical side
 	    svg_rect_2_and_2_several_plus_3.append("line")
@@ -1599,7 +1599,7 @@ d3.select("#medium_size_rect_2_and_2_several_plus_3")
 	        .attr("y2", h_cross_block*(4.5/10))
 	        .style("stroke", "#d079a2")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 	    
 	    // bottom
 	    svg_rect_2_and_2_several_plus_3.append("line")
@@ -1609,7 +1609,7 @@ d3.select("#medium_size_rect_2_and_2_several_plus_3")
 	        .attr("y2", h_cross_block*(4.5/10))
 	        .style("stroke", "#d079a2")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 
 	    // left vertical side
 	    svg_rect_2_and_2_several_plus_3.append("line")
@@ -1619,7 +1619,7 @@ d3.select("#medium_size_rect_2_and_2_several_plus_3")
 	        .attr("y2", h_cross_block*(2.5/10))
 	        .style("stroke", "#d079a2")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
     });
 
 // Drawing the smaller rectangle within --------------------------------------
@@ -1635,7 +1635,7 @@ d3.select("#smaller_size_rect_2_and_2_several_plus_3")
 	        .attr("y2", h_cross_block*(6.5/10))
 	        .style("stroke", "#91d5e4")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 
 	    // right vertical side
 	    svg_rect_2_and_2_several_plus_3.append("line")
@@ -1645,7 +1645,7 @@ d3.select("#smaller_size_rect_2_and_2_several_plus_3")
 	        .attr("y2", h_cross_block*(7.5/10))
 	        .style("stroke", "#91d5e4")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 	    
 	    // bottom
 	    svg_rect_2_and_2_several_plus_3.append("line")
@@ -1655,7 +1655,7 @@ d3.select("#smaller_size_rect_2_and_2_several_plus_3")
 	        .attr("y2", h_cross_block*(7.5/10))
 	        .style("stroke", "#91d5e4")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 
 	    // left vertical side
 	    svg_rect_2_and_2_several_plus_3.append("line")
@@ -1665,7 +1665,7 @@ d3.select("#smaller_size_rect_2_and_2_several_plus_3")
 	        .attr("y2", h_cross_block*(6.5/10))
 	        .style("stroke", "#91d5e4")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
     });
 
 // Drawing the larger rectangle within ---------------------------------------
@@ -1681,7 +1681,7 @@ d3.select("#larger_size_rect_2_and_2_several_plus_3")
 	        .attr("y2", h_cross_block*(3.25/10))
 	        .style("stroke", "#cca2fa")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 
 	    // right vertical side
 	    svg_rect_2_and_2_several_plus_3.append("line")
@@ -1691,7 +1691,7 @@ d3.select("#larger_size_rect_2_and_2_several_plus_3")
 	        .attr("y2", h_cross_block*(7.75/10))
 	        .style("stroke", "#cca2fa")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 	    
 	    // bottom
 	    svg_rect_2_and_2_several_plus_3.append("line")
@@ -1701,7 +1701,7 @@ d3.select("#larger_size_rect_2_and_2_several_plus_3")
 	        .attr("y2", h_cross_block*(7.75/10))
 	        .style("stroke", "#cca2fa")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
 
 	    // left vertical side
 	    svg_rect_2_and_2_several_plus_3.append("line")
@@ -1711,7 +1711,7 @@ d3.select("#larger_size_rect_2_and_2_several_plus_3")
 	        .attr("y2", h_cross_block*(3.25/10))
 	        .style("stroke", "#cca2fa")
 	        .style("stroke-width", 5)
-	        .style("stroke-dasharray", "3 3");
+	        .style("stroke-dasharray", "3 1");
     });
 
 
@@ -2394,7 +2394,13 @@ epsilon_delta_svg.append("text")
 //
 //
 // ---------------------------------------------------------------------------
+// Total area we wish to fill is 107521
+// 107521 comes from the following
+// For h_0=380, [(h_0/2)^2]*pi=107521
+// If a total area larger than 107521 is desired, 
+// h_0 may be increased
 // radius r=128 for larger circle and radius r=34 for smaller circles
+
 var w_0 = 960;
 var h_0 = 380;
 
@@ -2421,17 +2427,26 @@ var nodes_set_0 = d3.range(number_nodes_0).map(function(d, i) {
 			{},
 			{}
 		],
-		radii_0: 128};
+		radii_0: 145};
 });
-
 
 var the_simulation_0 = d3.forceSimulation(nodes_set_0)
     .force("center", d3.forceCenter(w_0/2, h_0/2));
 
-
 var svg_nodes_set_0 = d3.select(".featuredgallery0")
   .append("svg")
     .attr("viewBox", "0 0 " + w_0 + " " + h_0); 
+
+// larger space in which the circles reside
+svg_nodes_set_0.append("circle")
+    .style("stroke", "#9977bd")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3")
+    .style("fill", "none")
+    .attr("cx", w_0/2)
+    .attr("cy", h_0/2)
+    .attr("r", 185)
+    .attr("class", "larger_space");
 
 var all_the_nodes_0 = svg_nodes_set_0.selectAll(".node")
     .data(nodes_set_0)
@@ -2453,15 +2468,15 @@ all_the_nodes_0.append("g")
     .data(d => d.satellite_circles)
     .enter()
     .append("circle")
-    .attr("r", 34)
+    .attr("r", 38)
     .style("fill", "rgba(117, 158, 22, 0.3)")
     .attr("cx", function(d, i) {
 	    const factor = (i/15)*(10/2)*5;
-	    return 128*Math.cos(factor-(Math.PI*0.5));
+	    return 145*Math.cos(factor-(Math.PI*0.5));
     })
     .attr("cy", function(d, i) {
 	    const factor = (i/15)*(10/2)*5;
-	    return 128*Math.sin(factor-(Math.PI*0.5));
+	    return 145*Math.sin(factor-(Math.PI*0.5));
     })
     .attr("class", "circle_small");
 
@@ -2471,6 +2486,15 @@ the_simulation_0.on("tick", function() {
 		`translate(${d.x}, ${d.y})`);
 });
 
+// gap circle highlighting that the larger space is not entirely filled
+svg_nodes_set_0.append("circle")
+    .attr("r", 20)
+    .style("stroke", "#e0620d")
+    .style("stroke-width", 5)
+    .style("fill", "none")
+    .attr("cx", w_0/2 - 185)
+    .attr("cy", h_0/2 )
+    .attr("class", "gap_circle");
 
 
 
@@ -2480,20 +2504,16 @@ the_simulation_0.on("tick", function() {
 var w_1 = 960;
 var h_1 = 380;
 
-// Compute the number of nodes by taking the floor of 
-// 157080/(pi*[r^2])
-// 157080 comes from the following
-// For r=25, each node area is pi*[25^2]
-// Take the sum of the area of 80 such nodes to get 157080
-// If a total area larger than 157080 is desired, 
-// a greater number of nodes can be used in the sum
 
 var color_scale = ["rgba(105, 106, 97, 0.6)", 
 	"rgba(153, 119, 189, 0.6)"];
 
+// smaller_circle_radii_1 = radii_1*(266/1000)
+const smaller_circle_radii_1 = 2.66;
+
 // collide_factor_1 = radii_1*(2/3)
 
-var number_nodes_1 = 500;
+var number_nodes_1 = 570;
 var nodes_set_1 = d3.range(number_nodes_1).map(function(d, i) {
 	return {
 		satellite_circles: [
@@ -2529,6 +2549,17 @@ var svg_nodes_set_1 = d3.select(".featuredgallery1")
   .append("svg")
     .attr("viewBox", "0 0 " + w_1 + " " + h_1); 
 
+// larger space in which the circles reside
+svg_nodes_set_1.append("circle")
+    .style("stroke", "#9977bd")
+    .style("stroke-width", 5)
+    .style("stroke-dasharray", "3 3")
+    .style("fill", "none")
+    .attr("cx", w_1/2)
+    .attr("cy", h_1/2)
+    .attr("r", 185)
+    .attr("class", "larger_space");
+
 var all_the_nodes_1 = svg_nodes_set_1.selectAll(".node")
     .data(nodes_set_1)
     .enter()
@@ -2549,7 +2580,7 @@ all_the_nodes_1.append("g")
     .data(d => d.satellite_circles)
     .enter()
     .append("circle")
-    .attr("r", 2.66)
+    .attr("r", smaller_circle_radii_1)
     .style("fill", "rgba(117, 158, 22, 0.3)")
     .attr("cx", function(d, i) {
 	    const factor = (i/15)*(10/2)*5;
@@ -2567,5 +2598,14 @@ the_simulation_1.on("tick", function() {
 		`translate(${d.x}, ${d.y})`);
 });
 
+// gap circle highlighting that the larger space is not entirely filled
+svg_nodes_set_1.append("circle")
+    .attr("r", 20)
+    .style("stroke", "#e0620d")
+    .style("stroke-width", 5)
+    .style("fill", "none")
+    .attr("cx", w_1/2 - 185)
+    .attr("cy", h_1/2 )
+    .attr("class", "gap_circle");
 
 
