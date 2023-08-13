@@ -39,11 +39,14 @@ li {
 	clear: left;
 }
 
-
 #topic>ul {
 	"list-style": none;
 }
 
+
+li.topdown_list {
+	display: block;
+}
 
 #block1,
 #block2,
