@@ -21,9 +21,9 @@ svg_block.append("text")
 // back-facing long edge of block
 // top line
 svg_block.append("line")
-    .attr("x1", w_block*(2.88/15))
+    .attr("x1", w_block*(2.87/15))
     .attr("y1", h_block*(1/10))
-    .attr("x2", w_block*(13.88/15))
+    .attr("x2", w_block*(13.87/15))
     .attr("y2", h_block*(1/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -31,9 +31,9 @@ svg_block.append("line")
 
 // bottom line
 svg_block.append("line")
-    .attr("x1", w_block*(2.88/15))
+    .attr("x1", w_block*(2.87/15))
     .attr("y1", h_block*(6/10))
-    .attr("x2", w_block*(13.88/15))
+    .attr("x2", w_block*(13.87/15))
     .attr("y2", h_block*(6/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -65,7 +65,7 @@ svg_block.append("line")
 svg_block.append("line")
     .attr("x1", w_block*(12/15))
     .attr("y1", h_block*(4/10))
-    .attr("x2", w_block*(13.88/15))
+    .attr("x2", w_block*(13.87/15))
     .attr("y2", h_block*(1/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -85,7 +85,7 @@ svg_block.append("line")
 svg_block.append("line")
     .attr("x1", w_block*(12/15))
     .attr("y1", h_block*(9/10))
-    .attr("x2", w_block*(13.88/15))
+    .attr("x2", w_block*(13.87/15))
     .attr("y2", h_block*(6/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -93,9 +93,9 @@ svg_block.append("line")
 
 // right vertical line
 svg_block.append("line")
-    .attr("x1", w_block*(13.88/15))
+    .attr("x1", w_block*(13.87/15))
     .attr("y1", h_block*(6/10))
-    .attr("x2", w_block*(13.88/15))
+    .attr("x2", w_block*(13.87/15))
     .attr("y2", h_block*(1/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -104,7 +104,7 @@ svg_block.append("line")
 // left-facing short edge of block
 // top line
 svg_block.append("line")
-    .attr("x1", w_block*(2.88/15))
+    .attr("x1", w_block*(2.87/15))
     .attr("y1", h_block*(1/10))
     .attr("x2", w_block*(1/15))
     .attr("y2", h_block*(4/10))
@@ -126,7 +126,7 @@ svg_block.append("line")
 svg_block.append("line")
     .attr("x1", w_block*(1/15))
     .attr("y1", h_block*(9/10))
-    .attr("x2", w_block*(2.88/15))
+    .attr("x2", w_block*(2.87/15))
     .attr("y2", h_block*(6/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -134,9 +134,9 @@ svg_block.append("line")
 
 // right vertical line
 svg_block.append("line")
-    .attr("x1", w_block*(2.88/15))
+    .attr("x1", w_block*(2.87/15))
     .attr("y1", h_block*(6/10))
-    .attr("x2", w_block*(3/15))
+    .attr("x2", w_block*(2.87/15))
     .attr("y2", h_block*(1/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -173,9 +173,9 @@ svg_cross_1_block.append("text")
 
 // top line
 svg_cross_1_block.append("line")
-    .attr("x1", w_cross_block*(1/15))
+    .attr("x1", w_cross_block*(3/15))
     .attr("y1", h_cross_block*(2/10))
-    .attr("x2", w_cross_block*(14/15))
+    .attr("x2", w_cross_block*(12/15))
     .attr("y2", h_cross_block*(2/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -183,9 +183,9 @@ svg_cross_1_block.append("line")
 
 // right vertical line
 svg_cross_1_block.append("line")
-    .attr("x1", w_cross_block*(14/15))
+    .attr("x1", w_cross_block*(12/15))
     .attr("y1", h_cross_block*(2/10))
-    .attr("x2", w_cross_block*(14/15))
+    .attr("x2", w_cross_block*(12/15))
     .attr("y2", h_cross_block*(8/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -193,9 +193,9 @@ svg_cross_1_block.append("line")
 
 // bottom line
 svg_cross_1_block.append("line")
-    .attr("x1", w_cross_block*(14/15))
+    .attr("x1", w_cross_block*(12/15))
     .attr("y1", h_cross_block*(8/10))
-    .attr("x2", w_cross_block*(1/15))
+    .attr("x2", w_cross_block*(3/15))
     .attr("y2", h_cross_block*(8/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -203,9 +203,9 @@ svg_cross_1_block.append("line")
 
 // left vertical line
 svg_cross_1_block.append("line")
-    .attr("x1", w_cross_block*(1/15))
+    .attr("x1", w_cross_block*(3/15))
     .attr("y1", h_cross_block*(8/10))
-    .attr("x2", w_cross_block*(1/15))
+    .attr("x2", w_cross_block*(3/15))
     .attr("y2", h_cross_block*(2/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -231,9 +231,9 @@ svg_cross_4_block.append("text")
 
 // top line
 svg_cross_4_block.append("line")
-    .attr("x1", w_cross_block*(1/15))
+    .attr("x1", w_cross_block*(3/15))
     .attr("y1", h_cross_block*(2/10))
-    .attr("x2", w_cross_block*(14/15))
+    .attr("x2", w_cross_block*(12/15))
     .attr("y2", h_cross_block*(2/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -241,9 +241,9 @@ svg_cross_4_block.append("line")
 
 // right vertical line
 svg_cross_4_block.append("line")
-    .attr("x1", w_cross_block*(14/15))
+    .attr("x1", w_cross_block*(12/15))
     .attr("y1", h_cross_block*(2/10))
-    .attr("x2", w_cross_block*(14/15))
+    .attr("x2", w_cross_block*(12/15))
     .attr("y2", h_cross_block*(8/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -251,9 +251,9 @@ svg_cross_4_block.append("line")
 
 // bottom line
 svg_cross_4_block.append("line")
-    .attr("x1", w_cross_block*(14/15))
+    .attr("x1", w_cross_block*(12/15))
     .attr("y1", h_cross_block*(8/10))
-    .attr("x2", w_cross_block*(1/15))
+    .attr("x2", w_cross_block*(3/15))
     .attr("y2", h_cross_block*(8/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -261,9 +261,9 @@ svg_cross_4_block.append("line")
 
 // left vertical line
 svg_cross_4_block.append("line")
-    .attr("x1", w_cross_block*(1/15))
+    .attr("x1", w_cross_block*(3/15))
     .attr("y1", h_cross_block*(8/10))
-    .attr("x2", w_cross_block*(1/15))
+    .attr("x2", w_cross_block*(3/15))
     .attr("y2", h_cross_block*(2/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -271,9 +271,9 @@ svg_cross_4_block.append("line")
 
 // middle horizontal line
 svg_cross_4_block.append("line")
-    .attr("x1", w_cross_block*(1/15))
+    .attr("x1", w_cross_block*(3/15))
     .attr("y1", h_cross_block*(5/10))
-    .attr("x2", w_cross_block*(14/15))
+    .attr("x2", w_cross_block*(12/15))
     .attr("y2", h_cross_block*(5/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -317,28 +317,28 @@ d3.select("#center_point")
 	// top left
 	svg_cross_4_block.append("circle")
 	    .style("fill", "#696a61")
-	    .attr("cx", w_cross_block*(4.25/15))
+	    .attr("cx", w_cross_block*(5.25/15))
 	    .attr("cy", h_cross_block*(3.5/10))
 	    .attr("r", 5);
 	
 	// top right
 	svg_cross_4_block.append("circle")
 	    .style("fill", "#696a61")
-	    .attr("cx", w_cross_block*(10.75/15))
+	    .attr("cx", w_cross_block*(9.75/15))
 	    .attr("cy", h_cross_block*(3.5/10))
 	    .attr("r", 5);
 
 	// bottom left
 	svg_cross_4_block.append("circle")
 	    .style("fill", "#696a61")
-	    .attr("cx", w_cross_block*(4.25/15))
+	    .attr("cx", w_cross_block*(5.25/15))
 	    .attr("cy", h_cross_block*(6.5/10))
 	    .attr("r", 5);
 
 	// bottom right
 	svg_cross_4_block.append("circle")
 	    .style("fill", "#696a61")
-	    .attr("cx", w_cross_block*(10.75/15))
+	    .attr("cx", w_cross_block*(9.75/15))
 	    .attr("cy", h_cross_block*(6.5/10))
 	    .attr("r", 5);
 });
@@ -356,9 +356,9 @@ var svg_cross_3_and_1_several_block = d3.select("#block3")
 
 // top line
 svg_cross_3_and_1_several_block.append("line")
-    .attr("x1", w_cross_block*(1/15))
+    .attr("x1", w_cross_block*(3/15))
     .attr("y1", h_cross_block*(2/10))
-    .attr("x2", w_cross_block*(14/15))
+    .attr("x2", w_cross_block*(12/15))
     .attr("y2", h_cross_block*(2/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -366,9 +366,9 @@ svg_cross_3_and_1_several_block.append("line")
 
 // right vertical line
 svg_cross_3_and_1_several_block.append("line")
-    .attr("x1", w_cross_block*(14/15))
+    .attr("x1", w_cross_block*(12/15))
     .attr("y1", h_cross_block*(2/10))
-    .attr("x2", w_cross_block*(14/15))
+    .attr("x2", w_cross_block*(12/15))
     .attr("y2", h_cross_block*(8/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -376,9 +376,9 @@ svg_cross_3_and_1_several_block.append("line")
 
 // bottom line
 svg_cross_3_and_1_several_block.append("line")
-    .attr("x1", w_cross_block*(14/15))
+    .attr("x1", w_cross_block*(12/15))
     .attr("y1", h_cross_block*(8/10))
-    .attr("x2", w_cross_block*(1/15))
+    .attr("x2", w_cross_block*(3/15))
     .attr("y2", h_cross_block*(8/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -386,9 +386,9 @@ svg_cross_3_and_1_several_block.append("line")
 
 // left vertical line
 svg_cross_3_and_1_several_block.append("line")
-    .attr("x1", w_cross_block*(1/15))
+    .attr("x1", w_cross_block*(3/15))
     .attr("y1", h_cross_block*(8/10))
-    .attr("x2", w_cross_block*(1/15))
+    .attr("x2", w_cross_block*(3/15))
     .attr("y2", h_cross_block*(2/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -396,9 +396,9 @@ svg_cross_3_and_1_several_block.append("line")
 
 // middle horizontal line
 svg_cross_3_and_1_several_block.append("line")
-    .attr("x1", w_cross_block*(1/15))
+    .attr("x1", w_cross_block*(3/15))
     .attr("y1", h_cross_block*(5/10))
-    .attr("x2", w_cross_block*(14/15))
+    .attr("x2", w_cross_block*(12/15))
     .attr("y2", h_cross_block*(5/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -416,19 +416,19 @@ svg_cross_3_and_1_several_block.append("line")
 
 // left vertical line in bottom right stick of butter
 svg_cross_3_and_1_several_block.append("line")
-    .attr("x1", w_cross_block*(9.66/15))
+    .attr("x1", w_cross_block*(9/15))
     .attr("y1", h_cross_block*(5/10))
-    .attr("x2", w_cross_block*(9.66/15))
+    .attr("x2", w_cross_block*(9/15))
     .attr("y2", h_cross_block*(8/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
     .style("stroke-dasharray", "3 3");
 
-// right vertical vertical line in bottom right stick of butter
+// right vertical line in bottom right stick of butter
 svg_cross_3_and_1_several_block.append("line")
-    .attr("x1", w_cross_block*(11.83/15))
+    .attr("x1", w_cross_block*(10.5/15))
     .attr("y1", h_cross_block*(5/10))
-    .attr("x2", w_cross_block*(11.83/15))
+    .attr("x2", w_cross_block*(10.5/15))
     .attr("y2", h_cross_block*(8/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -438,7 +438,7 @@ svg_cross_3_and_1_several_block.append("line")
 svg_cross_3_and_1_several_block.append("line")
     .attr("x1", w_cross_block*(7.5/15))
     .attr("y1", h_cross_block*(6/10))
-    .attr("x2", w_cross_block*(14/15))
+    .attr("x2", w_cross_block*(12/15))
     .attr("y2", h_cross_block*(6/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -448,7 +448,7 @@ svg_cross_3_and_1_several_block.append("line")
 svg_cross_3_and_1_several_block.append("line")
     .attr("x1", w_cross_block*(7.5/15))
     .attr("y1", h_cross_block*(7/10))
-    .attr("x2", w_cross_block*(14/15))
+    .attr("x2", w_cross_block*(12/15))
     .attr("y2", h_cross_block*(7/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -458,84 +458,84 @@ svg_cross_3_and_1_several_block.append("line")
 // top left
 svg_cross_3_and_1_several_block.append("circle")
     .style("fill", "#696a61")
-    .attr("cx", w_cross_block*(4.25/15))
+    .attr("cx", w_cross_block*(5.25/15))
     .attr("cy", h_cross_block*(3.5/10))
     .attr("r", 5);
 
 // top right
 svg_cross_3_and_1_several_block.append("circle")
     .style("fill", "#696a61")
-    .attr("cx", w_cross_block*(10.75/15))
+    .attr("cx", w_cross_block*(9.75/15))
     .attr("cy", h_cross_block*(3.5/10))
     .attr("r", 5);
 
 // bottom left
 svg_cross_3_and_1_several_block.append("circle")
     .style("fill", "#696a61")
-    .attr("cx", w_cross_block*(4.25/15))
+    .attr("cx", w_cross_block*(5.25/15))
     .attr("cy", h_cross_block*(6.5/10))
     .attr("r", 5);
 
 // bottom right, r1, c1
 svg_cross_3_and_1_several_block.append("circle")
     .style("fill", "#696a61")
-    .attr("cx", w_cross_block*(8.58/15))
+    .attr("cx", w_cross_block*(8.25/15))
     .attr("cy", h_cross_block*(5.5/10))
     .attr("r", 5);
 
 // bottom right, r1, c2
 svg_cross_3_and_1_several_block.append("circle")
     .style("fill", "#696a61")
-    .attr("cx", w_cross_block*(10.74/15))
+    .attr("cx", w_cross_block*(9.75/15))
     .attr("cy", h_cross_block*(5.5/10))
     .attr("r", 5);
 
 // bottom right, r1, c3
 svg_cross_3_and_1_several_block.append("circle")
     .style("fill", "#696a61")
-    .attr("cx", w_cross_block*(12.91/15))
+    .attr("cx", w_cross_block*(11.25/15))
     .attr("cy", h_cross_block*(5.5/10))
     .attr("r", 5);
 
 // bottom right, r2, c1
 svg_cross_3_and_1_several_block.append("circle")
     .style("fill", "#696a61")
-    .attr("cx", w_cross_block*(8.58/15))
+    .attr("cx", w_cross_block*(8.25/15))
     .attr("cy", h_cross_block*(6.5/10))
     .attr("r", 5);
 
 // bottom right, r2, c2
 svg_cross_3_and_1_several_block.append("circle")
     .style("fill", "#696a61")
-    .attr("cx", w_cross_block*(10.74/15))
+    .attr("cx", w_cross_block*(9.75/15))
     .attr("cy", h_cross_block*(6.5/10))
     .attr("r", 5);
 
 // bottom right, r2, c3
 svg_cross_3_and_1_several_block.append("circle")
     .style("fill", "#696a61")
-    .attr("cx", w_cross_block*(12.91/15))
+    .attr("cx", w_cross_block*(11.25/15))
     .attr("cy", h_cross_block*(6.5/10))
     .attr("r", 5);
 
 // bottom right, r3, c1
 svg_cross_3_and_1_several_block.append("circle")
     .style("fill", "#696a61")
-    .attr("cx", w_cross_block*(8.58/15))
+    .attr("cx", w_cross_block*(8.25/15))
     .attr("cy", h_cross_block*(7.5/10))
     .attr("r", 5);
 
 // bottom right, r3, c2
 svg_cross_3_and_1_several_block.append("circle")
     .style("fill", "#696a61")
-    .attr("cx", w_cross_block*(10.74/15))
+    .attr("cx", w_cross_block*(9.75/15))
     .attr("cy", h_cross_block*(7.5/10))
     .attr("r", 5);
 
 // bottom right, r3, c3
 svg_cross_3_and_1_several_block.append("circle")
     .style("fill", "#696a61")
-    .attr("cx", w_cross_block*(12.91/15))
+    .attr("cx", w_cross_block*(11.25/15))
     .attr("cy", h_cross_block*(7.5/10))
     .attr("r", 5);
 
@@ -552,9 +552,9 @@ var svg_cross_2_and_2_several_block = d3.select("#block4")
 
 // top line
 svg_cross_2_and_2_several_block.append("line")
-    .attr("x1", w_cross_block*(1/15))
+    .attr("x1", w_cross_block*(3/15))
     .attr("y1", h_cross_block*(2/10))
-    .attr("x2", w_cross_block*(14/15))
+    .attr("x2", w_cross_block*(12/15))
     .attr("y2", h_cross_block*(2/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -562,9 +562,9 @@ svg_cross_2_and_2_several_block.append("line")
 
 // middle vertical line in top left stick of butter
 svg_cross_2_and_2_several_block.append("line")
-    .attr("x1", w_cross_block*(4.25/15))
+    .attr("x1", w_cross_block*(5.25/15))
     .attr("y1", h_cross_block*(2/10))
-    .attr("x2", w_cross_block*(4.25/15))
+    .attr("x2", w_cross_block*(5.25/15))
     .attr("y2", h_cross_block*(5/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -572,7 +572,7 @@ svg_cross_2_and_2_several_block.append("line")
 
 // middle horizontal line in top left stick of butter
 svg_cross_2_and_2_several_block.append("line")
-    .attr("x1", w_cross_block*(1/15))
+    .attr("x1", w_cross_block*(3/15))
     .attr("y1", h_cross_block*(3.5/10))
     .attr("x2", w_cross_block*(7.5/15))
     .attr("y2", h_cross_block*(3.5/10))
@@ -582,9 +582,9 @@ svg_cross_2_and_2_several_block.append("line")
 
 // right vertical line
 svg_cross_2_and_2_several_block.append("line")
-    .attr("x1", w_cross_block*(14/15))
+    .attr("x1", w_cross_block*(12/15))
     .attr("y1", h_cross_block*(2/10))
-    .attr("x2", w_cross_block*(14/15))
+    .attr("x2", w_cross_block*(12/15))
     .attr("y2", h_cross_block*(8/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -592,9 +592,9 @@ svg_cross_2_and_2_several_block.append("line")
 
 // bottom line
 svg_cross_2_and_2_several_block.append("line")
-    .attr("x1", w_cross_block*(14/15))
+    .attr("x1", w_cross_block*(12/15))
     .attr("y1", h_cross_block*(8/10))
-    .attr("x2", w_cross_block*(1/15))
+    .attr("x2", w_cross_block*(3/15))
     .attr("y2", h_cross_block*(8/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -602,9 +602,9 @@ svg_cross_2_and_2_several_block.append("line")
 
 // left vertical line
 svg_cross_2_and_2_several_block.append("line")
-    .attr("x1", w_cross_block*(1/15))
+    .attr("x1", w_cross_block*(3/15))
     .attr("y1", h_cross_block*(8/10))
-    .attr("x2", w_cross_block*(1/15))
+    .attr("x2", w_cross_block*(3/15))
     .attr("y2", h_cross_block*(2/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -612,9 +612,9 @@ svg_cross_2_and_2_several_block.append("line")
 
 // middle horizontal line
 svg_cross_2_and_2_several_block.append("line")
-    .attr("x1", w_cross_block*(1/15))
+    .attr("x1", w_cross_block*(3/15))
     .attr("y1", h_cross_block*(5/10))
-    .attr("x2", w_cross_block*(14/15))
+    .attr("x2", w_cross_block*(12/15))
     .attr("y2", h_cross_block*(5/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -632,9 +632,9 @@ svg_cross_2_and_2_several_block.append("line")
 
 // left vertical line in bottom right stick of butter
 svg_cross_2_and_2_several_block.append("line")
-    .attr("x1", w_cross_block*(9.66/15))
+    .attr("x1", w_cross_block*(9/15))
     .attr("y1", h_cross_block*(5/10))
-    .attr("x2", w_cross_block*(9.66/15))
+    .attr("x2", w_cross_block*(9/15))
     .attr("y2", h_cross_block*(8/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -642,9 +642,9 @@ svg_cross_2_and_2_several_block.append("line")
 
 // right vertical vertical line in bottom right stick of butter
 svg_cross_2_and_2_several_block.append("line")
-    .attr("x1", w_cross_block*(11.83/15))
+    .attr("x1", w_cross_block*(10.5/15))
     .attr("y1", h_cross_block*(5/10))
-    .attr("x2", w_cross_block*(11.83/15))
+    .attr("x2", w_cross_block*(10.5/15))
     .attr("y2", h_cross_block*(8/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -654,7 +654,7 @@ svg_cross_2_and_2_several_block.append("line")
 svg_cross_2_and_2_several_block.append("line")
     .attr("x1", w_cross_block*(7.5/15))
     .attr("y1", h_cross_block*(6/10))
-    .attr("x2", w_cross_block*(14/15))
+    .attr("x2", w_cross_block*(12/15))
     .attr("y2", h_cross_block*(6/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -664,7 +664,7 @@ svg_cross_2_and_2_several_block.append("line")
 svg_cross_2_and_2_several_block.append("line")
     .attr("x1", w_cross_block*(7.5/15))
     .attr("y1", h_cross_block*(7/10))
-    .attr("x2", w_cross_block*(14/15))
+    .attr("x2", w_cross_block*(12/15))
     .attr("y2", h_cross_block*(7/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -674,105 +674,105 @@ svg_cross_2_and_2_several_block.append("line")
 // top left, r1, c1
 svg_cross_2_and_2_several_block.append("circle")
     .style("fill", "#696a61")
-    .attr("cx", w_cross_block*(2.62/15))
+    .attr("cx", w_cross_block*(4.13/15))
     .attr("cy", h_cross_block*(2.75/10))
     .attr("r", 5)
 
 // top left, r1, c2
 svg_cross_2_and_2_several_block.append("circle")
     .style("fill", "#696a61")
-    .attr("cx", w_cross_block*(5.87/15))
+    .attr("cx", w_cross_block*(6.38/15))
     .attr("cy", h_cross_block*(2.75/10))
     .attr("r", 5)
 
 // top left, r2, c1
 svg_cross_2_and_2_several_block.append("circle")
     .style("fill", "#696a61")
-    .attr("cx", w_cross_block*(2.62/15))
+    .attr("cx", w_cross_block*(4.13/15))
     .attr("cy", h_cross_block*(4.25/10))
     .attr("r", 5)
 
 // top left, r2, c2
 svg_cross_2_and_2_several_block.append("circle")
     .style("fill", "#696a61")
-    .attr("cx", w_cross_block*(5.87/15))
+    .attr("cx", w_cross_block*(6.38/15))
     .attr("cy", h_cross_block*(4.25/10))
     .attr("r", 5)
 
 // top right
 svg_cross_2_and_2_several_block.append("circle")
     .style("fill", "#696a61")
-    .attr("cx", w_cross_block*(10.75/15))
+    .attr("cx", w_cross_block*(9.75/15))
     .attr("cy", h_cross_block*(3.5/10))
     .attr("r", 5);
 
 // bottom left
 svg_cross_2_and_2_several_block.append("circle")
     .style("fill", "#696a61")
-    .attr("cx", w_cross_block*(4.25/15))
+    .attr("cx", w_cross_block*(5.25/15))
     .attr("cy", h_cross_block*(6.5/10))
     .attr("r", 5);
 
 // bottom right, r1, c1
 svg_cross_2_and_2_several_block.append("circle")
     .style("fill", "#696a61")
-    .attr("cx", w_cross_block*(8.58/15))
+    .attr("cx", w_cross_block*(8.25/15))
     .attr("cy", h_cross_block*(5.5/10))
     .attr("r", 5);
 
 // bottom right, r1, c2
 svg_cross_2_and_2_several_block.append("circle")
     .style("fill", "#696a61")
-    .attr("cx", w_cross_block*(10.74/15))
+    .attr("cx", w_cross_block*(9.75/15))
     .attr("cy", h_cross_block*(5.5/10))
     .attr("r", 5);
 
 // bottom right, r1, c3
 svg_cross_2_and_2_several_block.append("circle")
     .style("fill", "#696a61")
-    .attr("cx", w_cross_block*(12.91/15))
+    .attr("cx", w_cross_block*(11.25/15))
     .attr("cy", h_cross_block*(5.5/10))
     .attr("r", 5);
 
 // bottom right, r2, c1
 svg_cross_2_and_2_several_block.append("circle")
     .style("fill", "#696a61")
-    .attr("cx", w_cross_block*(8.58/15))
+    .attr("cx", w_cross_block*(8.25/15))
     .attr("cy", h_cross_block*(6.5/10))
     .attr("r", 5);
 
 // bottom right, r2, c2
 svg_cross_2_and_2_several_block.append("circle")
     .style("fill", "#696a61")
-    .attr("cx", w_cross_block*(10.74/15))
+    .attr("cx", w_cross_block*(9.75/15))
     .attr("cy", h_cross_block*(6.5/10))
     .attr("r", 5);
 
 // bottom right, r2, c3
 svg_cross_2_and_2_several_block.append("circle")
     .style("fill", "#696a61")
-    .attr("cx", w_cross_block*(12.91/15))
+    .attr("cx", w_cross_block*(11.25/15))
     .attr("cy", h_cross_block*(6.5/10))
     .attr("r", 5);
 
 // bottom right, r3, c1
 svg_cross_2_and_2_several_block.append("circle")
     .style("fill", "#696a61")
-    .attr("cx", w_cross_block*(8.58/15))
+    .attr("cx", w_cross_block*(8.25/15))
     .attr("cy", h_cross_block*(7.5/10))
     .attr("r", 5);
 
 // bottom right, r3, c2
 svg_cross_2_and_2_several_block.append("circle")
     .style("fill", "#696a61")
-    .attr("cx", w_cross_block*(10.74/15))
+    .attr("cx", w_cross_block*(9.75/15))
     .attr("cy", h_cross_block*(7.5/10))
     .attr("r", 5);
 
 // bottom right, r3, c3
 svg_cross_2_and_2_several_block.append("circle")
     .style("fill", "#696a61")
-    .attr("cx", w_cross_block*(12.91/15))
+    .attr("cx", w_cross_block*(11.25/15))
     .attr("cy", h_cross_block*(7.5/10))
     .attr("r", 5);
 
@@ -791,9 +791,9 @@ var svg_rect_1_plus_3 = d3.select("#block5")
 
 // top line
 svg_rect_1_plus_3.append("line")
-    .attr("x1", w_cross_block*(1/15))
+    .attr("x1", w_cross_block*(3/15))
     .attr("y1", h_cross_block*(2/10))
-    .attr("x2", w_cross_block*(14/15))
+    .attr("x2", w_cross_block*(12/15))
     .attr("y2", h_cross_block*(2/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -801,9 +801,9 @@ svg_rect_1_plus_3.append("line")
 
 // right vertical line
 svg_rect_1_plus_3.append("line")
-    .attr("x1", w_cross_block*(14/15))
+    .attr("x1", w_cross_block*(12/15))
     .attr("y1", h_cross_block*(2/10))
-    .attr("x2", w_cross_block*(14/15))
+    .attr("x2", w_cross_block*(12/15))
     .attr("y2", h_cross_block*(8/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -811,9 +811,9 @@ svg_rect_1_plus_3.append("line")
 
 // bottom line
 svg_rect_1_plus_3.append("line")
-    .attr("x1", w_cross_block*(14/15))
+    .attr("x1", w_cross_block*(12/15))
     .attr("y1", h_cross_block*(8/10))
-    .attr("x2", w_cross_block*(1/15))
+    .attr("x2", w_cross_block*(3/15))
     .attr("y2", h_cross_block*(8/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -821,9 +821,9 @@ svg_rect_1_plus_3.append("line")
 
 // left vertical line
 svg_rect_1_plus_3.append("line")
-    .attr("x1", w_cross_block*(1/15))
+    .attr("x1", w_cross_block*(3/15))
     .attr("y1", h_cross_block*(8/10))
-    .attr("x2", w_cross_block*(1/15))
+    .attr("x2", w_cross_block*(3/15))
     .attr("y2", h_cross_block*(2/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -836,9 +836,9 @@ d3.select("#medium_size_rect_1_plus_3")
     .on("click", function() {
 	    // top
 	    svg_rect_1_plus_3.append("line")
-	        .attr("x1", w_cross_block*(2/15))
+	        .attr("x1", w_cross_block*(4/15))
 	        .attr("y1", h_cross_block*(4/10))
-	        .attr("x2", w_cross_block*(8.5/15))
+	        .attr("x2", w_cross_block*(7/15))
 	        .attr("y2", h_cross_block*(4/10))
 	        .style("stroke", "#91d5e4")
 	        .style("stroke-width", 5)
@@ -846,29 +846,29 @@ d3.select("#medium_size_rect_1_plus_3")
 
 	    // right vertical side
 	    svg_rect_1_plus_3.append("line")
-	        .attr("x1", w_cross_block*(8.5/15))
+	        .attr("x1", w_cross_block*(7/15))
 	        .attr("y1", h_cross_block*(4/10))
-	        .attr("x2", w_cross_block*(8.5/15))
-	        .attr("y2", h_cross_block*(7/10))
+	        .attr("x2", w_cross_block*(7/15))
+	        .attr("y2", h_cross_block*(6/10))
 	        .style("stroke", "#91d5e4")
 	        .style("stroke-width", 5)
 	        .style("stroke-dasharray", "3 1");
 	    
 	    // bottom
 	    svg_rect_1_plus_3.append("line")
-	        .attr("x1", w_cross_block*(8.5/15))
-	        .attr("y1", h_cross_block*(7/10))
-	        .attr("x2", w_cross_block*(2/15))
-	        .attr("y2", h_cross_block*(7/10))
+	        .attr("x1", w_cross_block*(7/15))
+	        .attr("y1", h_cross_block*(6/10))
+	        .attr("x2", w_cross_block*(4/15))
+	        .attr("y2", h_cross_block*(6/10))
 	        .style("stroke", "#91d5e4")
 	        .style("stroke-width", 5)
 	        .style("stroke-dasharray", "3 1");
 
 	    // left vertical side
 	    svg_rect_1_plus_3.append("line")
-	        .attr("x1", w_cross_block*(2/15))
-	        .attr("y1", h_cross_block*(7/10))
-	        .attr("x2", w_cross_block*(2/15))
+	        .attr("x1", w_cross_block*(4/15))
+	        .attr("y1", h_cross_block*(6/10))
+	        .attr("x2", w_cross_block*(4/15))
 	        .attr("y2", h_cross_block*(4/10))
 	        .style("stroke", "#91d5e4")
 	        .style("stroke-width", 5)
@@ -882,7 +882,7 @@ d3.select("#smaller_size_rect_1_plus_3")
     .on("click", function() {
 	    // top
 	    svg_rect_1_plus_3.append("line")
-	        .attr("x1", w_cross_block*(1.5/15))
+	        .attr("x1", w_cross_block*(3.5/15))
 	        .attr("y1", h_cross_block*(2.5/10))
 	        .attr("x2", w_cross_block*(4.5/15))
 	        .attr("y2", h_cross_block*(2.5/10))
@@ -895,7 +895,7 @@ d3.select("#smaller_size_rect_1_plus_3")
 	        .attr("x1", w_cross_block*(4.5/15))
 	        .attr("y1", h_cross_block*(2.5/10))
 	        .attr("x2", w_cross_block*(4.5/15))
-	        .attr("y2", h_cross_block*(3.5/10))
+	        .attr("y2", h_cross_block*(3.16/10))
 	        .style("stroke", "#91d5e4")
 	        .style("stroke-width", 5)
 	        .style("stroke-dasharray", "3 1");
@@ -903,18 +903,18 @@ d3.select("#smaller_size_rect_1_plus_3")
 	    // bottom
 	    svg_rect_1_plus_3.append("line")
 	        .attr("x1", w_cross_block*(4.5/15))
-	        .attr("y1", h_cross_block*(3.5/10))
-	        .attr("x2", w_cross_block*(1.5/15))
-	        .attr("y2", h_cross_block*(3.5/10))
+	        .attr("y1", h_cross_block*(3.16/10))
+	        .attr("x2", w_cross_block*(3.5/15))
+	        .attr("y2", h_cross_block*(3.16/10))
 	        .style("stroke", "#91d5e4")
 	        .style("stroke-width", 5)
 	        .style("stroke-dasharray", "3 1");
 
 	    // left vertical side
 	    svg_rect_1_plus_3.append("line")
-	        .attr("x1", w_cross_block*(1.5/15))
-	        .attr("y1", h_cross_block*(3.5/10))
-	        .attr("x2", w_cross_block*(1.5/15))
+	        .attr("x1", w_cross_block*(3.5/15))
+	        .attr("y1", h_cross_block*(3.16/10))
+	        .attr("x2", w_cross_block*(3.5/15))
 	        .attr("y2", h_cross_block*(2.5/10))
 	        .style("stroke", "#91d5e4")
 	        .style("stroke-width", 5)
@@ -929,29 +929,29 @@ d3.select("#larger_size_rect_1_plus_3")
 	    // top
 	    svg_rect_1_plus_3.append("line")
 	        .attr("x1", w_cross_block*(5.5/15))
-	        .attr("y1", h_cross_block*(2.25/10))
-	        .attr("x2", w_cross_block*(13.5/15))
-	        .attr("y2", h_cross_block*(2.25/10))
+	        .attr("y1", h_cross_block*(3.25/10))
+	        .attr("x2", w_cross_block*(11.5/15))
+	        .attr("y2", h_cross_block*(3.25/10))
 	        .style("stroke", "#91d5e4")
 	        .style("stroke-width", 5)
 	        .style("stroke-dasharray", "3 1");
 
 	    // right vertical side
 	    svg_rect_1_plus_3.append("line")
-	        .attr("x1", w_cross_block*(13.5/15))
-	        .attr("y1", h_cross_block*(2.25/10))
-	        .attr("x2", w_cross_block*(13.5/15))
-	        .attr("y2", h_cross_block*(6.75/10))
+	        .attr("x1", w_cross_block*(11.5/15))
+	        .attr("y1", h_cross_block*(3.25/10))
+	        .attr("x2", w_cross_block*(11.5/15))
+	        .attr("y2", h_cross_block*(7.25/10))
 	        .style("stroke", "#91d5e4")
 	        .style("stroke-width", 5)
 	        .style("stroke-dasharray", "3 1");
 	    
 	    // bottom
 	    svg_rect_1_plus_3.append("line")
-	        .attr("x1", w_cross_block*(13.5/15))
-	        .attr("y1", h_cross_block*(6.75/10))
+	        .attr("x1", w_cross_block*(11.5/15))
+	        .attr("y1", h_cross_block*(7.25/10))
 	        .attr("x2", w_cross_block*(5.5/15))
-	        .attr("y2", h_cross_block*(6.75/10))
+	        .attr("y2", h_cross_block*(7.25/10))
 	        .style("stroke", "#91d5e4")
 	        .style("stroke-width", 5)
 	        .style("stroke-dasharray", "3 1");
@@ -959,9 +959,9 @@ d3.select("#larger_size_rect_1_plus_3")
 	    // left vertical side
 	    svg_rect_1_plus_3.append("line")
 	        .attr("x1", w_cross_block*(5.5/15))
-	        .attr("y1", h_cross_block*(6.75/10))
+	        .attr("y1", h_cross_block*(7.25/10))
 	        .attr("x2", w_cross_block*(5.5/15))
-	        .attr("y2", h_cross_block*(2.25/10))
+	        .attr("y2", h_cross_block*(3.25/10))
 	        .style("stroke", "#91d5e4")
 	        .style("stroke-width", 5)
 	        .style("stroke-dasharray", "3 1");
@@ -986,9 +986,9 @@ var svg_rect_4_plus_3 = d3.select("#block6")
 
 // top line
 svg_rect_4_plus_3.append("line")
-    .attr("x1", w_cross_block*(1/15))
+    .attr("x1", w_cross_block*(3/15))
     .attr("y1", h_cross_block*(2/10))
-    .attr("x2", w_cross_block*(14/15))
+    .attr("x2", w_cross_block*(12/15))
     .attr("y2", h_cross_block*(2/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -996,9 +996,9 @@ svg_rect_4_plus_3.append("line")
 
 // right vertical line
 svg_rect_4_plus_3.append("line")
-    .attr("x1", w_cross_block*(14/15))
+    .attr("x1", w_cross_block*(12/15))
     .attr("y1", h_cross_block*(2/10))
-    .attr("x2", w_cross_block*(14/15))
+    .attr("x2", w_cross_block*(12/15))
     .attr("y2", h_cross_block*(8/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -1006,9 +1006,9 @@ svg_rect_4_plus_3.append("line")
 
 // bottom line
 svg_rect_4_plus_3.append("line")
-    .attr("x1", w_cross_block*(14/15))
+    .attr("x1", w_cross_block*(12/15))
     .attr("y1", h_cross_block*(8/10))
-    .attr("x2", w_cross_block*(1/15))
+    .attr("x2", w_cross_block*(3/15))
     .attr("y2", h_cross_block*(8/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -1016,9 +1016,9 @@ svg_rect_4_plus_3.append("line")
 
 // left vertical line
 svg_rect_4_plus_3.append("line")
-    .attr("x1", w_cross_block*(1/15))
+    .attr("x1", w_cross_block*(3/15))
     .attr("y1", h_cross_block*(8/10))
-    .attr("x2", w_cross_block*(1/15))
+    .attr("x2", w_cross_block*(3/15))
     .attr("y2", h_cross_block*(2/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
@@ -1026,9 +1026,9 @@ svg_rect_4_plus_3.append("line")
 
 // middle horizontal line
 svg_rect_4_plus_3.append("line")
-    .attr("x1", w_cross_block*(1/15))
+    .attr("x1", w_cross_block*(3/15))
     .attr("y1", h_cross_block*(5/10))
-    .attr("x2", w_cross_block*(14/15))
+    .attr("x2", w_cross_block*(12/15))
     .attr("y2", h_cross_block*(5/10))
     .style("stroke", "#696a61")
     .style("stroke-width", 5)
