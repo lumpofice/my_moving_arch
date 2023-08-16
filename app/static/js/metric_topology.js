@@ -1267,9 +1267,9 @@ d3.select("#rect_1_plus_many")
 	    if (k_minus_i == 1) {
 	    	    //let number = [-0.5, -0.33, -0.08, 0, 1, 1.81, 2];
 	    	    //let random_number = Math.floor(Math.random()*number.length);
-		    var j = 1;
-		    var n = 1.66;
-		    var scalar = Math.random()*(2 - (-0.5)) + (-0.5);
+		    let j = 1;
+		    let n = 1.66;
+		    let scalar = Math.random()*(2 - (-0.5)) + (-0.5);
 		    //var scalar = number[random_number];
 	    
 
@@ -1317,9 +1317,9 @@ d3.select("#rect_1_plus_many")
 	    else if (k_minus_i == 2) {
 	    	    //let number = [0, 0.11, 0.41, 0.71, 1, 1.47, 2, 2.17];
 	    	    //let random_number = Math.floor(Math.random()*number.length);
-		    var j = 1;
-		    var n = 2.33;
-		    var scalar = Math.random()*(2.17);
+		    let j = 1;
+		    let n = 2.33;
+		    let scalar = Math.random()*(2.17);
 		    //var scalar = number[random_number];
 	    
 
@@ -1367,9 +1367,9 @@ d3.select("#rect_1_plus_many")
 	    else if (k_minus_i == 3) {
 	    	    //let number = [0, 0.05, 0.12, 0.84, 1, 1.17, 1.5];
 	    	    //let random_number = Math.floor(Math.random()*number.length);
-		    var j = 1;
-		    var n = 3;
-		    var scalar = Math.random()*(1.5);
+		    let j = 1;
+		    let n = 3;
+		    let scalar = Math.random()*(1.5);
 		    //var scalar = number[random_number];
 	    
 
@@ -1412,13 +1412,14 @@ d3.select("#rect_1_plus_many")
 	    	        .attr("y2", w_rect*((j+scalar)/10))
 	    	        .style("stroke", colors[random_color])
 	    	        .style("stroke-width", 5)
+	    	        .style("stroke-dasharray", "3 3");
 	    }
 	    else if (k_minus_i == 4) {
 	    	    //let number = [0, 0.33, 0.66, 0.84];
 	    	    //let random_number = Math.floor(Math.random()*number.length);
-		    var j = 1;
-		    var n = 3.66;
-		    var scalar = Math.random()*(0.84);
+		    let j = 1;
+		    let n = 3.66;
+		    let scalar = Math.random()*(0.84);
 		    //var scalar = number[random_number];
 	    
 
@@ -1461,21 +1462,24 @@ d3.select("#rect_1_plus_many")
 	    	        .attr("y2", w_rect*((j+scalar)/10))
 	    	        .style("stroke", colors[random_color])
 	    	        .style("stroke-width", 5)
+	    	        .style("stroke-dasharray", "3 3");
 	    } 
 	    else {
 	    	    //let number = [0, 0.17];
 	    	    //let random_number = Math.floor(Math.random()*number.length);
-		    var j = 1;
-		    var n = 4.33;
-		    var scalar = Math.random()*(0.17);
+		    let p = Math.floor(Math.random()*9) + 3;
+		    let q = p+1;
+		    let j = 1;
+		    let n = 1.66;
+		    let scalar = Math.random()*(2 - (-0.5)) + (-0.5);
 		    //var scalar = number[random_number];
 	    
 
             	    // top
 	    	    svg_rect_1_plus_many.append("line")
-	    	        .attr("x1", w_rect*(i/15))
+	    	        .attr("x1", w_rect*(p/15))
 	    	        .attr("y1", w_rect*((j+scalar)/10))
-	    	        .attr("x2", w_rect*(k/15))
+	    	        .attr("x2", w_rect*(q/15))
 	    	        .attr("y2", w_rect*((j+scalar)/10))
 	    	        .style("stroke", colors[random_color])
 	    	        .style("stroke-width", 5)
@@ -1484,9 +1488,9 @@ d3.select("#rect_1_plus_many")
 
             	    // right vertical
 	    	    svg_rect_1_plus_many.append("line")
-	    	        .attr("x1", w_rect*(k/15))
+	    	        .attr("x1", w_rect*(q/15))
 	    	        .attr("y1", w_rect*((j+scalar)/10))
-	    	        .attr("x2", w_rect*(k/15))
+	    	        .attr("x2", w_rect*(q/15))
 	    	        .attr("y2", w_rect*((n+scalar)/10))
 	    	        .style("stroke", colors[random_color])
 	    	        .style("stroke-width", 5)
@@ -1494,9 +1498,9 @@ d3.select("#rect_1_plus_many")
             	    
 	    	    // bottom
 	    	    svg_rect_1_plus_many.append("line")
-	    	        .attr("x1", w_rect*(k/15))
+	    	        .attr("x1", w_rect*(q/15))
 	    	        .attr("y1", w_rect*((n+scalar)/10))
-	    	        .attr("x2", w_rect*(i/15))
+	    	        .attr("x2", w_rect*(p/15))
 	    	        .attr("y2", w_rect*((n+scalar)/10))
 	    	        .style("stroke", colors[random_color])
 	    	        .style("stroke-width", 5)
@@ -1504,12 +1508,13 @@ d3.select("#rect_1_plus_many")
             	    
 	    	    // left vertical
 	    	    svg_rect_1_plus_many.append("line")
-	    	        .attr("x1", w_rect*(i/15))
+	    	        .attr("x1", w_rect*(p/15))
 	    	        .attr("y1", w_rect*((n+scalar)/10))
-	    	        .attr("x2", w_rect*(i/15))
+	    	        .attr("x2", w_rect*(p/15))
 	    	        .attr("y2", w_rect*((j+scalar)/10))
 	    	        .style("stroke", colors[random_color])
 	    	        .style("stroke-width", 5)
+	    	        .style("stroke-dasharray", "3 3");
 	    } 
     });
 
