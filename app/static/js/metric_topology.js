@@ -1265,12 +1265,9 @@ d3.select("#rect_1_plus_many")
 
 
 	    if (k_minus_i == 1) {
-	    	    //let number = [-0.5, -0.33, -0.08, 0, 1, 1.81, 2];
-	    	    //let random_number = Math.floor(Math.random()*number.length);
 		    let j = 1;
 		    let n = 1.66;
 		    let scalar = Math.random()*(2 - (-0.5)) + (-0.5);
-		    //var scalar = number[random_number];
 	    
 
             	    // top
@@ -1315,12 +1312,9 @@ d3.select("#rect_1_plus_many")
 	    	        .style("stroke-dasharray", "3 3");
 	    }
 	    else if (k_minus_i == 2) {
-	    	    //let number = [0, 0.11, 0.41, 0.71, 1, 1.47, 2, 2.17];
-	    	    //let random_number = Math.floor(Math.random()*number.length);
 		    let j = 1;
 		    let n = 2.33;
 		    let scalar = Math.random()*(2.17);
-		    //var scalar = number[random_number];
 	    
 
             	    // top
@@ -1365,12 +1359,9 @@ d3.select("#rect_1_plus_many")
 	    	        .style("stroke-dasharray", "3 3");
 	    } 
 	    else if (k_minus_i == 3) {
-	    	    //let number = [0, 0.05, 0.12, 0.84, 1, 1.17, 1.5];
-	    	    //let random_number = Math.floor(Math.random()*number.length);
 		    let j = 1;
 		    let n = 3;
 		    let scalar = Math.random()*(1.5);
-		    //var scalar = number[random_number];
 	    
 
             	    // top
@@ -1415,12 +1406,9 @@ d3.select("#rect_1_plus_many")
 	    	        .style("stroke-dasharray", "3 3");
 	    }
 	    else if (k_minus_i == 4) {
-	    	    //let number = [0, 0.33, 0.66, 0.84];
-	    	    //let random_number = Math.floor(Math.random()*number.length);
 		    let j = 1;
 		    let n = 3.66;
 		    let scalar = Math.random()*(0.84);
-		    //var scalar = number[random_number];
 	    
 
             	    // top
@@ -1465,14 +1453,11 @@ d3.select("#rect_1_plus_many")
 	    	        .style("stroke-dasharray", "3 3");
 	    } 
 	    else {
-	    	    //let number = [0, 0.17];
-	    	    //let random_number = Math.floor(Math.random()*number.length);
 		    let p = Math.floor(Math.random()*9) + 3;
 		    let q = p+1;
 		    let j = 1;
 		    let n = 1.66;
 		    let scalar = Math.random()*(2 - (-0.5)) + (-0.5);
-		    //var scalar = number[random_number];
 	    
 
             	    // top
@@ -1521,14 +1506,276 @@ d3.select("#rect_1_plus_many")
 
 
 
+// Union of elements ---------------------------------------------------------
+//
+// Two boxes of different-sized circles unioned to one box -------------------
 
-// One-dimensional real line filled with intervals of a specified distance ---
+var circle_dataset_1 = [15, 20, 25];
+var circle_dataset_2 = [18, 23, 28];
+
+var w_union = 960;
+var h_union = 280;
+
+var svg_union = d3.select("#union")
+  .append("svg")
+    .attr("viewBox", "0 0 " + w_union + " " + h_union);
+
+// box of circles set 1
 //
+// top line
+svg_union.append("line")
+    .attr("x1", 5)
+    .attr("y1", ((h_union/2) - 50))
+    .attr("x2", 190)
+    .attr("y2", ((h_union/2) - 50))
+    .attr("stroke", "black")
+    .attr("stroke-width", 3);
+
+// right vertical line
+svg_union.append("line")
+    .attr("x1", 190)
+    .attr("y1", ((h_union/2) - 50))
+    .attr("x2", 190)
+    .attr("y2", ((h_union/2) + 50))
+    .attr("stroke", "black")
+    .attr("stroke-width", 3);
+
+// bottom line
+svg_union.append("line")
+    .attr("x1", 190)
+    .attr("y1", ((h_union/2) + 50))
+    .attr("x2", 5)
+    .attr("y2", ((h_union/2) + 50))
+    .attr("stroke", "black")
+    .attr("stroke-width", 3);
+
+// left vertical line
+svg_union.append("line")
+    .attr("x1", 5)
+    .attr("y1", ((h_union/2) + 50))
+    .attr("x2", 5)
+    .attr("y2", ((h_union/2) - 50))
+    .attr("stroke", "black")
+    .attr("stroke-width", 3);
+    
+// box of circles set 2
 //
-// ---------------------------------------------------------------------------
-// 4 intervals ---------------------------------------------------------------
-var w_svg_for_line = 960;
-var h_svg_for_line = 150;
+// top line
+svg_union.append("line")
+    .attr("x1", 220)
+    .attr("y1", ((h_union/2) - 50))
+    .attr("x2", 430)
+    .attr("y2", ((h_union/2) - 50))
+    .attr("stroke", "black")
+    .attr("stroke-width", 3);
+
+// right vertical line
+svg_union.append("line")
+    .attr("x1", 430)
+    .attr("y1", ((h_union/2) - 50))
+    .attr("x2", 430)
+    .attr("y2", ((h_union/2) + 50))
+    .attr("stroke", "black")
+    .attr("stroke-width", 3);
+
+// bottom line
+svg_union.append("line")
+    .attr("x1", 430)
+    .attr("y1", ((h_union/2) + 50))
+    .attr("x2", 220)
+    .attr("y2", ((h_union/2) + 50))
+    .attr("stroke", "black")
+    .attr("stroke-width", 3);
+
+// left vertical line
+svg_union.append("line")
+    .attr("x1", 220)
+    .attr("y1", ((h_union/2) + 50))
+    .attr("x2", 220)
+    .attr("y2", ((h_union/2) - 50))
+    .attr("stroke", "black")
+    .attr("stroke-width", 3);
+
+// box of circles sets 1 and 2
+//
+// top line
+svg_union.append("line")
+    .attr("x1", 450)
+    .attr("y1", ((h_union/2) - 50))
+    .attr("x2", 880)
+    .attr("y2", ((h_union/2) - 50))
+    .attr("stroke", "black")
+    .attr("stroke-width", 3);
+
+// right vertical line
+svg_union.append("line")
+    .attr("x1", 880)
+    .attr("y1", ((h_union/2) - 50))
+    .attr("x2", 880)
+    .attr("y2", ((h_union/2) + 50))
+    .attr("stroke", "black")
+    .attr("stroke-width", 3);
+
+// bottom line
+svg_union.append("line")
+    .attr("x1", 880)
+    .attr("y1", ((h_union/2) + 50))
+    .attr("x2", 450)
+    .attr("y2", ((h_union/2) + 50))
+    .attr("stroke", "black")
+    .attr("stroke-width", 3);
+
+// left vertical line
+svg_union.append("line")
+    .attr("x1", 450)
+    .attr("y1", ((h_union/2) + 50))
+    .attr("x2", 450)
+    .attr("y2", ((h_union/2) - 50))
+    .attr("stroke", "black")
+    .attr("stroke-width", 3);
+
+var circle_set_1 = svg_union.selectAll(".circle_set_1")
+    .data(circle_dataset_1)
+    .enter()
+  .append("circle");
+
+circle_set_1.attr("cx", function(d, i) {
+		return (i*60)+30;
+	})
+	.attr("cy", h_union/2)
+	.attr("r", function(d) {
+		return d;
+	})
+	.attr("fill", "yellow")
+	.attr("stroke", "orange")
+	.attr("stroke-width", function(d) {
+		return d/2;
+	})
+	.attr("class", "circle_set_1");
+
+svg_union.selectAll(".text_set_1")
+    .data(circle_dataset_1)
+    .enter()
+  .append("text")
+    .text(function(d) {
+	    return d;
+    })
+    .attr("text-anchor", "middle")
+    .attr("x", function(d, i) {
+		return (i*60)+30;
+	})
+    .attr("y", (h_union/2)+5)
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "15px")
+    .attr("fill", "black")
+    .attr("class", "text_set_1");
+    
+
+var circle_set_2 = svg_union.selectAll(".circle_set_2")
+    .data(circle_dataset_2)
+    .enter()
+  .append("circle");
+
+circle_set_2.attr("cx", function(d, i) {
+		return (i*70) + 250;
+	})
+	.attr("cy", h_union/2)
+	.attr("r", function(d) {
+		return d;
+	})
+	.attr("fill", "yellow")
+	.attr("stroke", "orange")
+	.attr("stroke-width", function(d) {
+		return d/2;
+	})
+	.attr("class", "circle_set_2");
+
+svg_union.selectAll(".text_set_2")
+    .data(circle_dataset_2)
+    .enter()
+  .append("text")
+    .text(function(d) {
+	    return d;
+    })
+    .attr("text-anchor", "middle")
+    .attr("x", function(d, i) {
+		return (i*70)+250;
+	})
+    .attr("y", (h_union/2)+5)
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "15px")
+    .attr("fill", "black")
+    .attr("class", "text_set_2");
+
+d3.select("#union_button")
+    .on("click", function() {
+	    var union_dataset = [15, 18, 20, 23, 25, 28];
+	    var circle_union_set = svg_union.selectAll(".union_circles")
+	        .data(union_dataset)
+	        .enter()
+	      .append("circle")
+	        .transition()
+	        .duration(2000)
+	        .on("start", function() {
+			d3.select(this)
+			    .attr("fill", "black")
+			    .attr("r", 3);
+		})
+	        .attr("cx", function(d, i) {
+	    		return 450+(i*70)+30;
+	    	})
+	    	.attr("cy", h_union/2)
+	        .on("end", function() {
+			d3.select(this)
+			    .transition()
+			    .duration(1000)
+			    .ease(d3.easeLinear)
+	    		    .attr("fill", "yellow")
+	    		    .attr("stroke", "orange")
+	    		    .attr("stroke-width", function(d) {
+	    		    	return d/2;
+	    		    })
+	    		    .attr("r", function(d) {
+	    			return d;
+	    		    })
+
+		})
+	        .attr("class", "union_circles");
+
+	    svg_union.selectAll(".union_text")
+	        .data(union_dataset)
+	        .enter()
+	      .append("text")
+	        .transition()
+	        .duration(2000)
+	        .on("start", function() {
+			d3.select(this)
+	        	    .attr("font-size", "1px")
+		})
+	        .text(function(d) {
+	    	    return d;
+	        })
+	        .attr("text-anchor", "middle")
+	        .attr("x", function(d, i) {
+	    		return 450+(i*70)+30;
+	    	})
+	        .attr("y", (h_union/2)+5)
+	        .attr("font-family", "sans-serif")
+	        .attr("fill", "black")
+	        .on("end", function() {
+			d3.select(this)
+			    .transition()
+			    .duration(1000)
+			    .ease(d3.easeLinear)
+			    .attr("font-size","15px")
+		})
+	        .attr("class", "union_text");
+
+    });
+
+
+
+
 
 
 
