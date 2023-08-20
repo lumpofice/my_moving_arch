@@ -1514,11 +1514,38 @@ var circle_dataset_1 = [15, 20, 25];
 var circle_dataset_2 = [18, 23, 28];
 
 var w_union = 960;
-var h_union = 280;
+var h_union = 230;
 
 var svg_union = d3.select("#union")
   .append("svg")
     .attr("viewBox", "0 0 " + w_union + " " + h_union);
+
+// box of circles set 1 label
+svg_union.append("text")
+    .text("Set A")
+    .attr("x", 65)
+    .attr("y", ((h_union/2) - 60))
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "30px")
+    .attr("fill", "#696a61");
+
+// box of circles set 2 label
+svg_union.append("text")
+    .text("Set B")
+    .attr("x", 300)
+    .attr("y", ((h_union/2) - 60))
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "30px")
+    .attr("fill", "#696a61");
+
+// box of circles sets 1 and 2 label
+svg_union.append("text")
+    .text("Set C")
+    .attr("x", 640)
+    .attr("y", ((h_union/2) - 60))
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "30px")
+    .attr("fill", "#696a61");
 
 // box of circles set 1
 //
@@ -1528,7 +1555,7 @@ svg_union.append("line")
     .attr("y1", ((h_union/2) - 50))
     .attr("x2", 190)
     .attr("y2", ((h_union/2) - 50))
-    .attr("stroke", "black")
+    .attr("stroke", "#696a61")
     .attr("stroke-width", 3);
 
 // right vertical line
@@ -1537,7 +1564,7 @@ svg_union.append("line")
     .attr("y1", ((h_union/2) - 50))
     .attr("x2", 190)
     .attr("y2", ((h_union/2) + 50))
-    .attr("stroke", "black")
+    .attr("stroke", "#696a61")
     .attr("stroke-width", 3);
 
 // bottom line
@@ -1546,7 +1573,7 @@ svg_union.append("line")
     .attr("y1", ((h_union/2) + 50))
     .attr("x2", 5)
     .attr("y2", ((h_union/2) + 50))
-    .attr("stroke", "black")
+    .attr("stroke", "#696a61")
     .attr("stroke-width", 3);
 
 // left vertical line
@@ -1555,7 +1582,7 @@ svg_union.append("line")
     .attr("y1", ((h_union/2) + 50))
     .attr("x2", 5)
     .attr("y2", ((h_union/2) - 50))
-    .attr("stroke", "black")
+    .attr("stroke", "#696a61")
     .attr("stroke-width", 3);
     
 // box of circles set 2
@@ -1566,7 +1593,7 @@ svg_union.append("line")
     .attr("y1", ((h_union/2) - 50))
     .attr("x2", 430)
     .attr("y2", ((h_union/2) - 50))
-    .attr("stroke", "black")
+    .attr("stroke", "#696a61")
     .attr("stroke-width", 3);
 
 // right vertical line
@@ -1575,7 +1602,7 @@ svg_union.append("line")
     .attr("y1", ((h_union/2) - 50))
     .attr("x2", 430)
     .attr("y2", ((h_union/2) + 50))
-    .attr("stroke", "black")
+    .attr("stroke", "#696a61")
     .attr("stroke-width", 3);
 
 // bottom line
@@ -1584,7 +1611,7 @@ svg_union.append("line")
     .attr("y1", ((h_union/2) + 50))
     .attr("x2", 220)
     .attr("y2", ((h_union/2) + 50))
-    .attr("stroke", "black")
+    .attr("stroke", "#696a61")
     .attr("stroke-width", 3);
 
 // left vertical line
@@ -1593,7 +1620,7 @@ svg_union.append("line")
     .attr("y1", ((h_union/2) + 50))
     .attr("x2", 220)
     .attr("y2", ((h_union/2) - 50))
-    .attr("stroke", "black")
+    .attr("stroke", "#696a61")
     .attr("stroke-width", 3);
 
 // box of circles sets 1 and 2
@@ -1604,7 +1631,7 @@ svg_union.append("line")
     .attr("y1", ((h_union/2) - 50))
     .attr("x2", 880)
     .attr("y2", ((h_union/2) - 50))
-    .attr("stroke", "black")
+    .attr("stroke", "#696a61")
     .attr("stroke-width", 3);
 
 // right vertical line
@@ -1613,7 +1640,7 @@ svg_union.append("line")
     .attr("y1", ((h_union/2) - 50))
     .attr("x2", 880)
     .attr("y2", ((h_union/2) + 50))
-    .attr("stroke", "black")
+    .attr("stroke", "#696a61")
     .attr("stroke-width", 3);
 
 // bottom line
@@ -1622,7 +1649,7 @@ svg_union.append("line")
     .attr("y1", ((h_union/2) + 50))
     .attr("x2", 450)
     .attr("y2", ((h_union/2) + 50))
-    .attr("stroke", "black")
+    .attr("stroke", "#696a61")
     .attr("stroke-width", 3);
 
 // left vertical line
@@ -1631,7 +1658,7 @@ svg_union.append("line")
     .attr("y1", ((h_union/2) + 50))
     .attr("x2", 450)
     .attr("y2", ((h_union/2) - 50))
-    .attr("stroke", "black")
+    .attr("stroke", "#696a61")
     .attr("stroke-width", 3);
 
 var circle_set_1 = svg_union.selectAll(".circle_set_1")
@@ -1646,11 +1673,10 @@ circle_set_1.attr("cx", function(d, i) {
 	.attr("r", function(d) {
 		return d;
 	})
-	.attr("fill", "yellow")
-	.attr("stroke", "orange")
-	.attr("stroke-width", function(d) {
-		return d/2;
-	})
+	.attr("fill", "#f5ffde")
+	.attr("stroke", "#759e16")
+	.attr("stroke-width", 3)
+	.attr("stroke-dasharray", "1 2")
 	.attr("class", "circle_set_1");
 
 svg_union.selectAll(".text_set_1")
@@ -1667,7 +1693,7 @@ svg_union.selectAll(".text_set_1")
     .attr("y", (h_union/2)+5)
     .attr("font-family", "sans-serif")
     .attr("font-size", "15px")
-    .attr("fill", "black")
+    .attr("fill", "#696a61")
     .attr("class", "text_set_1");
     
 
@@ -1683,11 +1709,10 @@ circle_set_2.attr("cx", function(d, i) {
 	.attr("r", function(d) {
 		return d;
 	})
-	.attr("fill", "yellow")
-	.attr("stroke", "orange")
-	.attr("stroke-width", function(d) {
-		return d/2;
-	})
+	.attr("fill", "#f5ffde")
+	.attr("stroke", "#759e16")
+	.attr("stroke-width", 3)
+	.attr("stroke-dasharray", "1 2")
 	.attr("class", "circle_set_2");
 
 svg_union.selectAll(".text_set_2")
@@ -1704,7 +1729,7 @@ svg_union.selectAll(".text_set_2")
     .attr("y", (h_union/2)+5)
     .attr("font-family", "sans-serif")
     .attr("font-size", "15px")
-    .attr("fill", "black")
+    .attr("fill", "#696a61")
     .attr("class", "text_set_2");
 
 d3.select("#union_button")
@@ -1718,7 +1743,7 @@ d3.select("#union_button")
 	        .duration(2000)
 	        .on("start", function() {
 			d3.select(this)
-			    .attr("fill", "black")
+			    .attr("fill", "#696a61")
 			    .attr("r", 3);
 		})
 	        .attr("cx", function(d, i) {
@@ -1730,11 +1755,10 @@ d3.select("#union_button")
 			    .transition()
 			    .duration(1000)
 			    .ease(d3.easeLinear)
-	    		    .attr("fill", "yellow")
-	    		    .attr("stroke", "orange")
-	    		    .attr("stroke-width", function(d) {
-	    		    	return d/2;
-	    		    })
+	    		    .attr("fill", "#f5ffde")
+	    		    .attr("stroke", "#759e16")
+	    		    .attr("stroke-width", 3)
+			    .attr("stroke-dasharray", "1 2")
 	    		    .attr("r", function(d) {
 	    			return d;
 	    		    })
@@ -1761,7 +1785,7 @@ d3.select("#union_button")
 	    	})
 	        .attr("y", (h_union/2)+5)
 	        .attr("font-family", "sans-serif")
-	        .attr("fill", "black")
+	        .attr("fill", "#696a61")
 	        .on("end", function() {
 			d3.select(this)
 			    .transition()
