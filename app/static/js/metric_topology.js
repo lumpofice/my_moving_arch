@@ -1510,8 +1510,8 @@ d3.select("#rect_1_plus_many")
 //
 // Two boxes of different-sized circles unioned to one box -------------------
 
-var circle_dataset_1 = [15, 20, 25];
-var circle_dataset_2 = [18, 23, 28];
+var circle_union_dataset_1 = [15, 20, 25];
+var circle_union_dataset_2 = [18, 23, 28];
 
 var w_union = 960;
 var h_union = 230;
@@ -1661,12 +1661,12 @@ svg_union.append("line")
     .attr("stroke", "#696a61")
     .attr("stroke-width", 3);
 
-var circle_set_1 = svg_union.selectAll(".circle_set_1")
-    .data(circle_dataset_1)
+var circle_union_set_1 = svg_union.selectAll(".circle_union_set_1")
+    .data(circle_union_dataset_1)
     .enter()
   .append("circle");
 
-circle_set_1.attr("cx", function(d, i) {
+circle_union_set_1.attr("cx", function(d, i) {
 		return (i*60)+30;
 	})
 	.attr("cy", h_union/2)
@@ -1677,10 +1677,10 @@ circle_set_1.attr("cx", function(d, i) {
 	.attr("stroke", "#759e16")
 	.attr("stroke-width", 3)
 	.attr("stroke-dasharray", "1 2")
-	.attr("class", "circle_set_1");
+	.attr("class", "circle_union_set_1");
 
-svg_union.selectAll(".text_set_1")
-    .data(circle_dataset_1)
+svg_union.selectAll(".text_union_set_1")
+    .data(circle_union_dataset_1)
     .enter()
   .append("text")
     .text(function(d) {
@@ -1694,15 +1694,15 @@ svg_union.selectAll(".text_set_1")
     .attr("font-family", "sans-serif")
     .attr("font-size", "15px")
     .attr("fill", "#696a61")
-    .attr("class", "text_set_1");
+    .attr("class", "text_union_set_1");
     
 
-var circle_set_2 = svg_union.selectAll(".circle_set_2")
-    .data(circle_dataset_2)
+var circle_union_set_2 = svg_union.selectAll(".circle_union_set_2")
+    .data(circle_union_dataset_2)
     .enter()
   .append("circle");
 
-circle_set_2.attr("cx", function(d, i) {
+circle_union_set_2.attr("cx", function(d, i) {
 		return (i*70) + 250;
 	})
 	.attr("cy", h_union/2)
@@ -1713,10 +1713,10 @@ circle_set_2.attr("cx", function(d, i) {
 	.attr("stroke", "#759e16")
 	.attr("stroke-width", 3)
 	.attr("stroke-dasharray", "1 2")
-	.attr("class", "circle_set_2");
+	.attr("class", "circle_union_set_2");
 
-svg_union.selectAll(".text_set_2")
-    .data(circle_dataset_2)
+svg_union.selectAll(".text_union_set_2")
+    .data(circle_union_dataset_2)
     .enter()
   .append("text")
     .text(function(d) {
@@ -1730,7 +1730,7 @@ svg_union.selectAll(".text_set_2")
     .attr("font-family", "sans-serif")
     .attr("font-size", "15px")
     .attr("fill", "#696a61")
-    .attr("class", "text_set_2");
+    .attr("class", "text_union_set_2");
 
 d3.select("#union_button")
     .on("click", function() {
@@ -1796,6 +1796,306 @@ d3.select("#union_button")
 	        .attr("class", "union_text");
 
     });
+
+
+
+
+
+
+
+
+// Intersection of elements --------------------------------------------------
+//
+// Two boxes of different- and same-size circles intersected to one box ------
+
+var circle_intersection_dataset_1 = [15, 20, 25];
+var circle_intersection_dataset_2 = [15, 23, 25];
+
+var w_intersection = 960;
+var h_intersection = 230;
+
+var svg_intersection = d3.select("#intersection")
+  .append("svg")
+    .attr("viewBox", "0 0 " + w_intersection + " " + h_intersection);
+
+// box of circles set 1 label
+svg_intersection.append("text")
+    .text("Set A")
+    .attr("x", 65)
+    .attr("y", ((h_intersection/2) - 60))
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "30px")
+    .attr("fill", "#696a61");
+
+// box of circles set 2 label
+svg_intersection.append("text")
+    .text("Set B")
+    .attr("x", 300)
+    .attr("y", ((h_intersection/2) - 60))
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "30px")
+    .attr("fill", "#696a61");
+
+// box of circles set 1 intersected with set 2 label
+svg_intersection.append("text")
+    .text("Set C")
+    .attr("x", 490)
+    .attr("y", ((h_intersection/2) - 60))
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "30px")
+    .attr("fill", "#696a61");
+
+// box of circles set 1
+//
+// top line
+svg_intersection.append("line")
+    .attr("x1", 5)
+    .attr("y1", ((h_intersection/2) - 50))
+    .attr("x2", 190)
+    .attr("y2", ((h_intersection/2) - 50))
+    .attr("stroke", "#696a61")
+    .attr("stroke-width", 3);
+
+// right vertical line
+svg_intersection.append("line")
+    .attr("x1", 190)
+    .attr("y1", ((h_intersection/2) - 50))
+    .attr("x2", 190)
+    .attr("y2", ((h_intersection/2) + 50))
+    .attr("stroke", "#696a61")
+    .attr("stroke-width", 3);
+
+// bottom line
+svg_intersection.append("line")
+    .attr("x1", 190)
+    .attr("y1", ((h_intersection/2) + 50))
+    .attr("x2", 5)
+    .attr("y2", ((h_intersection/2) + 50))
+    .attr("stroke", "#696a61")
+    .attr("stroke-width", 3);
+
+// left vertical line
+svg_intersection.append("line")
+    .attr("x1", 5)
+    .attr("y1", ((h_intersection/2) + 50))
+    .attr("x2", 5)
+    .attr("y2", ((h_intersection/2) - 50))
+    .attr("stroke", "#696a61")
+    .attr("stroke-width", 3);
+    
+// box of circles set 2
+//
+// top line
+svg_intersection.append("line")
+    .attr("x1", 220)
+    .attr("y1", ((h_intersection/2) - 50))
+    .attr("x2", 430)
+    .attr("y2", ((h_intersection/2) - 50))
+    .attr("stroke", "#696a61")
+    .attr("stroke-width", 3);
+
+// right vertical line
+svg_intersection.append("line")
+    .attr("x1", 430)
+    .attr("y1", ((h_intersection/2) - 50))
+    .attr("x2", 430)
+    .attr("y2", ((h_intersection/2) + 50))
+    .attr("stroke", "#696a61")
+    .attr("stroke-width", 3);
+
+// bottom line
+svg_intersection.append("line")
+    .attr("x1", 430)
+    .attr("y1", ((h_intersection/2) + 50))
+    .attr("x2", 220)
+    .attr("y2", ((h_intersection/2) + 50))
+    .attr("stroke", "#696a61")
+    .attr("stroke-width", 3);
+
+// left vertical line
+svg_intersection.append("line")
+    .attr("x1", 220)
+    .attr("y1", ((h_intersection/2) + 50))
+    .attr("x2", 220)
+    .attr("y2", ((h_intersection/2) - 50))
+    .attr("stroke", "#696a61")
+    .attr("stroke-width", 3);
+
+// box of circles set 1 intersected with set 2
+//
+// top line
+svg_intersection.append("line")
+    .attr("x1", 450)
+    .attr("y1", ((h_intersection/2) - 50))
+    .attr("x2", 590)
+    .attr("y2", ((h_intersection/2) - 50))
+    .attr("stroke", "#696a61")
+    .attr("stroke-width", 3);
+
+// right vertical line
+svg_intersection.append("line")
+    .attr("x1", 590)
+    .attr("y1", ((h_intersection/2) - 50))
+    .attr("x2", 590)
+    .attr("y2", ((h_intersection/2) + 50))
+    .attr("stroke", "#696a61")
+    .attr("stroke-width", 3);
+
+// bottom line
+svg_intersection.append("line")
+    .attr("x1", 590)
+    .attr("y1", ((h_intersection/2) + 50))
+    .attr("x2", 450)
+    .attr("y2", ((h_intersection/2) + 50))
+    .attr("stroke", "#696a61")
+    .attr("stroke-width", 3);
+
+// left vertical line
+svg_intersection.append("line")
+    .attr("x1", 450)
+    .attr("y1", ((h_intersection/2) + 50))
+    .attr("x2", 450)
+    .attr("y2", ((h_intersection/2) - 50))
+    .attr("stroke", "#696a61")
+    .attr("stroke-width", 3);
+
+var circle_intersection_set_1 = svg_intersection.selectAll(".circle_intersection_set_1")
+    .data(circle_intersection_dataset_1)
+    .enter()
+  .append("circle");
+
+circle_intersection_set_1.attr("cx", function(d, i) {
+		return (i*60)+30;
+	})
+	.attr("cy", h_intersection/2)
+	.attr("r", function(d) {
+		return d;
+	})
+	.attr("fill", "#f5ffde")
+	.attr("stroke", "#759e16")
+	.attr("stroke-width", 3)
+	.attr("stroke-dasharray", "1 2")
+	.attr("class", "circle_intersection_set_1");
+
+svg_intersection.selectAll(".text_intersection_set_1")
+    .data(circle_intersection_dataset_1)
+    .enter()
+  .append("text")
+    .text(function(d) {
+	    return d;
+    })
+    .attr("text-anchor", "middle")
+    .attr("x", function(d, i) {
+		return (i*60)+30;
+	})
+    .attr("y", (h_intersection/2)+5)
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "15px")
+    .attr("fill", "#696a61")
+    .attr("class", "text_intersection_set_1");
+    
+
+var circle_intersection_set_2 = svg_intersection.selectAll(".circle_intersection_set_2")
+    .data(circle_intersection_dataset_2)
+    .enter()
+  .append("circle");
+
+circle_intersection_set_2.attr("cx", function(d, i) {
+		return (i*70) + 250;
+	})
+	.attr("cy", h_intersection/2)
+	.attr("r", function(d) {
+		return d;
+	})
+	.attr("fill", "#f5ffde")
+	.attr("stroke", "#759e16")
+	.attr("stroke-width", 3)
+	.attr("stroke-dasharray", "1 2")
+	.attr("class", "circle_intersection_set_2");
+
+svg_intersection.selectAll(".text_intersection_set_2")
+    .data(circle_intersection_dataset_2)
+    .enter()
+  .append("text")
+    .text(function(d) {
+	    return d;
+    })
+    .attr("text-anchor", "middle")
+    .attr("x", function(d, i) {
+		return (i*70)+250;
+	})
+    .attr("y", (h_intersection/2)+5)
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "15px")
+    .attr("fill", "#696a61")
+    .attr("class", "text_intersection_set_2");
+
+d3.select("#intersection_button")
+    .on("click", function() {
+	    var intersection_dataset = [15, 25];
+	    var circle_intersection_set = svg_intersection.selectAll(".intersection_circles")
+	        .data(intersection_dataset)
+	        .enter()
+	      .append("circle")
+	        .transition()
+	        .duration(2000)
+	        .on("start", function() {
+			d3.select(this)
+			    .attr("fill", "#696a61")
+			    .attr("r", 3);
+		})
+	        .attr("cx", function(d, i) {
+	    		return 450+(i*70)+30;
+	    	})
+	    	.attr("cy", h_intersection/2)
+	        .on("end", function() {
+			d3.select(this)
+			    .transition()
+			    .duration(1000)
+			    .ease(d3.easeLinear)
+	    		    .attr("fill", "#f5ffde")
+	    		    .attr("stroke", "#759e16")
+	    		    .attr("stroke-width", 3)
+			    .attr("stroke-dasharray", "1 2")
+	    		    .attr("r", function(d) {
+	    			return d;
+	    		    })
+
+		})
+	        .attr("class", "intersection_circles");
+
+	    svg_intersection.selectAll(".intersection_text")
+	        .data(intersection_dataset)
+	        .enter()
+	      .append("text")
+	        .transition()
+	        .duration(2000)
+	        .on("start", function() {
+			d3.select(this)
+	        	    .attr("font-size", "1px")
+		})
+	        .text(function(d) {
+	    	    return d;
+	        })
+	        .attr("text-anchor", "middle")
+	        .attr("x", function(d, i) {
+	    		return 450+(i*70)+30;
+	    	})
+	        .attr("y", (h_intersection/2)+5)
+	        .attr("font-family", "sans-serif")
+	        .attr("fill", "#696a61")
+	        .on("end", function() {
+			d3.select(this)
+			    .transition()
+			    .duration(1000)
+			    .ease(d3.easeLinear)
+			    .attr("font-size","15px")
+		})
+	        .attr("class", "intersection_text");
+
+    });
+
+
 
 
 
