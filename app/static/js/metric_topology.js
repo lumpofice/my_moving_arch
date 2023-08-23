@@ -2095,8 +2095,32 @@ d3.select("#intersection_button")
 
     });
 
+// Size of union vs size of intersection vs size of unioned/intersected sets
+svg_intersection.append("text")
+    .text("Notice, compared to the size of A and B")
+    .attr("x", 600)
+    .attr("y", ((h_intersection/2) - 30))
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "18px")
+    .attr("fill", "#696a61");
 
+// Size of union vs size of intersection vs size of unioned/intersected sets
+svg_intersection.append("text")
+    .text("The size of the union is larger")
+    .attr("x", 600)
+    .attr("y", ((h_intersection/2) - 10))
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "18px")
+    .attr("fill", "#696a61");
 
+// Size of union vs size of intersection vs size of unioned/intersected sets
+svg_intersection.append("text")
+    .text("The size of the intersection is smaller")
+    .attr("x", 600)
+    .attr("y", ((h_intersection/2) + 10))
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "18px")
+    .attr("fill", "#696a61");
 
 
 
