@@ -2097,7 +2097,25 @@ d3.select("#intersection_button")
 
 // Size of union vs size of intersection vs size of unioned/intersected sets
 svg_intersection.append("text")
-    .text("Notice, compared to the size of A and B")
+    .text("Notice, compared to the sizes of A and B,")
+    .attr("x", 600)
+    .attr("y", ((h_intersection/2) - 70))
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "18px")
+    .attr("fill", "#696a61");
+
+// Size of union vs size of intersection vs size of unioned/intersected sets
+svg_intersection.append("text")
+    .text("the size of the union is larger, while")
+    .attr("x", 600)
+    .attr("y", ((h_intersection/2) - 50))
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "18px")
+    .attr("fill", "#696a61");
+
+// Size of union vs size of intersection vs size of unioned/intersected sets
+svg_intersection.append("text")
+    .text("the size of the intersection is smaller.")
     .attr("x", 600)
     .attr("y", ((h_intersection/2) - 30))
     .attr("font-family", "sans-serif")
@@ -2106,7 +2124,7 @@ svg_intersection.append("text")
 
 // Size of union vs size of intersection vs size of unioned/intersected sets
 svg_intersection.append("text")
-    .text("The size of the union is larger")
+    .text("This difference in size of sets,")
     .attr("x", 600)
     .attr("y", ((h_intersection/2) - 10))
     .attr("font-family", "sans-serif")
@@ -2115,16 +2133,30 @@ svg_intersection.append("text")
 
 // Size of union vs size of intersection vs size of unioned/intersected sets
 svg_intersection.append("text")
-    .text("The size of the intersection is smaller")
+    .text("such that all elements in one set")
     .attr("x", 600)
     .attr("y", ((h_intersection/2) + 10))
     .attr("font-family", "sans-serif")
     .attr("font-size", "18px")
     .attr("fill", "#696a61");
 
+// Size of union vs size of intersection vs size of unioned/intersected sets
+svg_intersection.append("text")
+    .text("appear as elements in another,")
+    .attr("x", 600)
+    .attr("y", ((h_intersection/2) + 30))
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "18px")
+    .attr("fill", "#696a61");
 
-
-
+// Size of union vs size of intersection vs size of unioned/intersected sets
+svg_intersection.append("text")
+    .text("can be communicated symbolically.")
+    .attr("x", 600)
+    .attr("y", ((h_intersection/2) + 50))
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "18px")
+    .attr("fill", "#696a61");
 
 
 
