@@ -1804,6 +1804,9 @@ d3.select("#union_button")
 
 
 
+
+
+
 // Intersection of elements --------------------------------------------------
 //
 // Two boxes of different- and same-size circles intersected to one box ------
@@ -2158,6 +2161,99 @@ svg_intersection.append("text")
     .attr("font-size", "18px")
     .attr("fill", "#696a61");
 
+
+// Venn Diagram --------------------------------------------------------------
+//
+// Three circles Inclusion-Exclusion Principle--------------------------------
+const i_e_w = 960;
+const i_e_h = 500;
+
+var i_e_svg = d3.select("#inclusion_exclusion")
+  .append("svg")
+    .attr("viewBox", "0 0 " + i_e_w + " " + i_e_h);
+
+const i_e_w_by_3 = i_e_w/3;
+const i_e_h_by_3 = i_e_h/3;
+
+// Left Circle
+i_e_svg.append("circle")
+    .attr("cx", i_e_w_by_3)
+    .attr("cy", i_e_h_by_3)
+    .attr("r", 160)
+    .attr("fill", "rgba(224, 98, 13, 0.3)")
+    .attr("stroke", "#696a61")
+    .attr("stroke-width", 1)
+    .attr("stroke-dasharray", "3 3");
+
+const i_e_r = 160;
+const offset = 1.5*i_e_r;
+
+// Right Circle
+i_e_svg.append("circle")
+    .attr("cx", i_e_w_by_3 + offset)
+    .attr("cy", i_e_h_by_3)
+    .attr("r", 160)
+    .attr("fill", "rgba(224, 98, 13, 0.3)")
+    .attr("stroke", "#696a61")
+    .attr("stroke-width", 1)
+    .attr("stroke-dasharray", "3 3");
+
+const bottom_circle_drop = i_e_h/3 + i_e_r;
+
+// Bottom Circle
+i_e_svg.append("circle")
+    .attr("cx", i_e_w_by_3 + (offset)/2)
+    .attr("cy", bottom_circle_drop)
+    .attr("r", 160)
+    .attr("fill", "rgba(224, 98, 13, 0.3)")
+    .attr("stroke", "#696a61")
+    .attr("stroke-width", 1)
+    .attr("stroke-dasharray", "3 3");
+
+// Points
+const i_e_point_0 = i_e_svg.append("circle")
+    .attr("cx", i_e_w_by_3)
+    .attr("cy", i_e_h_by_3)
+    .attr("r", 5)
+    .attr("fill", "#696a61");
+
+const i_e_point_1 = i_e_svg.append("circle")
+    .attr("cx", i_e_w_by_3 + (offset)/2)
+    .attr("cy", i_e_h_by_3 + i_e_r)
+    .attr("r", 5)
+    .attr("fill", "#696a61");
+
+const i_e_point_3 = i_e_svg.append("circle")
+    .attr("cx", i_e_w_by_3 + (offset))
+    .attr("cy", i_e_h_by_3)
+    .attr("r", 5)
+    .attr("fill", "#696a61");
+
+
+const triple_intersection_bottom = Math.sqrt((i_e_r)**2 - ((offset)/2)**2);
+
+const i_e_point_5 = i_e_svg.append("circle")
+    .attr("cx", i_e_w_by_3 + (offset)/2)
+    .attr("cy", i_e_h_by_3 + triple_intersection_bottom)
+    .attr("r", 5)
+    .attr("fill", "#696a61");
+
+//const triple_intersection_right = Math.sqrt((i_e_r)**2 - ());
+//const distance_triple_intersection_right_corner = 
+//	Math.sqrt((i_e_r)**2 - (i_e_point_5_to_point_1)**2);
+//
+//const i_e_point_6 = i_e_svg.append("circle")
+//    .attr("cx", i_e_w_by_3 + distance_triple_intersection_right_corner)
+//    .attr("cy", i_e_h_by_3 + i_e_point_5_to_point_1)
+//    .attr("r", 5)
+//    .attr("fill", "#696a61");
+
+i_e_svg.append("line")
+    .attr("x1", i_e_w_by_3)
+    .attr("y1", i_e_h_by_3)
+    .attr("x2", i_e_w_by_3 + offset)
+    .attr("y2", i_e_h_by_3)
+    .attr("stroke", "black");
 
 
 
