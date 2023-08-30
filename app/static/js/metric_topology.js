@@ -2182,11 +2182,11 @@ i_e_svg.append("circle")
     .attr("r", 160)
     .attr("fill", "rgba(224, 98, 13, 0.3)")
     .attr("stroke", "#696a61")
-    .attr("stroke-width", 1)
+    .attr("stroke-width", 5)
     .attr("stroke-dasharray", "3 3");
 
 const i_e_r = 160;
-const offset = 1.5*i_e_r;
+const offset = 1.2*i_e_r;
 
 // Right Circle
 i_e_svg.append("circle")
@@ -2195,10 +2195,10 @@ i_e_svg.append("circle")
     .attr("r", 160)
     .attr("fill", "rgba(224, 98, 13, 0.3)")
     .attr("stroke", "#696a61")
-    .attr("stroke-width", 1)
+    .attr("stroke-width", 5)
     .attr("stroke-dasharray", "3 3");
 
-const bottom_circle_drop = i_e_h/3 + i_e_r;
+const bottom_circle_drop = i_e_h/3 + Math.sqrt(offset**2 - (offset/2)**2);
 
 // Bottom Circle
 i_e_svg.append("circle")
@@ -2207,7 +2207,7 @@ i_e_svg.append("circle")
     .attr("r", 160)
     .attr("fill", "rgba(224, 98, 13, 0.3)")
     .attr("stroke", "#696a61")
-    .attr("stroke-width", 1)
+    .attr("stroke-width", 5)
     .attr("stroke-dasharray", "3 3");
 
 // Points
@@ -2230,14 +2230,32 @@ const i_e_point_3 = i_e_svg.append("circle")
     .attr("fill", "#696a61");
 
 
-const triple_intersection_bottom = Math.sqrt((i_e_r)**2 - ((offset)/2)**2);
+const triple_intersection_height = Math.sqrt((i_e_r)**2 - ((offset)/2)**2);
 
 const i_e_point_5 = i_e_svg.append("circle")
     .attr("cx", i_e_w_by_3 + (offset)/2)
-    .attr("cy", i_e_h_by_3 + triple_intersection_bottom)
+    .attr("cy", i_e_h_by_3 + triple_intersection_height)
     .attr("r", 5)
     .attr("fill", "#696a61");
 
+
+// There is a corrective in the y direction that is needed 
+const vertical_corrective = 5;
+
+const i_e_point_7 = i_e_svg.append("circle")
+    .attr("cx", 
+	    i_e_w_by_3 + 
+	    (offset)/2 + 
+	    (offset/2)*Math.cos(Math.PI/3) - 
+	    triple_intersection_height*Math.sin(Math.PI/3))
+    .attr("cy", 
+	    i_e_h_by_3 + 
+	    i_e_r - 
+	    (offset/2)*Math.sin(Math.PI/3) - 
+    	    triple_intersection_height*Math.cos(Math.PI/3) + 
+	    vertical_corrective)
+    .attr("r", 5)
+    .attr("fill", "#696a61");
 //const triple_intersection_right = Math.sqrt((i_e_r)**2 - ());
 //const distance_triple_intersection_right_corner = 
 //	Math.sqrt((i_e_r)**2 - (i_e_point_5_to_point_1)**2);
@@ -2248,12 +2266,32 @@ const i_e_point_5 = i_e_svg.append("circle")
 //    .attr("r", 5)
 //    .attr("fill", "#696a61");
 
+// top equalateral triangle leg
 i_e_svg.append("line")
     .attr("x1", i_e_w_by_3)
     .attr("y1", i_e_h_by_3)
     .attr("x2", i_e_w_by_3 + offset)
     .attr("y2", i_e_h_by_3)
     .attr("stroke", "black");
+
+// right equalateral triangle leg
+i_e_svg.append("line")
+    .attr("x1", i_e_w_by_3 + offset)
+    .attr("y1", i_e_h_by_3)
+    .attr("x2", i_e_w_by_3 + (offset)/2)
+    .attr("y2", i_e_h_by_3 + i_e_r)
+    .attr("stroke", "black");
+
+// midpoint of right equalateral triangle leg
+i_e_svg.append("circle")
+    .attr("cx", i_e_w_by_3 + (offset)/2 + (offset/2)*Math.cos(Math.PI/3))
+    .attr("cy", 
+	    i_e_h_by_3 + 
+	    i_e_r - 
+	    (offset/2)*Math.sin(Math.PI/3) + 
+	    vertical_corrective)
+    .attr("r", 5)
+    .attr("fill", "#696a61");
 
 
 
