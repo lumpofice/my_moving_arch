@@ -2162,6 +2162,10 @@ svg_intersection.append("text")
     .attr("fill", "#696a61");
 
 
+
+
+
+
 // Venn Diagram --------------------------------------------------------------
 //
 // Three circles Inclusion-Exclusion Principle--------------------------------
@@ -2256,17 +2260,29 @@ const i_e_point_7 = i_e_svg.append("circle")
 	    vertical_corrective)
     .attr("r", 5)
     .attr("fill", "#696a61");
-//const triple_intersection_right = Math.sqrt((i_e_r)**2 - ());
-//const distance_triple_intersection_right_corner = 
-//	Math.sqrt((i_e_r)**2 - (i_e_point_5_to_point_1)**2);
-//
-//const i_e_point_6 = i_e_svg.append("circle")
-//    .attr("cx", i_e_w_by_3 + distance_triple_intersection_right_corner)
-//    .attr("cy", i_e_h_by_3 + i_e_point_5_to_point_1)
-//    .attr("r", 5)
-//    .attr("fill", "#696a61");
 
-// top equalateral triangle leg
+const i_e_point_6 = i_e_svg.append("circle")
+    .attr("cx", 
+	    i_e_w_by_3 + 
+	    (offset)/2 - 
+	    (offset/2)*Math.cos(Math.PI/3) + 
+	    triple_intersection_height*Math.sin(Math.PI/3))
+    .attr("cy", 
+	    i_e_h_by_3 + 
+	    i_e_r - 
+	    (offset/2)*Math.sin(Math.PI/3) - 
+    	    triple_intersection_height*Math.cos(Math.PI/3) + 
+	    vertical_corrective)
+    .attr("r", 5)
+    .attr("fill", "#696a61");
+
+const i_e_point_8 = i_e_svg.append("circle")
+    .attr("cx", i_e_w_by_3 + offset/2)
+    .attr("cy", i_e_h_by_3 - Math.sqrt((i_e_r)**2 - (offset/2)**2))
+    .attr("r", 5)
+    .attr("fill", "#696a61");
+
+// top equilateral triangle leg
 i_e_svg.append("line")
     .attr("x1", i_e_w_by_3)
     .attr("y1", i_e_h_by_3)
@@ -2274,7 +2290,7 @@ i_e_svg.append("line")
     .attr("y2", i_e_h_by_3)
     .attr("stroke", "black");
 
-// right equalateral triangle leg
+// right equilateral triangle leg
 i_e_svg.append("line")
     .attr("x1", i_e_w_by_3 + offset)
     .attr("y1", i_e_h_by_3)
@@ -2282,7 +2298,7 @@ i_e_svg.append("line")
     .attr("y2", i_e_h_by_3 + i_e_r)
     .attr("stroke", "black");
 
-// midpoint of right equalateral triangle leg
+// midpoint of right equaliteral triangle leg
 i_e_svg.append("circle")
     .attr("cx", i_e_w_by_3 + (offset)/2 + (offset/2)*Math.cos(Math.PI/3))
     .attr("cy", 
@@ -2292,6 +2308,28 @@ i_e_svg.append("circle")
 	    vertical_corrective)
     .attr("r", 5)
     .attr("fill", "#696a61");
+
+// left equilateral triangle leg
+i_e_svg.append("line")
+    .attr("x1", i_e_w_by_3)
+    .attr("y1", i_e_h_by_3)
+    .attr("x2", i_e_w_by_3 + (offset)/2)
+    .attr("y2", i_e_h_by_3 + i_e_r)
+    .attr("stroke", "black");
+
+// midpoint of left equilateral triangle leg
+i_e_svg.append("circle")
+    .attr("cx", i_e_w_by_3 + (offset)/2 - (offset/2)*Math.cos(Math.PI/3))
+    .attr("cy", 
+	    i_e_h_by_3 + 
+	    i_e_r - 
+	    (offset/2)*Math.sin(Math.PI/3) + 
+	    vertical_corrective)
+    .attr("r", 5)
+    .attr("fill", "#696a61");
+
+
+
 
 
 
