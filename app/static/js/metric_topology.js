@@ -2214,24 +2214,94 @@ i_e_svg.append("circle")
     .attr("stroke-width", 5)
     .attr("stroke-dasharray", "3 3");
 
+// The following are lines and points to help aid in the construction of the 
+// the points 0 through 8
+
 // Points
-const i_e_point_0 = i_e_svg.append("circle")
-    .attr("cx", i_e_w_by_3)
-    .attr("cy", i_e_h_by_3)
-    .attr("r", 5)
-    .attr("fill", "#696a61");
+// i_e_point_0 is the center of the left circle
+// i_e_point_1 is the center of the bottom circle
+// i_e_point_2 is the bottom left intersection of the left and bottom circles
+// i_e_point_3 is the center of the right circle
+// i_e_point_4 is bottom right intersection of the right and bottom circles
+// i_e_point_5 is the bottom of triple intersection
+// i_e_point_6 is the top right of triple intersection
+// i_e_point_7 is the top left of the triple intersection
+// i_e_point_8 is the top intersection of the left and right circles
 
-const i_e_point_1 = i_e_svg.append("circle")
-    .attr("cx", i_e_w_by_3 + (offset)/2)
-    .attr("cy", i_e_h_by_3 + i_e_r)
-    .attr("r", 5)
-    .attr("fill", "#696a61");
+//const i_e_point_0 = i_e_svg.append("circle")
+//    .attr("cx", i_e_w_by_3)
+//    .attr("cy", i_e_h_by_3)
+//    .attr("r", 5)
+//    .attr("fill", "#696a61");
 
-const i_e_point_3 = i_e_svg.append("circle")
-    .attr("cx", i_e_w_by_3 + (offset))
-    .attr("cy", i_e_h_by_3)
-    .attr("r", 5)
-    .attr("fill", "#696a61");
+//const i_e_point_1 = i_e_svg.append("circle")
+//    .attr("cx", i_e_w_by_3 + (offset)/2)
+//    .attr("cy", bottom_circle_drop)
+//    .attr("r", 5)
+//    .attr("fill", "#696a61");
+
+//const i_e_point_3 = i_e_svg.append("circle")
+//    .attr("cx", i_e_w_by_3 + (offset))
+//    .attr("cy", i_e_h_by_3)
+//    .attr("r", 5)
+//    .attr("fill", "#696a61");
+
+// top equilateral triangle leg
+//----------------------------------------------------------------------------
+//i_e_svg.append("line")
+//    .attr("x1", i_e_w_by_3)
+//    .attr("y1", i_e_h_by_3)
+//    .attr("x2", i_e_w_by_3 + offset)
+//    .attr("y2", i_e_h_by_3)
+//    .attr("stroke", "black");
+
+// right equilateral triangle leg
+// ---------------------------------------------------------------------------
+//i_e_svg.append("line")
+//    .attr("x1", i_e_w_by_3 + offset)
+//    .attr("y1", i_e_h_by_3)
+//    .attr("x2", i_e_w_by_3 + (offset)/2)
+//    .attr("y2", bottom_circle_drop)
+//    .attr("stroke", "black");
+
+// midpoint of right equaliteral triangle leg
+// ---------------------------------------------------------------------------
+//i_e_svg.append("circle")
+//    .attr("cx", i_e_w_by_3 + (offset)/2 + (offset/2)*Math.cos(Math.PI/3))
+//    .attr("cy", 
+//	    bottom_circle_drop - 
+//	    (offset/2)*Math.sin(Math.PI/3))
+//    .attr("r", 5)
+//    .attr("fill", "#696a61");
+
+// left equilateral triangle leg
+// ---------------------------------------------------------------------------
+//i_e_svg.append("line")
+//    .attr("x1", i_e_w_by_3)
+//    .attr("y1", i_e_h_by_3)
+//    .attr("x2", i_e_w_by_3 + (offset)/2)
+//    .attr("y2", bottom_circle_drop)
+//    .attr("stroke", "black");
+
+// midpoint of left equilateral triangle leg
+// ---------------------------------------------------------------------------
+//i_e_svg.append("circle")
+//    .attr("cx", i_e_w_by_3 + (offset)/2 - (offset/2)*Math.cos(Math.PI/3))
+//    .attr("cy", 
+//	    bottom_circle_drop - 
+//	    (offset/2)*Math.sin(Math.PI/3))
+//    .attr("r", 5)
+//    .attr("fill", "#696a61");
+
+// bottom right point of quadrilateral containing bottom right intersection
+// point
+// ---------------------------------------------------------------------------
+//i_e_svg.append("circle")
+//    .attr("cx", i_e_w_by_3 + (offset/2) + offset)
+//    .attr("cy", bottom_circle_drop)
+//    .attr("r", 5)
+//    .attr("fill", "#696a61");
+
 
 
 const triple_intersection_height = Math.sqrt((i_e_r)**2 - ((offset)/2)**2);
@@ -2243,8 +2313,6 @@ const i_e_point_5 = i_e_svg.append("circle")
     .attr("fill", "#696a61");
 
 
-// There is a corrective in the y direction that is needed 
-const vertical_corrective = 5;
 
 const i_e_point_7 = i_e_svg.append("circle")
     .attr("cx", 
@@ -2253,11 +2321,9 @@ const i_e_point_7 = i_e_svg.append("circle")
 	    (offset/2)*Math.cos(Math.PI/3) - 
 	    triple_intersection_height*Math.sin(Math.PI/3))
     .attr("cy", 
-	    i_e_h_by_3 + 
-	    i_e_r - 
+	    bottom_circle_drop - 
 	    (offset/2)*Math.sin(Math.PI/3) - 
-    	    triple_intersection_height*Math.cos(Math.PI/3) + 
-	    vertical_corrective)
+    	    triple_intersection_height*Math.cos(Math.PI/3))
     .attr("r", 5)
     .attr("fill", "#696a61");
 
@@ -2268,11 +2334,9 @@ const i_e_point_6 = i_e_svg.append("circle")
 	    (offset/2)*Math.cos(Math.PI/3) + 
 	    triple_intersection_height*Math.sin(Math.PI/3))
     .attr("cy", 
-	    i_e_h_by_3 + 
-	    i_e_r - 
+	    bottom_circle_drop - 
 	    (offset/2)*Math.sin(Math.PI/3) - 
-    	    triple_intersection_height*Math.cos(Math.PI/3) + 
-	    vertical_corrective)
+    	    triple_intersection_height*Math.cos(Math.PI/3))
     .attr("r", 5)
     .attr("fill", "#696a61");
 
@@ -2282,51 +2346,34 @@ const i_e_point_8 = i_e_svg.append("circle")
     .attr("r", 5)
     .attr("fill", "#696a61");
 
-// top equilateral triangle leg
-i_e_svg.append("line")
-    .attr("x1", i_e_w_by_3)
-    .attr("y1", i_e_h_by_3)
-    .attr("x2", i_e_w_by_3 + offset)
-    .attr("y2", i_e_h_by_3)
-    .attr("stroke", "black");
+const i_e_point_1_to_i_e_point_5_distance = 
+	bottom_circle_drop - i_e_h_by_3 - triple_intersection_height;
 
-// right equilateral triangle leg
-i_e_svg.append("line")
-    .attr("x1", i_e_w_by_3 + offset)
-    .attr("y1", i_e_h_by_3)
-    .attr("x2", i_e_w_by_3 + (offset)/2)
-    .attr("y2", i_e_h_by_3 + i_e_r)
-    .attr("stroke", "black");
-
-// midpoint of right equaliteral triangle leg
-i_e_svg.append("circle")
-    .attr("cx", i_e_w_by_3 + (offset)/2 + (offset/2)*Math.cos(Math.PI/3))
-    .attr("cy", 
-	    i_e_h_by_3 + 
-	    i_e_r - 
-	    (offset/2)*Math.sin(Math.PI/3) + 
-	    vertical_corrective)
+const i_e_point_4 = i_e_svg.append("circle")
+    .attr("cx", 
+	    i_e_w_by_3 + 
+	    (offset/2) +
+	    offset - 
+	    i_e_point_1_to_i_e_point_5_distance*Math.cos(Math.PI/6))
+    .attr("cy",
+    	    bottom_circle_drop - 
+	    i_e_point_1_to_i_e_point_5_distance*Math.sin(Math.PI/6))
     .attr("r", 5)
     .attr("fill", "#696a61");
 
-// left equilateral triangle leg
-i_e_svg.append("line")
-    .attr("x1", i_e_w_by_3)
-    .attr("y1", i_e_h_by_3)
-    .attr("x2", i_e_w_by_3 + (offset)/2)
-    .attr("y2", i_e_h_by_3 + i_e_r)
-    .attr("stroke", "black");
-
-// midpoint of left equilateral triangle leg
-i_e_svg.append("circle")
-    .attr("cx", i_e_w_by_3 + (offset)/2 - (offset/2)*Math.cos(Math.PI/3))
-    .attr("cy", 
-	    i_e_h_by_3 + 
-	    i_e_r - 
-	    (offset/2)*Math.sin(Math.PI/3) + 
-	    vertical_corrective)
+const i_e_point_2 = i_e_svg.append("circle")
+    .attr("cx", 
+	    i_e_w_by_3 + 
+	    (offset/2) -
+	    offset + 
+	    i_e_point_1_to_i_e_point_5_distance*Math.cos(Math.PI/6))
+    .attr("cy",
+    	    bottom_circle_drop - 
+	    i_e_point_1_to_i_e_point_5_distance*Math.sin(Math.PI/6))
     .attr("r", 5)
     .attr("fill", "#696a61");
+
+
 
 
 
