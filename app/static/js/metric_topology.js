@@ -2190,6 +2190,8 @@ i_e_svg.append("circle")
     .attr("stroke-dasharray", "3 3");
 
 const i_e_r = 160;
+
+// Distance between centers of left and right circles
 const offset = 1.2*i_e_r;
 
 // Right Circle
@@ -2202,6 +2204,8 @@ i_e_svg.append("circle")
     .attr("stroke-width", 5)
     .attr("stroke-dasharray", "3 3");
 
+// Distance between top leg of equilateral triangle and center of 
+// bottom circle
 const bottom_circle_drop = i_e_h/3 + Math.sqrt(offset**2 - (offset/2)**2);
 
 // Bottom Circle
@@ -2227,6 +2231,12 @@ i_e_svg.append("circle")
 // i_e_point_6 is the top right of triple intersection
 // i_e_point_7 is the top left of the triple intersection
 // i_e_point_8 is the top intersection of the left and right circles
+
+// Height of the triangle with vertices at the centers of the three circles:
+// center of the left circle (i_e_w_by_3, i_e_h_by_3)
+// center of the right circle (i_e_w_by_3 + offset, i_e_h_by_3)
+// center of the bottom circle 
+// (i_e_w_by_3 + offset/2, i_e_h_by_3 + Math.sqrt(offset**2 - (offset/2))**2)
 
 //const i_e_point_0 = i_e_svg.append("circle")
 //    .attr("cx", i_e_w_by_3)
@@ -2265,6 +2275,15 @@ i_e_svg.append("circle")
 //    .attr("stroke", "black");
 
 // midpoint of right equaliteral triangle leg
+// Let the center of the bottom circle be the origin point.
+// The circle with edge containing the midpoint of the right equilateral
+// triangle leg has radius offset/2. The angle in standard position
+// is measure 60 degrees---we are using the right leg and its attending angles
+// of the equilateral triangle to determine this. Finally, we find the 
+// change in the x and y directions between the center of the bottom circle
+// and the midpoint of the right equilateral triangle leg, which is contained
+// along the edge of our circle. This gives us the coordinate at which the 
+// the midpoint of our right equilateral triangle leg sits.
 // ---------------------------------------------------------------------------
 //i_e_svg.append("circle")
 //    .attr("cx", i_e_w_by_3 + (offset)/2 + (offset/2)*Math.cos(Math.PI/3))
