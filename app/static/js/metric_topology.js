@@ -2292,6 +2292,17 @@ i_e_svg.append("circle")
 //	    (offset/2)*Math.sin(Math.PI/3))
 //    .attr("r", 5)
 //    .attr("fill", "#696a61");
+// ---------------------------------------------------------------------------
+// Given that the triangle is equilateral, the distance from the midpoint
+// of the right leg of the equilateral triangle to the top left corner point 
+// of the triple intersection is the same distance the top leg of the
+// equilateral triangle is from the bottom corner point of the triple
+// intersection. We address this in the variable triple_intersection_height
+// below. Once we have that distance, we find the change in the x and y
+// directions between the midpoint of the right leg of the equilateral 
+// triangle and where the top left corner point of the triple intersection
+// will be placed.
+
 
 // left equilateral triangle leg
 // ---------------------------------------------------------------------------
@@ -2322,7 +2333,13 @@ i_e_svg.append("circle")
 //    .attr("fill", "#696a61");
 
 
-
+// To find the height of the triple intersection, we use half of the distance
+// of the offset along the top leg of the equilateral triangle 
+// as one leg of a right triangle and the
+// radius of the left circle along the line connecting the center
+// of the left circle with the bottom corner point of the triple intersection
+// as the hypotenuse of that right triangle to find the other leg of that
+// right triangle, which happens to be the height of the tiple intersection.
 const triple_intersection_height = Math.sqrt((i_e_r)**2 - ((offset)/2)**2);
 
 const i_e_point_5 = i_e_svg.append("circle")
@@ -2359,12 +2376,26 @@ const i_e_point_6 = i_e_svg.append("circle")
     .attr("r", 5)
     .attr("fill", "#696a61");
 
+// For point 8, we take a similar approach as the one we took for the
+// tiple_intersection_height variable
 const i_e_point_8 = i_e_svg.append("circle")
     .attr("cx", i_e_w_by_3 + offset/2)
     .attr("cy", i_e_h_by_3 - Math.sqrt((i_e_r)**2 - (offset/2)**2))
     .attr("r", 5)
     .attr("fill", "#696a61");
 
+// We use a point at the bottom right corner point of the rhombus with leg
+// between the centers of the left circle and right circle (top-most leg)
+// between the centers of the left circle and bottom circle (left side leg)
+// to help us find i_e_point_4. The distance between this point
+// and i_e_point_4 is the same as the distance between i_e_point_1 and
+// i_e_point_5. The distance between i_e_point_1 and this new point is offset,
+// given that we are using the rhombus to identify this point. Once we
+// identify the coordinates of this point, we use the distance between
+// i_e_point_1 and i_e_point_5 along with the change in the x and y
+// directions between this new point and where i_e_point_4 is expected
+// to sit (at the bottom right intersection of the right and bottom circles)
+// to find the coordinates of i_e_point_4.
 const i_e_point_1_to_i_e_point_5_distance = 
 	bottom_circle_drop - i_e_h_by_3 - triple_intersection_height;
 
