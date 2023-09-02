@@ -2184,7 +2184,7 @@ i_e_svg.append("circle")
     .attr("cx", i_e_w_by_3)
     .attr("cy", i_e_h_by_3)
     .attr("r", 160)
-    .attr("fill", "rgba(224, 98, 13, 0.3)")
+    .attr("fill", "none")
     .attr("stroke", "#696a61")
     .attr("stroke-width", 5)
     .attr("stroke-dasharray", "3 3");
@@ -2199,7 +2199,7 @@ i_e_svg.append("circle")
     .attr("cx", i_e_w_by_3 + offset)
     .attr("cy", i_e_h_by_3)
     .attr("r", 160)
-    .attr("fill", "rgba(224, 98, 13, 0.3)")
+    .attr("fill", "none")
     .attr("stroke", "#696a61")
     .attr("stroke-width", 5)
     .attr("stroke-dasharray", "3 3");
@@ -2213,7 +2213,7 @@ i_e_svg.append("circle")
     .attr("cx", i_e_w_by_3 + (offset)/2)
     .attr("cy", bottom_circle_drop)
     .attr("r", 160)
-    .attr("fill", "rgba(224, 98, 13, 0.3)")
+    .attr("fill", "none")
     .attr("stroke", "#696a61")
     .attr("stroke-width", 5)
     .attr("stroke-dasharray", "3 3");
@@ -2238,19 +2238,19 @@ i_e_svg.append("circle")
 // center of the bottom circle 
 // (i_e_w_by_3 + offset/2, i_e_h_by_3 + Math.sqrt(offset**2 - (offset/2))**2)
 
-//const i_e_point_0 = i_e_svg.append("circle")
+//i_e_point_0 = i_e_svg.append("circle")
 //    .attr("cx", i_e_w_by_3)
 //    .attr("cy", i_e_h_by_3)
 //    .attr("r", 5)
 //    .attr("fill", "#696a61");
 
-//const i_e_point_1 = i_e_svg.append("circle")
+//i_e_point_1 = i_e_svg.append("circle")
 //    .attr("cx", i_e_w_by_3 + (offset)/2)
 //    .attr("cy", bottom_circle_drop)
 //    .attr("r", 5)
 //    .attr("fill", "#696a61");
 
-//const i_e_point_3 = i_e_svg.append("circle")
+//i_e_point_3 = i_e_svg.append("circle")
 //    .attr("cx", i_e_w_by_3 + (offset))
 //    .attr("cy", i_e_h_by_3)
 //    .attr("r", 5)
@@ -2340,49 +2340,50 @@ i_e_svg.append("circle")
 // of the left circle with the bottom corner point of the triple intersection
 // as the hypotenuse of that right triangle to find the other leg of that
 // right triangle, which happens to be the height of the tiple intersection.
+
 const triple_intersection_height = Math.sqrt((i_e_r)**2 - ((offset)/2)**2);
 
-const i_e_point_5 = i_e_svg.append("circle")
-    .attr("cx", i_e_w_by_3 + (offset)/2)
-    .attr("cy", i_e_h_by_3 + triple_intersection_height)
-    .attr("r", 5)
-    .attr("fill", "#696a61");
-
-
-
-const i_e_point_7 = i_e_svg.append("circle")
-    .attr("cx", 
-	    i_e_w_by_3 + 
-	    (offset)/2 + 
-	    (offset/2)*Math.cos(Math.PI/3) - 
-	    triple_intersection_height*Math.sin(Math.PI/3))
-    .attr("cy", 
-	    bottom_circle_drop - 
-	    (offset/2)*Math.sin(Math.PI/3) - 
-    	    triple_intersection_height*Math.cos(Math.PI/3))
-    .attr("r", 5)
-    .attr("fill", "#696a61");
-
-const i_e_point_6 = i_e_svg.append("circle")
-    .attr("cx", 
-	    i_e_w_by_3 + 
-	    (offset)/2 - 
-	    (offset/2)*Math.cos(Math.PI/3) + 
-	    triple_intersection_height*Math.sin(Math.PI/3))
-    .attr("cy", 
-	    bottom_circle_drop - 
-	    (offset/2)*Math.sin(Math.PI/3) - 
-    	    triple_intersection_height*Math.cos(Math.PI/3))
-    .attr("r", 5)
-    .attr("fill", "#696a61");
+//i_e_point_5 = i_e_svg.append("circle")
+//    .attr("cx", i_e_w_by_3 + (offset)/2)
+//    .attr("cy", i_e_h_by_3 + triple_intersection_height)
+//    .attr("r", 5)
+//    .attr("fill", "#696a61");
+//
+//
+//
+//i_e_point_7 = i_e_svg.append("circle")
+//    .attr("cx", 
+//	    i_e_w_by_3 + 
+//	    (offset)/2 + 
+//	    (offset/2)*Math.cos(Math.PI/3) - 
+//	    triple_intersection_height*Math.sin(Math.PI/3))
+//    .attr("cy", 
+//	    bottom_circle_drop - 
+//	    (offset/2)*Math.sin(Math.PI/3) - 
+//    	    triple_intersection_height*Math.cos(Math.PI/3))
+//    .attr("r", 5)
+//    .attr("fill", "#696a61");
+//
+//i_e_point_6 = i_e_svg.append("circle")
+//    .attr("cx", 
+//	    i_e_w_by_3 + 
+//	    (offset)/2 - 
+//	    (offset/2)*Math.cos(Math.PI/3) + 
+//	    triple_intersection_height*Math.sin(Math.PI/3))
+//    .attr("cy", 
+//	    bottom_circle_drop - 
+//	    (offset/2)*Math.sin(Math.PI/3) - 
+//    	    triple_intersection_height*Math.cos(Math.PI/3))
+//    .attr("r", 5)
+//    .attr("fill", "#696a61");
 
 // For point 8, we take a similar approach as the one we took for the
 // tiple_intersection_height variable
-const i_e_point_8 = i_e_svg.append("circle")
-    .attr("cx", i_e_w_by_3 + offset/2)
-    .attr("cy", i_e_h_by_3 - Math.sqrt((i_e_r)**2 - (offset/2)**2))
-    .attr("r", 5)
-    .attr("fill", "#696a61");
+//i_e_point_8 = i_e_svg.append("circle")
+//    .attr("cx", i_e_w_by_3 + offset/2)
+//    .attr("cy", i_e_h_by_3 - Math.sqrt((i_e_r)**2 - (offset/2)**2))
+//    .attr("r", 5)
+//    .attr("fill", "#696a61");
 
 // We use a point at the bottom right corner point of the rhombus with leg
 // between the centers of the left circle and right circle (top-most leg)
@@ -2396,33 +2397,203 @@ const i_e_point_8 = i_e_svg.append("circle")
 // directions between this new point and where i_e_point_4 is expected
 // to sit (at the bottom right intersection of the right and bottom circles)
 // to find the coordinates of i_e_point_4.
+
 const i_e_point_1_to_i_e_point_5_distance = 
 	bottom_circle_drop - i_e_h_by_3 - triple_intersection_height;
 
-const i_e_point_4 = i_e_svg.append("circle")
-    .attr("cx", 
-	    i_e_w_by_3 + 
-	    (offset/2) +
-	    offset - 
-	    i_e_point_1_to_i_e_point_5_distance*Math.cos(Math.PI/6))
-    .attr("cy",
-    	    bottom_circle_drop - 
-	    i_e_point_1_to_i_e_point_5_distance*Math.sin(Math.PI/6))
-    .attr("r", 5)
-    .attr("fill", "#696a61");
+//i_e_point_4 = i_e_svg.append("circle")
+//    .attr("cx", 
+//	    i_e_w_by_3 + 
+//	    (offset/2) +
+//	    offset - 
+//	    i_e_point_1_to_i_e_point_5_distance*Math.cos(Math.PI/6))
+//    .attr("cy",
+//    	    bottom_circle_drop - 
+//	    i_e_point_1_to_i_e_point_5_distance*Math.sin(Math.PI/6))
+//    .attr("r", 5)
+//    .attr("fill", "#696a61");
+//
+//i_e_point_2 = i_e_svg.append("circle")
+//    .attr("cx", 
+//	    i_e_w_by_3 + 
+//	    (offset/2) -
+//	    offset + 
+//	    i_e_point_1_to_i_e_point_5_distance*Math.cos(Math.PI/6))
+//    .attr("cy",
+//    	    bottom_circle_drop - 
+//	    i_e_point_1_to_i_e_point_5_distance*Math.sin(Math.PI/6))
+//    .attr("r", 5)
+//    .attr("fill", "#696a61");
 
-const i_e_point_2 = i_e_svg.append("circle")
-    .attr("cx", 
-	    i_e_w_by_3 + 
-	    (offset/2) -
-	    offset + 
-	    i_e_point_1_to_i_e_point_5_distance*Math.cos(Math.PI/6))
-    .attr("cy",
-    	    bottom_circle_drop - 
-	    i_e_point_1_to_i_e_point_5_distance*Math.sin(Math.PI/6))
-    .attr("r", 5)
-    .attr("fill", "#696a61");
+// Here, we list the components of each point
+// point 8 -------------------------------------------------------------------
+const i_e_point_8_x = i_e_w_by_3 + offset/2;
+const i_e_point_8_y = i_e_h_by_3 - Math.sqrt((i_e_r)**2 - (offset/2)**2);
+// point 5 ------------------------------------------------------------------- 
+const i_e_point_5_x = i_e_w_by_3 + offset/2;
+const i_e_point_5_y = i_e_h_by_3 + triple_intersection_height;
+// point 7 -------------------------------------------------------------------
+const i_e_point_7_x =
+	i_e_w_by_3 +
+	(offset/2) +
+	(offset/2)*Math.cos(Math.PI/3) - 
+	triple_intersection_height*Math.sin(Math.PI/3);
+const i_e_point_7_y = 
+	bottom_circle_drop -
+	(offset/2)*Math.sin(Math.PI/3) - 
+	triple_intersection_height*Math.cos(Math.PI/3);
+// point 6 -------------------------------------------------------------------
+const i_e_point_6_x = 
+	i_e_w_by_3 +
+	(offset/2) -
+	(offset/2)*Math.cos(Math.PI/3) +
+	triple_intersection_height*Math.sin(Math.PI/3);
+const i_e_point_6_y = 
+   	bottom_circle_drop - 
+    	(offset/2)*Math.sin(Math.PI/3) - 
+	triple_intersection_height*Math.cos(Math.PI/3);
+// point 4 -------------------------------------------------------------------
+const i_e_point_4_x =
+	i_e_w_by_3 +
+	(offset/2) +
+	offset -
+	i_e_point_1_to_i_e_point_5_distance*Math.cos(Math.PI/6);
+const i_e_point_4_y = 
+	bottom_circle_drop -
+	i_e_point_1_to_i_e_point_5_distance*Math.sin(Math.PI/6);
+// point 2 -------------------------------------------------------------------
+const i_e_point_2_x = 
+	i_e_w_by_3 +
+	(offset/2) -
+	offset +
+	i_e_point_1_to_i_e_point_5_distance*Math.cos(Math.PI/6);
+const i_e_point_2_y = 
+	bottom_circle_drop -
+	i_e_point_1_to_i_e_point_5_distance*Math.sin(Math.PI/6);
 
+// Here, we change from the above system of coordinate numbering to: 
+// 8 --> 1
+// 6 --> 5
+// 7 --> 6
+// 5 --> 4
+// 4 --> 3
+// 2 --> 2
+// So, the map below takes in 
+// i=1 and points to our point 8
+// i=2 and points to our point 2
+// i=3 and points to our point 4
+// i=4 and points to our point 5
+// i=5 and points to our point 6
+// i=6 and points to our point 7
+x_points = [
+	i_e_point_8_x,
+	i_e_point_2_x,
+	i_e_point_4_x,
+	i_e_point_5_x,
+	i_e_point_6_x,
+	i_e_point_7_x
+];
+y_points = [
+	i_e_point_8_y,
+	i_e_point_2_y,
+	i_e_point_4_y,
+	i_e_point_5_y,
+	i_e_point_6_y,
+	i_e_point_7_y
+];
+
+const make_iron = ([x1, x2, x3, y1, y2, y3]) => {
+	path = `M ${x1} ${y1}
+		A ${i_e_r} ${i_e_r} 0 0 1 ${x2} ${y2}
+		A ${i_e_r} ${i_e_r} 0 0 0 ${x3} ${y3}
+		A ${i_e_r} ${i_e_r} 0 0 1 ${x1} ${y1}`
+	return path;
+}
+
+
+const make_umbrella = ([x1, x2, x3, y1, y2, y3]) => {
+	path = `M ${x1} ${y1}
+		A ${i_e_r} ${i_e_r} 0 0 0 ${x2} ${y2}
+		A ${i_e_r} ${i_e_r} 0 0 0 ${x3} ${y3}
+		A ${i_e_r} ${i_e_r} 0 1 1 ${x1} ${y1}`
+	return path;
+}
+
+const make_shield = ([x1, x2, x3, y1, y2, y3]) => {
+	path = `M ${x1} ${y1}
+		A ${i_e_r} ${i_e_r} 0 0 1 ${x2} ${y2}
+		A ${i_e_r} ${i_e_r} 0 0 1 ${x3} ${y3}
+		A ${i_e_r} ${i_e_r} 0 0 1 ${x1} ${y1}`
+	return path;
+}
+
+iron_points = [
+	[1, 5, 6],
+	[3, 4, 5],
+	[2, 6, 4]
+];
+
+umbrella_points = [
+	[3, 5, 1],
+	[2, 4, 3],
+	[1, 6, 2]
+];
+
+shield_points = [
+	[5, 4, 6]
+];
+
+for (const point of iron_points) {
+	const point_cycle = point.map(i => x_points[i-1]).concat(
+		point.map(i => y_points[i-1])
+	);
+	const shape = make_iron(point_cycle);
+	i_e_svg.append("path")
+	    .attr("d", shape)
+	    .attr("class", "segment")
+	    .attr("fill", "#759e16")
+	    .attr("opacity", 0.4);
+}
+
+for (const point of umbrella_points) {
+	const point_cycle = point.map(i => x_points[i-1]).concat(
+		point.map(i => y_points[i-1])
+	);
+	const shape = make_umbrella(point_cycle);
+
+	i_e_svg.append("path")
+	    .attr("d", shape)
+	    .attr("class", "segment")
+	    .attr("fill", "#e0620d")
+	    .attr("opacity", 0.4);
+}
+
+for (const point of shield_points) {
+	const point_cycle = point.map(i => x_points[i-1]).concat(
+		point.map(i => y_points[i-1])
+	);
+	const shape = make_shield(point_cycle);
+	
+	i_e_svg.append("path")
+	    .attr("d", shape)
+	    .attr("class", "segment")
+	    .attr("fill", "#ffcd04")
+	    .attr("opacity", 0.4);
+}
+
+i_e_svg.selectAll("path.segment")
+    .on("mouseover", function() {
+	    d3.select(this)
+	        .transition()
+	        .attr("opacity", 0.8)
+	        .duration(500);
+    })
+    .on("mouseout", function() {
+	    d3.select(this)
+	        .transition()
+	        .attr("opacity", 0.4)
+	        .duration(500);
+    });
 
 
 
