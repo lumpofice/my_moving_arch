@@ -2543,6 +2543,8 @@ shield_points = [
 	[5, 4, 6]
 ];
 
+
+
 for (const point of iron_points) {
 	const point_cycle = point.map(i => x_points[i-1]).concat(
 		point.map(i => y_points[i-1])
@@ -2555,17 +2557,53 @@ for (const point of iron_points) {
 	    .attr("opacity", 0.4);
 }
 
-for (const point of umbrella_points) {
+for (const [n, point] of umbrella_points.entries()) {
 	const point_cycle = point.map(i => x_points[i-1]).concat(
 		point.map(i => y_points[i-1])
 	);
 	const shape = make_umbrella(point_cycle);
+	
+	var universe_array = [10, 11, 12];
+
+	var point_cycle_x = point.map(i => x_points[i-1]);
+	var sum_x = 0;
+	for (var j = 0; j < point_cycle_x.length; j++) {
+		sum_x += point_cycle_x[j];
+	}
+
+	var point_cycle_y = point.map(i => y_points[i-1]);
+	var sum_y = 0;
+	for (var k = 0; k < point_cycle_y.length; k++) {
+		sum_y += point_cycle_y[k];
+	}
 
 	i_e_svg.append("path")
 	    .attr("d", shape)
 	    .attr("class", "segment")
 	    .attr("fill", "#e0620d")
 	    .attr("opacity", 0.4);
+	
+	if (n == 0) {
+		x_position = 1.2*sum_x/3;
+		y_position = sum_y/3;
+	} else if (n == 1) {
+		x_position = sum_x/3;
+		y_position = 1.2*sum_y/3;
+	} else {
+		x_position = (sum_x/3) - 0.2*(sum_x/3);
+		y_position = sum_y/3;
+	}
+
+	i_e_svg.append("text")
+	    .attr("class", "segment")
+	    .text(universe_array[n])
+	    .attr("text-anchor", "middle")
+	    .attr("x", x_position)
+	    .attr("y", y_position)
+	    .attr("font-family", "sans-serif")
+	    .attr("font-size", 35)
+	    .attr("fill", "#696a61")
+	    .attr("opacity", 0.0);
 }
 
 for (const point of shield_points) {
@@ -2581,7 +2619,36 @@ for (const point of shield_points) {
 	    .attr("opacity", 0.4);
 }
 
-i_e_svg.selectAll("path.segment")
+//const universe_array = [
+//	100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300
+//];
+//
+//var universe = 100;
+//console.log(universe);
+//var left_umbrella = universe*0.25;
+//var right_umbrella = universe*0.20;
+//var bottom_umbrella = universe*0.15;
+//var top_iron = universe*0.10;
+//var left_iron = universe*0.12;
+//var right_iron = universe*0.13;
+//var shield = universe*0.05;
+
+
+//d3.select("#inclusion_exclusion_button")
+//    .on("click", function() {
+//	universe = universe_array[Math.floor(Math.random()*13)];
+//	console.log(universe);
+//	left_umbrella = universe*0.25;
+//	right_umbrella = universe*0.20;
+//	bottom_umbrella = universe*0.15;
+//	top_iron = universe*0.10;
+//	left_iron = universe*0.12;
+//	right_iron = universe*0.13;
+//	shield = universe*0.05;
+//    });
+
+
+i_e_svg.selectAll(".segment")
     .on("mouseover", function() {
 	    d3.select(this)
 	        .transition()
