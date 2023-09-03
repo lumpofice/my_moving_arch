@@ -2176,7 +2176,7 @@ var i_e_svg = d3.select("#inclusion_exclusion")
   .append("svg")
     .attr("viewBox", "0 0 " + i_e_w + " " + i_e_h);
 
-const i_e_w_by_3 = i_e_w/3;
+const i_e_w_by_3 = i_e_w/5;
 const i_e_h_by_3 = i_e_h/3;
 
 // Left Circle
@@ -2543,6 +2543,34 @@ shield_points = [
 	[5, 4, 6]
 ];
 
+i_e_svg.append("text")
+    .attr("class", "menu_item")
+    .text("Banana")
+    .attr("x", i_e_w_by_3/2)
+    .attr("y", i_e_h_by_3/2)
+    .attr("font-family", "sans-serif")
+    .attr("font-size", 30)
+    .attr("fill", "#696a61");
+
+i_e_svg.append("text")
+    .attr("class", "menu_item")
+    .text("Honey")
+    .attr("x", i_e_w_by_3 + offset)
+    .attr("y", i_e_h_by_3/2)
+    .attr("font-family", "sans-serif")
+    .attr("font-size", 30)
+    .attr("fill", "#696a61");
+
+i_e_svg.append("text")
+    .attr("class", "menu_item")
+    .text("Butter")
+    .attr("text-anchor", "middle")
+    .attr("x", i_e_w_by_3 + offset/2)
+    .attr("y", 7*(i_e_h/8))
+    .attr("font-family", "sans-serif")
+    .attr("font-size", 30)
+    .attr("fill", "#696a61");
+
 var universe = 100;
 var left_umbrella = universe*0.25;
 var right_umbrella = universe*0.20;
@@ -2552,6 +2580,84 @@ var left_iron = universe*0.12;
 var right_iron = universe*0.13;
 var shield = universe*0.05;
 
+var banana = left_umbrella + top_iron + left_iron + shield;
+var honey = right_umbrella + top_iron + right_iron + shield;
+var butter = bottom_umbrella + left_iron + right_iron + shield;
+var banana_honey = top_iron + shield;
+var banana_butter = left_iron + shield;
+var honey_butter = right_iron + shield;
+
+i_e_svg.append("text")
+    .attr("class", "conditions")
+    .text("Total customer count " + universe)
+    .attr("x", 0.6*i_e_w)
+    .attr("y", i_e_h_by_3)
+    .attr("font-family", "sans-serif")
+    .attr("font-size", 20)
+    .attr("fill", "#696a61");
+
+i_e_svg.append("text")
+    .attr("class", "conditions")
+    .text("Customers who like banana " + banana)
+    .attr("x", 0.6*i_e_w)
+    .attr("y", i_e_h_by_3 + 20)
+    .attr("font-family", "sans-serif")
+    .attr("font-size", 20)
+    .attr("fill", "#696a61");
+
+i_e_svg.append("text")
+    .attr("class", "conditions")
+    .text("Customers who like honey " + honey)
+    .attr("x", 0.6*i_e_w)
+    .attr("y", i_e_h_by_3 + 40)
+    .attr("font-family", "sans-serif")
+    .attr("font-size", 20)
+    .attr("fill", "#696a61");
+
+i_e_svg.append("text")
+    .attr("class", "conditions")
+    .text("Customers who like butter " + butter)
+    .attr("x", 0.6*i_e_w)
+    .attr("y", i_e_h_by_3 + 60)
+    .attr("font-family", "sans-serif")
+    .attr("font-size", 20)
+    .attr("fill", "#696a61");
+
+i_e_svg.append("text")
+    .attr("class", "conditions")
+    .text("Customers who like banana and honey " + banana_honey)
+    .attr("x", 0.6*i_e_w)
+    .attr("y", i_e_h_by_3 + 80)
+    .attr("font-family", "sans-serif")
+    .attr("font-size", 20)
+    .attr("fill", "#696a61");
+
+i_e_svg.append("text")
+    .attr("class", "conditions")
+    .text("Customers who like banana and butter " + banana_butter)
+    .attr("x", 0.6*i_e_w)
+    .attr("y", i_e_h_by_3 + 100)
+    .attr("font-family", "sans-serif")
+    .attr("font-size", 20)
+    .attr("fill", "#696a61");
+
+i_e_svg.append("text")
+    .attr("class", "conditions")
+    .text("Customers who like honey and butter " + honey_butter)
+    .attr("x", 0.6*i_e_w)
+    .attr("y", i_e_h_by_3 + 120)
+    .attr("font-family", "sans-serif")
+    .attr("font-size", 20)
+    .attr("fill", "#696a61");
+
+i_e_svg.append("text")
+    .attr("class", "conditions")
+    .text("Customers who like all three " + shield)
+    .attr("x", 0.6*i_e_w)
+    .attr("y", i_e_h_by_3 + 140)
+    .attr("font-family", "sans-serif")
+    .attr("font-size", 20)
+    .attr("fill", "#696a61");
 
 
 for (const [n, point] of iron_points.entries()) {
@@ -2855,6 +2961,10 @@ d3.select("#inclusion_exclusion_button")
 	    .remove();
 	i_e_svg.select("text.segment_6_5_7")
 	    .remove();
+
+	i_e_svg.selectAll("text.conditions")
+	    .remove();
+
 	const universe_generator = [
 		100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300
 	];
@@ -2866,6 +2976,86 @@ d3.select("#inclusion_exclusion_button")
 	left_iron = universe*0.12;
 	right_iron = universe*0.13;
 	shield = universe*0.05;
+
+	banana = left_umbrella + top_iron + left_iron + shield;
+	honey = right_umbrella + top_iron + right_iron + shield;
+	butter = bottom_umbrella + left_iron + right_iron + shield;
+	banana_honey = top_iron + shield;
+	banana_butter = left_iron + shield;
+	honey_butter = right_iron + shield;
+
+	i_e_svg.append("text")
+	    .attr("class", "conditions")
+	    .text("Total customer count " + universe)
+	    .attr("x", 0.6*i_e_w)
+	    .attr("y", i_e_h_by_3)
+	    .attr("font-family", "sans-serif")
+	    .attr("font-size", 20)
+	    .attr("fill", "#696a61");
+	
+	i_e_svg.append("text")
+	    .attr("class", "conditions")
+	    .text("Customers who like banana " + banana)
+	    .attr("x", 0.6*i_e_w)
+	    .attr("y", i_e_h_by_3 + 20)
+	    .attr("font-family", "sans-serif")
+	    .attr("font-size", 20)
+	    .attr("fill", "#696a61");
+	
+	i_e_svg.append("text")
+	    .attr("class", "conditions")
+	    .text("Customers who like honey " + honey)
+	    .attr("x", 0.6*i_e_w)
+	    .attr("y", i_e_h_by_3 + 40)
+	    .attr("font-family", "sans-serif")
+	    .attr("font-size", 20)
+	    .attr("fill", "#696a61");
+	
+	i_e_svg.append("text")
+	    .attr("class", "conditions")
+	    .text("Customers who like butter " + butter)
+	    .attr("x", 0.6*i_e_w)
+	    .attr("y", i_e_h_by_3 + 60)
+	    .attr("font-family", "sans-serif")
+	    .attr("font-size", 20)
+	    .attr("fill", "#696a61");
+	
+	i_e_svg.append("text")
+	    .attr("class", "conditions")
+	    .text("Customers who like banana and honey " + banana_honey)
+	    .attr("x", 0.6*i_e_w)
+	    .attr("y", i_e_h_by_3 + 80)
+	    .attr("font-family", "sans-serif")
+	    .attr("font-size", 20)
+	    .attr("fill", "#696a61");
+	
+	i_e_svg.append("text")
+	    .attr("class", "conditions")
+	    .text("Customers who like banana and butter " + banana_butter)
+	    .attr("x", 0.6*i_e_w)
+	    .attr("y", i_e_h_by_3 + 100)
+	    .attr("font-family", "sans-serif")
+	    .attr("font-size", 20)
+	    .attr("fill", "#696a61");
+	
+	i_e_svg.append("text")
+	    .attr("class", "conditions")
+	    .text("Customers who like honey and butter " + honey_butter)
+	    .attr("x", 0.6*i_e_w)
+	    .attr("y", i_e_h_by_3 + 120)
+	    .attr("font-family", "sans-serif")
+	    .attr("font-size", 20)
+	    .attr("fill", "#696a61");
+	
+	i_e_svg.append("text")
+	    .attr("class", "conditions")
+	    .text("Customers who like all three " + shield)
+	    .attr("x", 0.6*i_e_w)
+	    .attr("y", i_e_h_by_3 + 140)
+	    .attr("font-family", "sans-serif")
+	    .attr("font-size", 20)
+	    .attr("fill", "#696a61");
+	    
 	for (const [n, point] of iron_points.entries()) {
 		const point_cycle = point.map(i => x_points[i-1]).concat(
 			point.map(i => y_points[i-1])
