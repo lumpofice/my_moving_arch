@@ -2543,18 +2543,86 @@ shield_points = [
 	[5, 4, 6]
 ];
 
+var universe = 100;
+var left_umbrella = universe*0.25;
+var right_umbrella = universe*0.20;
+var bottom_umbrella = universe*0.15;
+var top_iron = universe*0.10;
+var left_iron = universe*0.12;
+var right_iron = universe*0.13;
+var shield = universe*0.05;
 
 
-for (const point of iron_points) {
+
+for (const [n, point] of iron_points.entries()) {
 	const point_cycle = point.map(i => x_points[i-1]).concat(
 		point.map(i => y_points[i-1])
 	);
 	const shape = make_iron(point_cycle);
-	i_e_svg.append("path")
-	    .attr("d", shape)
-	    .attr("class", "segment")
-	    .attr("fill", "#759e16")
-	    .attr("opacity", 0.4);
+
+	var universe_array = [top_iron, right_iron, left_iron];
+
+	var point_cycle_x = point.map(i => x_points[i-1]);
+	var sum_x = 0;
+	for (var j = 0; j < point_cycle_x.length; j++) {
+		sum_x += point_cycle_x[j];
+	}
+
+	var point_cycle_y = point.map(i => y_points[i-1]);
+	var sum_y = 0;
+	for (var k = 0; k < point_cycle_y.length; k++) {
+		sum_y += point_cycle_y[k];
+	}
+
+	if (n == 0) {
+		i_e_svg.append("path")
+		    .attr("d", shape)
+		    .attr("class", "segment_8_6_7")
+		    .attr("fill", "#759e16")
+		    .attr("opacity", 0.4);
+		i_e_svg.append("text")
+		    .attr("class", "segment_8_6_7")
+		    .text(universe_array[0])
+		    .attr("text-anchor", "middle")
+		    .attr("x", sum_x/3)
+		    .attr("y", sum_y/3)
+		    .attr("font-family", "sans-serif")
+		    .attr("font-size", 25)
+		    .attr("fill", "#696a61")
+		    .attr("opacity", 0.0);
+	} else if (n == 1) {
+		i_e_svg.append("path")
+		    .attr("d", shape)
+		    .attr("class", "segment_4_5_6")
+		    .attr("fill", "#759e16")
+		    .attr("opacity", 0.4);
+		i_e_svg.append("text")
+		    .attr("class", "segment_4_5_6")
+		    .text(universe_array[1])
+		    .attr("text-anchor", "middle")
+		    .attr("x", sum_x/3)
+		    .attr("y", sum_y/3)
+		    .attr("font-family", "sans-serif")
+		    .attr("font-size", 25)
+		    .attr("fill", "#696a61")
+		    .attr("opacity", 0.0);
+	} else {
+		i_e_svg.append("path")
+		    .attr("d", shape)
+		    .attr("class", "segment_2_7_5")
+		    .attr("fill", "#759e16")
+		    .attr("opacity", 0.4);
+		i_e_svg.append("text")
+		    .attr("class", "segment_2_7_5")
+		    .text(universe_array[2])
+		    .attr("text-anchor", "middle")
+		    .attr("x", sum_x/3)
+		    .attr("y", sum_y/3)
+		    .attr("font-family", "sans-serif")
+		    .attr("font-size", 25)
+		    .attr("fill", "#696a61")
+		    .attr("opacity", 0.0);
+	}
 }
 
 for (const [n, point] of umbrella_points.entries()) {
@@ -2563,7 +2631,90 @@ for (const [n, point] of umbrella_points.entries()) {
 	);
 	const shape = make_umbrella(point_cycle);
 	
-	var universe_array = [10, 11, 12];
+	var universe_array = [right_umbrella, bottom_umbrella, left_umbrella];
+
+	var point_cycle_x = point.map(i => x_points[i-1]);
+	var sum_x = 0;
+	for (var j = 0; j < point_cycle_x.length; j++) {
+		sum_x += point_cycle_x[j];
+	}
+
+	var point_cycle_y = point.map(i => y_points[i-1]);
+	var sum_y = 0;
+	for (var k = 0; k < point_cycle_y.length; k++) {
+		sum_y += point_cycle_y[k];
+	}
+	
+	if (n == 0) {
+		i_e_svg.append("path")
+		    .attr("d", shape)
+		    .attr("class", "segment_8_6_4")
+		    .attr("fill", "#e0620d")
+		    .attr("opacity", 0.4);
+
+		const x_position = 1.2*(sum_x/3);
+		const y_position = sum_y/3;
+
+		i_e_svg.append("text")
+		    .attr("class", "segment_8_6_4")
+		    .text(universe_array[0])
+		    .attr("text-anchor", "middle")
+		    .attr("x", x_position)
+		    .attr("y", y_position)
+		    .attr("font-family", "sans-serif")
+		    .attr("font-size", 25)
+		    .attr("fill", "#696a61")
+		    .attr("opacity", 0.0);
+	} else if (n == 1) {
+		i_e_svg.append("path")
+		    .attr("d", shape)
+		    .attr("class", "segment_4_5_2")
+		    .attr("fill", "#e0620d")
+		    .attr("opacity", 0.4);
+
+		const x_position = sum_x/3;
+		const y_position = 1.2*(sum_y/3);
+
+		i_e_svg.append("text")
+		    .attr("class", "segment_4_5_2")
+		    .text(universe_array[1])
+		    .attr("text-anchor", "middle")
+		    .attr("x", x_position)
+		    .attr("y", y_position)
+		    .attr("font-family", "sans-serif")
+		    .attr("font-size", 25)
+		    .attr("fill", "#696a61")
+		    .attr("opacity", 0.0);
+	} else {
+		i_e_svg.append("path")
+		    .attr("d", shape)
+		    .attr("class", "segment_2_7_8")
+		    .attr("fill", "#e0620d")
+		    .attr("opacity", 0.4);
+
+		const x_position = sum_x/3 - 0.2*(sum_x/3);
+		const y_position = sum_y/3;
+
+		i_e_svg.append("text")
+		    .attr("class", "segment_2_7_8")
+		    .text(universe_array[2])
+		    .attr("text-anchor", "middle")
+		    .attr("x", x_position)
+		    .attr("y", y_position)
+		    .attr("font-family", "sans-serif")
+		    .attr("font-size", 25)
+		    .attr("fill", "#696a61")
+		    .attr("opacity", 0.0);
+	}
+}
+
+for (const [n, point] of shield_points.entries()) {
+	const point_cycle = point.map(i => x_points[i-1]).concat(
+		point.map(i => y_points[i-1])
+	);
+	const shape = make_shield(point_cycle);
+	
+	var universe_array = [shield];
 
 	var point_cycle_x = point.map(i => x_points[i-1]);
 	var sum_x = 0;
@@ -2579,90 +2730,298 @@ for (const [n, point] of umbrella_points.entries()) {
 
 	i_e_svg.append("path")
 	    .attr("d", shape)
-	    .attr("class", "segment")
-	    .attr("fill", "#e0620d")
+	    .attr("class", "segment_6_5_7")
+	    .attr("fill", "#ffcd04")
 	    .attr("opacity", 0.4);
-	
-	if (n == 0) {
-		x_position = 1.2*sum_x/3;
-		y_position = sum_y/3;
-	} else if (n == 1) {
-		x_position = sum_x/3;
-		y_position = 1.2*sum_y/3;
-	} else {
-		x_position = (sum_x/3) - 0.2*(sum_x/3);
-		y_position = sum_y/3;
-	}
-
 	i_e_svg.append("text")
-	    .attr("class", "segment")
-	    .text(universe_array[n])
+	    .attr("class", "segment_6_5_7")
+	    .text(universe_array[0])
 	    .attr("text-anchor", "middle")
-	    .attr("x", x_position)
-	    .attr("y", y_position)
+	    .attr("x", sum_x/3)
+	    .attr("y", sum_y/3)
 	    .attr("font-family", "sans-serif")
-	    .attr("font-size", 35)
+	    .attr("font-size", 25)
 	    .attr("fill", "#696a61")
 	    .attr("opacity", 0.0);
 }
 
-for (const point of shield_points) {
-	const point_cycle = point.map(i => x_points[i-1]).concat(
-		point.map(i => y_points[i-1])
-	);
-	const shape = make_shield(point_cycle);
-	
-	i_e_svg.append("path")
-	    .attr("d", shape)
-	    .attr("class", "segment")
-	    .attr("fill", "#ffcd04")
-	    .attr("opacity", 0.4);
-}
 
-//const universe_array = [
-//	100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300
-//];
-//
-//var universe = 100;
-//console.log(universe);
-//var left_umbrella = universe*0.25;
-//var right_umbrella = universe*0.20;
-//var bottom_umbrella = universe*0.15;
-//var top_iron = universe*0.10;
-//var left_iron = universe*0.12;
-//var right_iron = universe*0.13;
-//var shield = universe*0.05;
-
-
-//d3.select("#inclusion_exclusion_button")
-//    .on("click", function() {
-//	universe = universe_array[Math.floor(Math.random()*13)];
-//	console.log(universe);
-//	left_umbrella = universe*0.25;
-//	right_umbrella = universe*0.20;
-//	bottom_umbrella = universe*0.15;
-//	top_iron = universe*0.10;
-//	left_iron = universe*0.12;
-//	right_iron = universe*0.13;
-//	shield = universe*0.05;
-//    });
-
-
-i_e_svg.selectAll(".segment")
+d3.select("path.segment_8_6_4")
     .on("mouseover", function() {
-	    d3.select(this)
+	    i_e_svg.selectAll(".segment_8_6_4")
 	        .transition()
 	        .attr("opacity", 0.8)
 	        .duration(500);
     })
     .on("mouseout", function() {
-	    d3.select(this)
+	    i_e_svg.selectAll(".segment_8_6_4")
+	        .transition()
+	        .attr("opacity", 0.4)
+	        .duration(500);
+    });
+d3.select("path.segment_4_5_2")
+    .on("mouseover", function() {
+	    i_e_svg.selectAll(".segment_4_5_2")
+	        .transition()
+	        .attr("opacity", 0.8)
+	        .duration(500);
+    })
+    .on("mouseout", function() {
+	    i_e_svg.selectAll(".segment_4_5_2")
+	        .transition()
+	        .attr("opacity", 0.4)
+	        .duration(500);
+    });
+d3.select("path.segment_2_7_8")
+    .on("mouseover", function() {
+	    i_e_svg.selectAll(".segment_2_7_8")
+	        .transition()
+	        .attr("opacity", 0.8)
+	        .duration(500);
+    })
+    .on("mouseout", function() {
+	    i_e_svg.selectAll(".segment_2_7_8")
+	        .transition()
+	        .attr("opacity", 0.4)
+	        .duration(500);
+    });
+d3.select("path.segment_8_6_7")
+    .on("mouseover", function() {
+	    i_e_svg.selectAll(".segment_8_6_7")
+	        .transition()
+	        .attr("opacity", 0.8)
+	        .duration(500);
+    })
+    .on("mouseout", function() {
+	    i_e_svg.selectAll(".segment_8_6_7")
+	        .transition()
+	        .attr("opacity", 0.4)
+	        .duration(500);
+    });
+d3.select("path.segment_4_5_6")
+    .on("mouseover", function() {
+	    i_e_svg.selectAll(".segment_4_5_6")
+	        .transition()
+	        .attr("opacity", 0.8)
+	        .duration(500);
+    })
+    .on("mouseout", function() {
+	    i_e_svg.selectAll(".segment_4_5_6")
+	        .transition()
+	        .attr("opacity", 0.4)
+	        .duration(500);
+    });
+d3.select("path.segment_2_7_5")
+    .on("mouseover", function() {
+	    i_e_svg.selectAll(".segment_2_7_5")
+	        .transition()
+	        .attr("opacity", 0.8)
+	        .duration(500);
+    })
+    .on("mouseout", function() {
+	    i_e_svg.selectAll(".segment_2_7_5")
+	        .transition()
+	        .attr("opacity", 0.4)
+	        .duration(500);
+    });
+d3.select("path.segment_6_5_7")
+    .on("mouseover", function() {
+	    i_e_svg.selectAll(".segment_6_5_7")
+	        .transition()
+	        .attr("opacity", 0.8)
+	        .duration(500);
+    })
+    .on("mouseout", function() {
+	    i_e_svg.selectAll(".segment_6_5_7")
 	        .transition()
 	        .attr("opacity", 0.4)
 	        .duration(500);
     });
 
 
+d3.select("#inclusion_exclusion_button")
+    .on("click", function() {
+	i_e_svg.select("text.segment_8_6_4")
+	    .remove();
+	i_e_svg.select("text.segment_4_5_2")
+	    .remove();
+	i_e_svg.select("text.segment_2_7_8")
+	    .remove();
+	i_e_svg.select("text.segment_8_6_7")
+	    .remove();
+	i_e_svg.select("text.segment_4_5_6")
+	    .remove();
+	i_e_svg.select("text.segment_2_7_5")
+	    .remove();
+	i_e_svg.select("text.segment_6_5_7")
+	    .remove();
+	const universe_generator = [
+		100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300
+	];
+	universe = universe_generator[Math.floor(Math.random()*13)];
+	left_umbrella = universe*0.25;
+	right_umbrella = universe*0.20;
+	bottom_umbrella = universe*0.15;
+	top_iron = universe*0.10;
+	left_iron = universe*0.12;
+	right_iron = universe*0.13;
+	shield = universe*0.05;
+	for (const [n, point] of iron_points.entries()) {
+		const point_cycle = point.map(i => x_points[i-1]).concat(
+			point.map(i => y_points[i-1])
+		);
+		const shape = make_iron(point_cycle);
+	
+		var universe_array = [top_iron, right_iron, left_iron];
+	
+		var point_cycle_x = point.map(i => x_points[i-1]);
+		var sum_x = 0;
+		for (var j = 0; j < point_cycle_x.length; j++) {
+			sum_x += point_cycle_x[j];
+		}
+	
+		var point_cycle_y = point.map(i => y_points[i-1]);
+		var sum_y = 0;
+		for (var k = 0; k < point_cycle_y.length; k++) {
+			sum_y += point_cycle_y[k];
+		}
+	
+		if (n == 0) {
+			i_e_svg.append("text")
+			    .attr("class", "segment_8_6_7")
+			    .text(universe_array[0])
+			    .attr("text-anchor", "middle")
+			    .attr("x", sum_x/3)
+			    .attr("y", sum_y/3)
+			    .attr("font-family", "sans-serif")
+			    .attr("font-size", 25)
+			    .attr("fill", "#696a61")
+			    .attr("opacity", 0.0);
+		} else if (n == 1) {
+			i_e_svg.append("text")
+			    .attr("class", "segment_4_5_6")
+			    .text(universe_array[1])
+			    .attr("text-anchor", "middle")
+			    .attr("x", sum_x/3)
+			    .attr("y", sum_y/3)
+			    .attr("font-family", "sans-serif")
+			    .attr("font-size", 25)
+			    .attr("fill", "#696a61")
+			    .attr("opacity", 0.0);
+		} else {
+			i_e_svg.append("text")
+			    .attr("class", "segment_2_7_5")
+			    .text(universe_array[2])
+			    .attr("text-anchor", "middle")
+			    .attr("x", sum_x/3)
+			    .attr("y", sum_y/3)
+			    .attr("font-family", "sans-serif")
+			    .attr("font-size", 25)
+			    .attr("fill", "#696a61")
+			    .attr("opacity", 0.0);
+		}
+	}
+	
+	for (const [n, point] of umbrella_points.entries()) {
+		const point_cycle = point.map(i => x_points[i-1]).concat(
+			point.map(i => y_points[i-1])
+		);
+		const shape = make_umbrella(point_cycle);
+		
+		var universe_array = [right_umbrella, bottom_umbrella, left_umbrella];
+	
+		var point_cycle_x = point.map(i => x_points[i-1]);
+		var sum_x = 0;
+		for (var j = 0; j < point_cycle_x.length; j++) {
+			sum_x += point_cycle_x[j];
+		}
+	
+		var point_cycle_y = point.map(i => y_points[i-1]);
+		var sum_y = 0;
+		for (var k = 0; k < point_cycle_y.length; k++) {
+			sum_y += point_cycle_y[k];
+		}
+		
+		if (n == 0) {
+	
+			const x_position = 1.2*(sum_x/3);
+			const y_position = sum_y/3;
+	
+			i_e_svg.append("text")
+			    .attr("class", "segment_8_6_4")
+			    .text(universe_array[0])
+			    .attr("text-anchor", "middle")
+			    .attr("x", x_position)
+			    .attr("y", y_position)
+			    .attr("font-family", "sans-serif")
+			    .attr("font-size", 25)
+			    .attr("fill", "#696a61")
+			    .attr("opacity", 0.0);
+		} else if (n == 1) {
+	
+			const x_position = sum_x/3;
+			const y_position = 1.2*(sum_y/3);
+	
+			i_e_svg.append("text")
+			    .attr("class", "segment_4_5_2")
+			    .text(universe_array[1])
+			    .attr("text-anchor", "middle")
+			    .attr("x", x_position)
+			    .attr("y", y_position)
+			    .attr("font-family", "sans-serif")
+			    .attr("font-size", 25)
+			    .attr("fill", "#696a61")
+			    .attr("opacity", 0.0);
+		} else {
+	
+			const x_position = sum_x/3 - 0.2*(sum_x/3);
+			const y_position = sum_y/3;
+	
+			i_e_svg.append("text")
+			    .attr("class", "segment_2_7_8")
+			    .text(universe_array[2])
+			    .attr("text-anchor", "middle")
+			    .attr("x", x_position)
+			    .attr("y", y_position)
+			    .attr("font-family", "sans-serif")
+			    .attr("font-size", 25)
+			    .attr("fill", "#696a61")
+			    .attr("opacity", 0.0);
+		}
+	}
+	
+	for (const [n, point] of shield_points.entries()) {
+		const point_cycle = point.map(i => x_points[i-1]).concat(
+			point.map(i => y_points[i-1])
+		);
+		const shape = make_shield(point_cycle);
+		
+		var universe_array = [shield];
+	
+		var point_cycle_x = point.map(i => x_points[i-1]);
+		var sum_x = 0;
+		for (var j = 0; j < point_cycle_x.length; j++) {
+			sum_x += point_cycle_x[j];
+		}
+	
+		var point_cycle_y = point.map(i => y_points[i-1]);
+		var sum_y = 0;
+		for (var k = 0; k < point_cycle_y.length; k++) {
+			sum_y += point_cycle_y[k];
+		}
+	
+		i_e_svg.append("text")
+		    .attr("class", "segment_6_5_7")
+		    .text(universe_array[0])
+		    .attr("text-anchor", "middle")
+		    .attr("x", sum_x/3)
+		    .attr("y", sum_y/3)
+		    .attr("font-family", "sans-serif")
+		    .attr("font-size", 25)
+		    .attr("fill", "#696a61")
+		    .attr("opacity", 0.0);
+	}
+    });
 
 
 
