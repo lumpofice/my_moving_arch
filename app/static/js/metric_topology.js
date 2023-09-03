@@ -2176,20 +2176,68 @@ var i_e_svg = d3.select("#inclusion_exclusion")
   .append("svg")
     .attr("viewBox", "0 0 " + i_e_w + " " + i_e_h);
 
-const i_e_w_by_3 = i_e_w/5;
-const i_e_h_by_3 = i_e_h/3;
+const i_e_w_by_3 = i_e_w/3;
+const i_e_h_by_3 = i_e_h/4;
+
+// Universe Box
+//
+// top line
+i_e_svg.append("line")
+    .attr("x1", i_e_w_by_3/2)
+    .attr("y1", 0.01*i_e_h)
+    .attr("x2", 2*i_e_w_by_3)
+    .attr("y2", 0.01*i_e_h)
+    .attr("stroke", "#696a61")
+    .attr("stroke-width", 3);
+
+// right line
+i_e_svg.append("line")
+    .attr("x1", 2*i_e_w_by_3)
+    .attr("y1", 0.01*i_e_h)
+    .attr("x2", 2*i_e_w_by_3)
+    .attr("y2", 3*(i_e_h/4) - 10)
+    .attr("stroke", "#696a61")
+    .attr("stroke-width", 3);
+
+// bottom line
+i_e_svg.append("line")
+    .attr("x1", 2*i_e_w_by_3)
+    .attr("y1", 3*(i_e_h/4) - 10)
+    .attr("x2", i_e_w_by_3/2)
+    .attr("y2", 3*(i_e_h/4) - 10)
+    .attr("stroke", "#696a61")
+    .attr("stroke-width", 3);
+
+// left line
+i_e_svg.append("line")
+    .attr("x1", i_e_w_by_3/2)
+    .attr("y1", 3*(i_e_h/4) - 10)
+    .attr("x2", i_e_w_by_3/2)
+    .attr("y2", 0.01*i_e_h)
+    .attr("stroke", "#696a61")
+    .attr("stroke-width", 3);
+
+// Universe label
+i_e_svg.append("text")
+    .text("Universe")
+    .attr("x", i_e_w_by_3/2 + 20)
+    .attr("y", 3*(i_e_h/4) - 30)
+    .attr("font-family", "sans-serif")
+    .attr("font-size", 30)
+    .attr("fill", "#696a61");
+
+const i_e_r = 115;
 
 // Left Circle
 i_e_svg.append("circle")
     .attr("cx", i_e_w_by_3)
     .attr("cy", i_e_h_by_3)
-    .attr("r", 160)
+    .attr("r", i_e_r)
     .attr("fill", "none")
     .attr("stroke", "#696a61")
     .attr("stroke-width", 5)
     .attr("stroke-dasharray", "3 3");
 
-const i_e_r = 160;
 
 // Distance between centers of left and right circles
 const offset = 1.2*i_e_r;
@@ -2198,7 +2246,7 @@ const offset = 1.2*i_e_r;
 i_e_svg.append("circle")
     .attr("cx", i_e_w_by_3 + offset)
     .attr("cy", i_e_h_by_3)
-    .attr("r", 160)
+    .attr("r", i_e_r)
     .attr("fill", "none")
     .attr("stroke", "#696a61")
     .attr("stroke-width", 5)
@@ -2206,13 +2254,13 @@ i_e_svg.append("circle")
 
 // Distance between top leg of equilateral triangle and center of 
 // bottom circle
-const bottom_circle_drop = i_e_h/3 + Math.sqrt(offset**2 - (offset/2)**2);
+const bottom_circle_drop = i_e_h_by_3 + Math.sqrt(offset**2 - (offset/2)**2);
 
 // Bottom Circle
 i_e_svg.append("circle")
     .attr("cx", i_e_w_by_3 + (offset)/2)
     .attr("cy", bottom_circle_drop)
-    .attr("r", 160)
+    .attr("r", i_e_r)
     .attr("fill", "none")
     .attr("stroke", "#696a61")
     .attr("stroke-width", 5)
@@ -2502,6 +2550,12 @@ y_points = [
 	i_e_point_7_y
 ];
 
+const make_universe = `M ${i_e_w_by_3/2} ${0.01*i_e_h}
+		L ${2*i_e_w_by_3} ${0.01*i_e_h}
+		L ${2*i_e_w_by_3} ${3*(i_e_h/4) - 10}
+		L ${i_e_w_by_3/2} ${3*(i_e_h/4) - 10}
+		Z`
+
 const make_iron = ([x1, x2, x3, y1, y2, y3]) => {
 	path = `M ${x1} ${y1}
 		A ${i_e_r} ${i_e_r} 0 0 1 ${x2} ${y2}
@@ -2546,8 +2600,8 @@ shield_points = [
 i_e_svg.append("text")
     .attr("class", "menu_item")
     .text("Banana")
-    .attr("x", i_e_w_by_3/2)
-    .attr("y", i_e_h_by_3/2)
+    .attr("x", 3*(i_e_w_by_3/4))
+    .attr("y", i_e_h_by_3 - 40)
     .attr("font-family", "sans-serif")
     .attr("font-size", 30)
     .attr("fill", "#696a61");
@@ -2556,7 +2610,7 @@ i_e_svg.append("text")
     .attr("class", "menu_item")
     .text("Honey")
     .attr("x", i_e_w_by_3 + offset)
-    .attr("y", i_e_h_by_3/2)
+    .attr("y", i_e_h_by_3 - 40)
     .attr("font-family", "sans-serif")
     .attr("font-size", 30)
     .attr("fill", "#696a61");
@@ -2566,7 +2620,7 @@ i_e_svg.append("text")
     .text("Butter")
     .attr("text-anchor", "middle")
     .attr("x", i_e_w_by_3 + offset/2)
-    .attr("y", 7*(i_e_h/8))
+    .attr("y", 2*(i_e_h/3))
     .attr("font-family", "sans-serif")
     .attr("font-size", 30)
     .attr("fill", "#696a61");
@@ -2578,7 +2632,8 @@ var bottom_umbrella = universe*0.15;
 var top_iron = universe*0.10;
 var left_iron = universe*0.12;
 var right_iron = universe*0.13;
-var shield = universe*0.05;
+var shield = universe*0.03;
+var neither = universe*0.02;
 
 var banana = left_umbrella + top_iron + left_iron + shield;
 var honey = right_umbrella + top_iron + right_iron + shield;
@@ -2590,75 +2645,90 @@ var honey_butter = right_iron + shield;
 i_e_svg.append("text")
     .attr("class", "conditions")
     .text("Total customer count " + universe)
-    .attr("x", 0.6*i_e_w)
-    .attr("y", i_e_h_by_3)
+    .attr("x", 0.01*i_e_w)
+    .attr("y", 3*(i_e_h_by_3) + 40)
     .attr("font-family", "sans-serif")
-    .attr("font-size", 20)
+    .attr("font-size", 30)
     .attr("fill", "#696a61");
 
 i_e_svg.append("text")
     .attr("class", "conditions")
-    .text("Customers who like banana " + banana)
-    .attr("x", 0.6*i_e_w)
-    .attr("y", i_e_h_by_3 + 20)
+    .text("Those who like banana " + banana)
+    .attr("x", 0.01*i_e_w)
+    .attr("y", 3*(i_e_h_by_3) + 65)
     .attr("font-family", "sans-serif")
-    .attr("font-size", 20)
+    .attr("font-size", 30)
     .attr("fill", "#696a61");
 
 i_e_svg.append("text")
     .attr("class", "conditions")
-    .text("Customers who like honey " + honey)
-    .attr("x", 0.6*i_e_w)
-    .attr("y", i_e_h_by_3 + 40)
+    .text("Those who like honey " + honey)
+    .attr("x", 0.01*i_e_w)
+    .attr("y", 3*(i_e_h_by_3) + 90)
     .attr("font-family", "sans-serif")
-    .attr("font-size", 20)
+    .attr("font-size", 30)
     .attr("fill", "#696a61");
 
 i_e_svg.append("text")
     .attr("class", "conditions")
-    .text("Customers who like butter " + butter)
-    .attr("x", 0.6*i_e_w)
-    .attr("y", i_e_h_by_3 + 60)
+    .text("Those who like butter " + butter)
+    .attr("x", 0.01*i_e_w)
+    .attr("y", 3*(i_e_h_by_3) + 115)
     .attr("font-family", "sans-serif")
-    .attr("font-size", 20)
+    .attr("font-size", 30)
     .attr("fill", "#696a61");
 
 i_e_svg.append("text")
     .attr("class", "conditions")
-    .text("Customers who like banana and honey " + banana_honey)
-    .attr("x", 0.6*i_e_w)
-    .attr("y", i_e_h_by_3 + 80)
+    .text("Those who like banana and honey " + banana_honey)
+    .attr("x", 0.45*i_e_w)
+    .attr("y", 3*(i_e_h_by_3) + 40)
     .attr("font-family", "sans-serif")
-    .attr("font-size", 20)
+    .attr("font-size", 30)
     .attr("fill", "#696a61");
 
 i_e_svg.append("text")
     .attr("class", "conditions")
-    .text("Customers who like banana and butter " + banana_butter)
-    .attr("x", 0.6*i_e_w)
-    .attr("y", i_e_h_by_3 + 100)
+    .text("Those who like banana and butter " + banana_butter)
+    .attr("x", 0.45*i_e_w)
+    .attr("y", 3*i_e_h_by_3 + 65)
     .attr("font-family", "sans-serif")
-    .attr("font-size", 20)
+    .attr("font-size", 30)
     .attr("fill", "#696a61");
 
 i_e_svg.append("text")
     .attr("class", "conditions")
-    .text("Customers who like honey and butter " + honey_butter)
-    .attr("x", 0.6*i_e_w)
-    .attr("y", i_e_h_by_3 + 120)
+    .text("Those who like honey and butter " + honey_butter)
+    .attr("x", 0.45*i_e_w)
+    .attr("y", 3*i_e_h_by_3 + 90)
     .attr("font-family", "sans-serif")
-    .attr("font-size", 20)
+    .attr("font-size", 30)
     .attr("fill", "#696a61");
 
 i_e_svg.append("text")
     .attr("class", "conditions")
-    .text("Customers who like all three " + shield)
-    .attr("x", 0.6*i_e_w)
-    .attr("y", i_e_h_by_3 + 140)
+    .text("Those who like all three " + shield)
+    .attr("x", 0.45*i_e_w)
+    .attr("y", 3*i_e_h_by_3 + 115)
     .attr("font-family", "sans-serif")
-    .attr("font-size", 20)
+    .attr("font-size", 30)
     .attr("fill", "#696a61");
 
+// Neither count
+i_e_svg.append("path")
+    .attr("d", make_universe)
+    .attr("class", "segment_neither")
+    .attr("fill", "#f5ffde")
+    .attr("opacity", 0.01);
+i_e_svg.append("text")
+    .attr("class", "segment_neither")
+    .text(neither)
+    .attr("x", (i_e_w_by_3/2) + 20)
+    .attr("y", 3*(i_e_h/4) - 60)
+    .attr("font-family", "sans-serif")
+    .attr("font-size", 25)
+    .attr("fill", "#696a61")
+    .attr("opacity", 0.0);
 
 for (const [n, point] of iron_points.entries()) {
 	const point_cycle = point.map(i => x_points[i-1]).concat(
@@ -2705,9 +2775,9 @@ for (const [n, point] of iron_points.entries()) {
 		i_e_svg.append("text")
 		    .attr("class", "segment_4_5_6")
 		    .text(universe_array[1])
-		    .attr("text-anchor", "middle")
+		    .attr("text-anchor", "start")
 		    .attr("x", sum_x/3)
-		    .attr("y", sum_y/3)
+		    .attr("y", sum_y/3 + 10)
 		    .attr("font-family", "sans-serif")
 		    .attr("font-size", 25)
 		    .attr("fill", "#696a61")
@@ -2721,9 +2791,9 @@ for (const [n, point] of iron_points.entries()) {
 		i_e_svg.append("text")
 		    .attr("class", "segment_2_7_5")
 		    .text(universe_array[2])
-		    .attr("text-anchor", "middle")
+		    .attr("text-anchor", "end")
 		    .attr("x", sum_x/3)
-		    .attr("y", sum_y/3)
+		    .attr("y", sum_y/3 + 10)
 		    .attr("font-family", "sans-serif")
 		    .attr("font-size", 25)
 		    .attr("fill", "#696a61")
@@ -2943,6 +3013,19 @@ d3.select("path.segment_6_5_7")
 	        .attr("opacity", 0.4)
 	        .duration(500);
     });
+d3.select("path.segment_neither")
+    .on("mouseover", function() {
+	    i_e_svg.selectAll(".segment_neither")
+	        .transition()
+	        .attr("opacity", 0.8)
+	        .duration(500);
+    })
+    .on("mouseout", function() {
+	    i_e_svg.selectAll(".segment_neither")
+	        .transition()
+	        .attr("opacity", 0.01)
+	        .duration(500);
+    });
 
 
 d3.select("#inclusion_exclusion_button")
@@ -2961,21 +3044,27 @@ d3.select("#inclusion_exclusion_button")
 	    .remove();
 	i_e_svg.select("text.segment_6_5_7")
 	    .remove();
+	i_e_svg.select("text.segment_neither")
+	    .remove();
 
 	i_e_svg.selectAll("text.conditions")
 	    .remove();
 
 	const universe_generator = [
-		100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300
+		100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 
+		1200, 1300, 1400, 1500, 1600, 1700, 1800, 1900, 2000, 
+		2100, 2200, 2300, 2400, 2500, 2600, 2700, 2800, 2900,
+		3000, 3100, 3200, 3300, 3400, 3500, 3600, 3700, 3800
 	];
-	universe = universe_generator[Math.floor(Math.random()*13)];
+	universe = universe_generator[Math.floor(Math.random()*38)];
 	left_umbrella = universe*0.25;
 	right_umbrella = universe*0.20;
 	bottom_umbrella = universe*0.15;
 	top_iron = universe*0.10;
 	left_iron = universe*0.12;
 	right_iron = universe*0.13;
-	shield = universe*0.05;
+	shield = universe*0.03;
+	neither = universe*0.02;
 
 	banana = left_umbrella + top_iron + left_iron + shield;
 	honey = right_umbrella + top_iron + right_iron + shield;
@@ -2987,75 +3076,86 @@ d3.select("#inclusion_exclusion_button")
 	i_e_svg.append("text")
 	    .attr("class", "conditions")
 	    .text("Total customer count " + universe)
-	    .attr("x", 0.6*i_e_w)
-	    .attr("y", i_e_h_by_3)
+	    .attr("x", 0.01*i_e_w)
+	    .attr("y", 3*i_e_h_by_3 + 40)
 	    .attr("font-family", "sans-serif")
-	    .attr("font-size", 20)
+	    .attr("font-size", 30)
 	    .attr("fill", "#696a61");
 	
 	i_e_svg.append("text")
 	    .attr("class", "conditions")
-	    .text("Customers who like banana " + banana)
-	    .attr("x", 0.6*i_e_w)
-	    .attr("y", i_e_h_by_3 + 20)
+	    .text("Those who like banana " + banana)
+	    .attr("x", 0.01*i_e_w)
+	    .attr("y", 3*i_e_h_by_3 + 65)
 	    .attr("font-family", "sans-serif")
-	    .attr("font-size", 20)
+	    .attr("font-size", 30)
 	    .attr("fill", "#696a61");
 	
 	i_e_svg.append("text")
 	    .attr("class", "conditions")
-	    .text("Customers who like honey " + honey)
-	    .attr("x", 0.6*i_e_w)
-	    .attr("y", i_e_h_by_3 + 40)
+	    .text("Those who like honey " + honey)
+	    .attr("x", 0.01*i_e_w)
+	    .attr("y", 3*i_e_h_by_3 + 90)
 	    .attr("font-family", "sans-serif")
-	    .attr("font-size", 20)
+	    .attr("font-size", 30)
 	    .attr("fill", "#696a61");
 	
 	i_e_svg.append("text")
 	    .attr("class", "conditions")
-	    .text("Customers who like butter " + butter)
-	    .attr("x", 0.6*i_e_w)
-	    .attr("y", i_e_h_by_3 + 60)
+	    .text("Those who like butter " + butter)
+	    .attr("x", 0.01*i_e_w)
+	    .attr("y", 3*i_e_h_by_3 + 115)
 	    .attr("font-family", "sans-serif")
-	    .attr("font-size", 20)
+	    .attr("font-size", 30)
 	    .attr("fill", "#696a61");
 	
 	i_e_svg.append("text")
 	    .attr("class", "conditions")
-	    .text("Customers who like banana and honey " + banana_honey)
-	    .attr("x", 0.6*i_e_w)
-	    .attr("y", i_e_h_by_3 + 80)
+	    .text("Those who like banana and honey " + banana_honey)
+	    .attr("x", 0.45*i_e_w)
+	    .attr("y", 3*i_e_h_by_3 + 40)
 	    .attr("font-family", "sans-serif")
-	    .attr("font-size", 20)
+	    .attr("font-size", 30)
 	    .attr("fill", "#696a61");
 	
 	i_e_svg.append("text")
 	    .attr("class", "conditions")
-	    .text("Customers who like banana and butter " + banana_butter)
-	    .attr("x", 0.6*i_e_w)
-	    .attr("y", i_e_h_by_3 + 100)
+	    .text("Those who like banana and butter " + banana_butter)
+	    .attr("x", 0.45*i_e_w)
+	    .attr("y", 3*i_e_h_by_3 + 65)
 	    .attr("font-family", "sans-serif")
-	    .attr("font-size", 20)
+	    .attr("font-size", 30)
 	    .attr("fill", "#696a61");
 	
 	i_e_svg.append("text")
 	    .attr("class", "conditions")
-	    .text("Customers who like honey and butter " + honey_butter)
-	    .attr("x", 0.6*i_e_w)
-	    .attr("y", i_e_h_by_3 + 120)
+	    .text("Those who like honey and butter " + honey_butter)
+	    .attr("x", 0.45*i_e_w)
+	    .attr("y", 3*i_e_h_by_3 + 90)
 	    .attr("font-family", "sans-serif")
-	    .attr("font-size", 20)
+	    .attr("font-size", 30)
 	    .attr("fill", "#696a61");
 	
 	i_e_svg.append("text")
 	    .attr("class", "conditions")
-	    .text("Customers who like all three " + shield)
-	    .attr("x", 0.6*i_e_w)
-	    .attr("y", i_e_h_by_3 + 140)
+	    .text("Those who like all three " + shield)
+	    .attr("x", 0.45*i_e_w)
+	    .attr("y", 3*i_e_h_by_3 + 115)
 	    .attr("font-family", "sans-serif")
-	    .attr("font-size", 20)
+	    .attr("font-size", 30)
 	    .attr("fill", "#696a61");
-	    
+	
+	// Neither count
+	i_e_svg.append("text")
+	    .attr("class", "segment_neither")
+	    .text(neither)
+	    .attr("x", (i_e_w_by_3/2) + 20)
+	    .attr("y", 3*(i_e_h/4) - 60)
+	    .attr("font-family", "sans-serif")
+	    .attr("font-size", 25)
+	    .attr("fill", "#696a61")
+	    .attr("opacity", 0.0);
+
 	for (const [n, point] of iron_points.entries()) {
 		const point_cycle = point.map(i => x_points[i-1]).concat(
 			point.map(i => y_points[i-1])
@@ -3091,9 +3191,9 @@ d3.select("#inclusion_exclusion_button")
 			i_e_svg.append("text")
 			    .attr("class", "segment_4_5_6")
 			    .text(universe_array[1])
-			    .attr("text-anchor", "middle")
+			    .attr("text-anchor", "start")
 			    .attr("x", sum_x/3)
-			    .attr("y", sum_y/3)
+			    .attr("y", sum_y/3 + 10)
 			    .attr("font-family", "sans-serif")
 			    .attr("font-size", 25)
 			    .attr("fill", "#696a61")
@@ -3102,9 +3202,9 @@ d3.select("#inclusion_exclusion_button")
 			i_e_svg.append("text")
 			    .attr("class", "segment_2_7_5")
 			    .text(universe_array[2])
-			    .attr("text-anchor", "middle")
+			    .attr("text-anchor", "end")
 			    .attr("x", sum_x/3)
-			    .attr("y", sum_y/3)
+			    .attr("y", sum_y/3 + 10)
 			    .attr("font-family", "sans-serif")
 			    .attr("font-size", 25)
 			    .attr("fill", "#696a61")
