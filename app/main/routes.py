@@ -40,7 +40,4 @@ def sweet_tooth():
     return render_template('sweet_tooth.html', title='My Moving Arch')
 
 
-@bp.route('/visual/metric_topology', methods=['GET', 'POST'])
-def metric_topology():
-    return render_template('metric_topology.html', title='My Moving Arch')
 
