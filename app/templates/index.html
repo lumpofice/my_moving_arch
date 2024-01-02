@@ -13,8 +13,8 @@
 		<div id='opening'>
 			<div id='nav'>
 				<ul>
-					<li><a href='{{ url_for("main.index") }}'>Home</a></li>
-					<li><a href='{{ url_for("main.visual") }}'>Visual</a></li>
+					<li id="text"><a href='{{ url_for("main.index") }}'>Home</a></li>
+					<li id="text"><a href='{{ url_for("main.visual") }}'>Visual</a></li>
 				</ul>
 			</div>
 		</div>
@@ -22,11 +22,14 @@
 			<div id='content'>
 				<div id='slideshow'>
 				</div>
+				<div class='featuredgallery1'>
+					<p id="text" class="gallery"><a href='https://lumpofice.pythonanywhere.com/'>Math Website</a></p>
+				</div>
 				<div class='featuredgallery2'>
-					<p class="gallery"><a href='{{ url_for("main.land_of_milk_and_honey") }}'>Milk and Honey</a></p>
+					<p id="text" class="gallery"><a href='{{ url_for("main.land_of_milk_and_honey") }}'>Milk and Honey</a></p>
 				</div>
 				<div class='featuredgallery3'>
-					<p class="gallery"><a href='{{ url_for("main.sweet_tooth") }}'>Sweet Tooth</a></p>
+					<p id="text" class="gallery"><a href='{{ url_for("main.sweet_tooth") }}'>Sweet Tooth</a></p>
 				</div>
 			</div>
 		{% endblock %}

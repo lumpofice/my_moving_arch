@@ -13,15 +13,15 @@
 		<div id='opening'>
 			<div id='nav'>
 				<ul>
-					<li><a href='{{ url_for("main.index") }}'>Home</a></li>
-					<li><a href='{{ url_for("main.visual") }}'>Visual</a></li>
+					<li id="text"><a href='{{ url_for("main.index") }}'>Home</a></li>
+					<li id="text"><a href='{{ url_for("main.visual") }}'>Visual</a></li>
 				</ul>
 			</div>
 		</div>
 		{% block content %}
 			<div id='content'>
 				<div id='page'>
-					<p>Visual Gallery</p>
+					<p id="text">Visual Gallery</p>
 				</div>
 				<div class='galleries'>
 					<form action='' method='post'>

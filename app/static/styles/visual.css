@@ -31,17 +31,27 @@ body {
 	margin: 0 auto;
 }
 
-li {
-	display: inline;
+#text {
+	font-size: 2.1rem;
 }
 
+li {
+	display: inline;
+	margin-right: 20px;
+}
+
+a {
+	text-decoration: none;
+}
 
 input {
 	max-width: 100%;
 	margin: 8px 8px 8px 8px;
 	padding: 8px 8px 8px 8px;
 	border: 1px solid #1f0b4a;
-	font-size: 12px;
+	border-radius: 3px;
+	font-size: 25px;
+	font-weight: bold;
 	font-family: courier, monospace;
 	background-color: #bdc2c9;
 	color: #284475;
@@ -49,10 +59,12 @@ input {
 
 input:hover[type="submit"] {
 	background-color: #dcecf7;
+	transition: 0.7s;
 }
 
 input:active[type="submit"] {
 	background-color: #fcfcf7;
+	transition: 0.1s;
 }
 
 @media screen and (min-width: 15rem) {
